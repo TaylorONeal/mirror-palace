@@ -1,5 +1,7 @@
 # Mirror Cognitive Architecture
 
+> Based on the MIRROR architecture by Nicole Hsing. See: [arxiv.org/abs/2506.00430](https://arxiv.org/abs/2506.00430)
+
 ## Core Concept
 
 The Mirror Cognitive Architecture is a model for structuring an artificial cognitive agent as a unified mind with two distinct functional layers: an internal reasoning layer (the Thinker) and a user-facing communication layer (the Talker). Between them sits a Cognitive Controller that integrates, compresses, and arbitrates.

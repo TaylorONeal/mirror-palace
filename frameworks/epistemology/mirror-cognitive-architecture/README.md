@@ -29,6 +29,10 @@ A two-layer cognitive model for agents: an internal Thinker (three parallel thre
 - **Time to apply**: Ongoing (architecture, not one-time exercise)
 - **Pairs with**: Concept Formation, Information Compression, Jobs to Be Done, Behavior Equation
 
+## Attribution
+
+Based on the MIRROR (Modular Internal Reasoning, Reflection, Orchestration, and Response) architecture by **Nicole Hsing**. Paper: [MIRROR: Cognitive Inner Monologue Between Conversational Turns for Persistent Reflection and Reasoning in Conversational LLMs](https://arxiv.org/abs/2506.00430) (2025).
+
 ## Files
 - `theory.md` — Full explanation of the concept
 - `template.md` — Ready-to-fill starter
