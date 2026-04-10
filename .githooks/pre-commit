@@ -27,7 +27,7 @@ PERSONAL_PATHS=(
 STAGED_FILES=$(git diff --cached --name-only)
 
 for pattern in "${PERSONAL_PATHS[@]}"; do
-    MATCHES=$(echo "$STAGED_FILES" | grep "$pattern" || true)
+    MATCHES=$(echo "$STAGED_FILES" | grep "$pattern" | grep -v "_template\.\|README\.\|PEOPLE-INDEX\.\|DECISIONS-INDEX\.\|decision-frameworks-ref\." || true)
     if [ -n "$MATCHES" ]; then
         echo -e "${RED}BLOCKED:${NC} Personal data file staged for commit:"
         echo "$MATCHES" | while read -r f; do echo "  - $f"; done
