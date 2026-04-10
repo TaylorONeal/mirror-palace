@@ -115,6 +115,18 @@ Signal patterns for the scan skill. When you detect a signal in conversation, do
 | Spending pattern change | Financial data, conversation | `behavior-equation`, `loss-aversion` | High if measurable, medium if reported | `status/domains/money-finances.md` |
 | Avoiding looking at bank balance | Conversation | `failure-modes`, `distortion-detection` | Medium — classic avoidance | `status/domains/money-finances.md` |
 
+## Practice and Mind-Body Signals
+
+| Signal | Source Type | Framework(s) | Confidence Guide | Updates |
+|--------|------------|-------------|-----------------|---------|
+| Mentions yoga, meditation, or breathwork but frustrated with mystical framing | Conversation | `rational-yoga` | High — direct trigger | `status/domains/health-fitness.md`, `status/domains/spirituality.md` |
+| Cognitive understanding not translating to behavior change | Conversation, journal | `rational-yoga`, `embodied-awareness` | Medium — common pattern, check if embodied practice is missing | `status/domains/personal-growth-learning.md` |
+| Seeking a unified daily practice across physical/mental/ethical dimensions | Conversation | `rational-yoga`, `systems-over-goals` | High if explicitly seeking integration | `status/domains/health-fitness.md`, `status/domains/personal-growth-learning.md` |
+| Reactive behavior despite intellectual awareness of the pattern | Conversation | `rational-yoga`, `awareness-as-intervention` | Medium-high — samskara/conditioned pattern signal | Relevant domain |
+| Stress response disproportionate to stimulus with somatic awareness | Conversation | `rational-yoga`, `four-f-survival-types` | Medium — check if breath/body practice would help | `status/domains/health-fitness.md` |
+| Interest in ethical framework grounded in rational self-interest | Conversation | `rational-yoga` | Medium — yamas/niyamas reframe may apply | `status/domains/personal-growth-learning.md` |
+| Attention/focus difficulties with interest in training (not just productivity tools) | Conversation | `rational-yoga`, `executive-function-model` | Medium — dharana/attention training phase | `status/domains/personal-growth-learning.md` |
+
 ## Spiritual and Meaning Signals
 
 | Signal | Source Type | Framework(s) | Confidence Guide | Updates |
@@ -125,6 +137,19 @@ Signal patterns for the scan skill. When you detect a signal in conversation, do
 | Not belonging in a group despite participation | Conversation | `four-f-survival-types`, `family-systems-differentiation` | Medium — anxiety or real misfit? | `status/domains/community.md` |
 
 ---
+
+## Thriving and Flourishing Signals
+
+| Signal | Source Type | Framework(s) | Confidence Guide | Updates |
+|--------|------------|-------------|-----------------|---------|
+| Sustained satisfaction in a domain for 30+ days | Status data, conversation | `identity-reinforcement`, `systems-over-goals` | High — measurable stability | Relevant domain (note as thriving, not just green) |
+| Relationship described with genuine warmth and reciprocity | Conversation | `psychological-contracts` | Medium — single instance may be mood; check pattern | `status/people/` |
+| Energy consistently high for 2+ weeks | Conversation, health data | `behavior-equation`, `embodied-awareness` | High if sustained — something structural is working | `status/domains/health-fitness.md` |
+| Stated values and actual behavior aligned (confirmed by tracker data) | Tracker reports, conversation | `identity-reinforcement`, `north-star-test` | High — strongest signal of integration | `status/domains/personal-growth-learning.md` |
+| User reports feeling "enough" or contentment without resignation | Conversation | `systems-over-goals` | Medium-high — distinguish from avoidance or settling | Relevant domain |
+| Proactive generosity or support toward others | Conversation, messages | `psychological-contracts` | Medium — note in people records | `status/people/` |
+| Completing a meaningful goal and feeling satisfied (not immediately chasing next) | Conversation | `regret-minimization`, `identity-reinforcement` | High — completion + satisfaction is flourishing data | `status/decisions/`, relevant domain |
+| Creative output or generative work described with energy | Conversation | `ikigai-diagnostic` | Medium — check if sustained or novelty | Relevant domain |
 
 ## Adding New Signals
 

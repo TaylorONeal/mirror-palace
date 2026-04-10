@@ -81,10 +81,11 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 **Input:** Framework mapping + signal list
 **Action:** For each signal that maps to a status domain:
 - Draft a proposed issue entry (Issue ID, Title, RYG, Score, Description, domain-specific columns)
-- For people signals: draft a proposed people record
-- For decision signals: draft a proposed decision entry
+- For people signals: draft a proposed people record — include Giving% and "What I Give" when evidence is present
+- For decision signals: draft a proposed decision entry — include "Who's Affected" when stakeholders are mentioned
+- For thriving signals: draft a proposed thriving note on the relevant domain — sustained stability, upward trends, and values-action alignment are worth recording, not just issues
 - Present all proposals to user in a clear, reviewable format
-**Output:** Proposed status updates
+**Output:** Proposed status updates (issues, thriving notes, people records, decision entries)
 **Consent required:** Yes — user must approve each proposed update before it's written
 
 ### Step 5: Write Updates
@@ -121,12 +122,21 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 | Personal Growth | "What are you learning or working on growing right now?" | "Is your learning translating into actual behavior change?" |
 | Spirituality | "Do you have a connection to meaning, purpose, or something bigger? What does that look like?" | "Is your inner life getting the attention it needs?" |
 
+**After the domain interview, ask these closing questions:**
+
+| Question | Purpose |
+|----------|---------|
+| "What part of your life is genuinely working well right now?" | Detect thriving — not just absence of problems, but active flourishing |
+| "What are you proud of recently — something you did that felt like you?" | Identity-aligned action, positive self-concept data |
+| "Who in your life would you say you're showing up well for?" | Relational reciprocity — giving, not just receiving |
+
 **Question design principles:**
 - Open-ended, not leading
 - One topic per question
 - Follow the energy — if a response is rich, go deeper before moving on
 - Don't ask about frameworks by name — detect them from natural language
 - If a topic is sensitive, respect the user's boundaries — note the avoidance as a signal without pushing
+- Balance gap-detection with thriving-detection — the system has a bias toward problems; deliberately surface what's working
 
 ### Step 3: Signal Processing
 **Action:** As the user responds, extract signals and map to frameworks in real-time using `references/signal-patterns.md`. Build the status picture progressively. After all domains are covered, present the complete picture.
@@ -137,8 +147,10 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 **Action:** Review the conversation for people mentioned. For each person:
 - Draft a people record with available information
 - Estimate Support % and Challenge % based on how they were described
+- Estimate Giving % based on what the user describes contributing to the relationship
+- Note "What I Give" when the user describes how they show up for this person
 - Note which domains they're connected to
-**Output:** Draft people records
+**Output:** Draft people records (bidirectional — what they give you AND what you give them)
 **Consent required:** Yes — confirm each person record
 
 ### Step 5: Decision Identification
@@ -146,6 +158,7 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 - Draft a decision record
 - Classify reversibility (one-way vs two-way)
 - Link to domains and people
+- Note "Who's Affected" — who else is impacted by this decision, who depends on it, who benefits
 **Output:** Draft decision records
 **Consent required:** Yes — confirm each decision record
 
@@ -190,14 +203,22 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 
 ### Step 3: Cross-Source Correlation
 **Action:** Look for signals that appear across multiple sources. Cross-source signals are the highest-value findings:
+
+**Problem correlations:**
 - Calendar packed + email backlog growing + response times increasing = systemic overload
 - Calendar empty + low email volume + messaging silence = potential withdrawal
 - New commitments increasing + existing tasks not completing = over-commitment trajectory
-**Output:** Correlated signal list
+
+**Thriving correlations:**
+- Consistent response times + manageable calendar density + regular free blocks = sustainable rhythm
+- Regular contact with key relationships + reciprocal message patterns = healthy relational maintenance
+- Calendar shows both work and non-work activities + no weekend overflow = life balance working
+
+**Output:** Correlated signal list (both problem and thriving signals)
 **Consent required:** No
 
 ### Step 4: Record Proposals
-**Action:** Draft people records (from contacts), domain updates (from calendar/email patterns), and decision entries (from decision-language threads). Present all proposals.
+**Action:** Draft people records (from contacts, including Giving% when reciprocal patterns are visible), domain updates (from calendar/email patterns, including thriving notes for stable domains), and decision entries (from decision-language threads, including "Who's Affected" when multiple parties are involved). Present all proposals.
 **Output:** Proposed updates
 **Consent required:** Yes — user approves each update
 
@@ -262,17 +283,30 @@ The scan skill is not a one-time event. It implements the Continuous Learning Pr
 
 ### On Every Interaction
 1. **Domain update check:** Did the user reveal information that updates a status domain? If yes, propose a 1-line update.
-2. **People update check:** Did a relationship dynamic surface? If yes, propose a people record update.
-3. **Decision check:** Is a decision being discussed? If yes, check for an existing decisions ledger entry or propose a new one.
+2. **People update check:** Did a relationship dynamic surface? If yes, propose a people record update — including Giving% and "What I Give" if the user describes what they contribute to the relationship.
+3. **Decision check:** Is a decision being discussed? If yes, check for an existing decisions ledger entry or propose a new one. Include "Who's Affected" if stakeholders are mentioned.
 4. **Personality check:** Did a personality pattern emerge? If yes, note it in the relevant assessment template.
 5. **Framework cascade:** Did a framework apply? If yes, check the framework's `updates` field in its README.md for what else should be refreshed.
+6. **Thriving check:** Is something genuinely working well? If yes, note it. Sustained satisfaction, values-action alignment, healthy reciprocity, and earned contentment are data worth capturing — not just the absence of problems.
+7. **Relational reciprocity check:** Did the user describe what they give to a relationship, or how their actions affect others? Update people records and decisions accordingly.
+
+### State-Aware Interaction
+Before surfacing patterns or proposing updates, read the user's current state. If the user is activated, distressed, or low-energy:
+- Lead with what's working before naming what's broken
+- Propose fewer updates — one or two, not five
+- Frame observations with warmth, not just accuracy
+- Save deeper pattern work for a calmer moment
+
+The continuous learning protocol should never add cognitive load to someone who's already overloaded.
 
 ### Staleness Detection
 Agents should check on every run:
 - Are any domain files older than 30 days? Flag for review.
 - Are any people records older than 60 days? Flag for review.
 - Are any decisions in "pending" for 30+ days? Flag for review.
+- Are any decisions in "pending" that have a "Who's Affected" section with names in it? Escalate priority — other people are waiting.
 - Have any frameworks been triggered that specify status updates, but those updates haven't been made? Flag the gap.
+- Are any domains green for 60+ days with no issues? Note as thriving — stability is data worth acknowledging, not just problems.
 
 ### Low Friction Is Mandatory
 Do not ask the user to fill out forms. Propose specific updates based on what they said. Confirm with a yes/no. Then write. The goal is zero-friction data maintenance.

@@ -1,6 +1,6 @@
 # DEC-NNN: [Decision Title]
 
-> Status: <!-- not-started / pending / in-progress / decided / revisiting -->
+> Status: <!-- not-started / pending / in-progress / decided / revisiting / released -->
 
 ## Overview
 
@@ -8,7 +8,7 @@
 |-------|-------|
 | Decision ID | DEC-NNN |
 | Title | |
-| Status | <!-- not-started / pending / in-progress / decided / revisiting --> |
+| Status | <!-- not-started / pending / in-progress / decided / revisiting / released --> |
 | Domain | <!-- Comma-separated domain issue IDs this decision affects --> |
 | People | <!-- Comma-separated people record links involved in this decision --> |
 | Reversibility | <!-- one-way / two-way --> |
@@ -38,6 +38,9 @@
 
 ## Reasoning
 <!-- Why this option? What was the decisive factor? -->
+
+## Who's Affected
+<!-- Who else is impacted by this decision? Who depends on it? Who benefits? Who could be harmed? -->
 
 ## Regret Check
 > "At 80, would I regret not doing this?"

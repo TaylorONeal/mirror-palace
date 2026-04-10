@@ -45,7 +45,17 @@ Quick RYG check across the 10 domains. Flag any that are:
 | Personal Growth | | | |
 | Spirituality | | | |
 
-### 4. Pattern Alert (30 seconds)
+### 4. What's Working (30 seconds)
+
+Before flagging problems, notice what's thriving:
+- Any domain green for 30+ days? → Acknowledge the stability. Don't optimize what's already working.
+- A streak being maintained? → Name it. Consistency is worth noting.
+- A score that improved since last check? → Surface the upward trend.
+- A relationship that's healthy and reciprocal? → Let it be a source of strength, not just another thing to track.
+
+If nothing stands out, skip this section. But don't skip it reflexively — the system has a bias toward problem-detection. Counterbalance it.
+
+### 5. Pattern Alert (30 seconds)
 
 The agent checks for active failure modes:
 - Task snoozed 2+ times? → Freeze/overthinking pattern
@@ -55,7 +65,9 @@ The agent checks for active failure modes:
 
 If a pattern is detected, name it. Don't fix it. Naming is the intervention.
 
-### 5. Today's Framework (optional)
+**Pacing note:** If the state check (Step 1) shows low energy, high anxiety, or emotional distress, keep this section minimal. Lead with what's working (Step 4), not what's failing. Analysis can wait for a calmer day.
+
+### 6. Today's Framework (optional)
 
 Rotate through the framework index. Today's spotlight:
 > *See `framework-of-the-day.md` for the rotation schedule*
@@ -72,11 +84,14 @@ Rotate through the framework index. Today's spotlight:
 ### Priority
 [The one thing]
 
+### Working Well
+- [Stable domains, maintained streaks, upward trends — skip if none stand out]
+
 ### Flags
 - [Any red domains, stale data, pending decisions, pattern alerts]
 
 ### People
-- [Anyone to contact or respond to]
+- [Anyone to contact or respond to — include reciprocity: anyone you owe presence to, not just responses]
 
 ### Framework Spotlight
 - [Today's framework + one-line on how it might apply]

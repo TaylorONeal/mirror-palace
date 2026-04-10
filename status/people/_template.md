@@ -11,6 +11,7 @@
 | Domain Links | <!-- Comma-separated domain codes: FAM, CAR, COM, etc. --> |
 | Support % | <!-- 0-100: How much they support your growth --> |
 | Challenge % | <!-- 0-100: How much they constructively challenge you --> |
+| Giving % | <!-- 0-100: How much you actively support and invest in them --> |
 | Contact Frequency | <!-- daily / weekly / biweekly / monthly / quarterly / rare / estranged --> |
 | Last Contact | <!-- YYYY-MM-DD --> |
 | Communication Quality | <!-- 0-100: Honesty, directness, emotional safety of conversations --> |
@@ -23,6 +24,12 @@
 
 ## Needs Unmet
 <!-- What needs are NOT being met in this relationship? -->
+- 
+- 
+- 
+
+## What I Give
+<!-- What do you contribute to this relationship? What do they need from you? -->
 - 
 - 
 - 

@@ -12,7 +12,7 @@ Mirror Palace is organized into five distinct layers, each with a clear responsi
 ╔═══════════════════════════════════════════════════════════════╗
 ║                     KNOWLEDGE LAYER                           ║
 ║  frameworks/                                                  ║
-║  35 frameworks × 4 files = 140 files                         ║
+║  36 frameworks × 4 files = 144 files                         ║
 ║  The agent's training in human psychology                     ║
 ║  ┌────────────┬────────────┬────────────┬────────────┐       ║
 ║  │ theory.md  │template.md │agent-prompt│ README.md  │       ║
@@ -40,11 +40,12 @@ Mirror Palace is organized into five distinct layers, each with a clear responsi
 ╠═══════════════════════════════════════════════════════════════╣
 ║                     ACTION LAYER                              ║
 ║  skills/                                                      ║
-║  ┌─────────────────────┬─────────────────────┐               ║
-║  │ scan                │ setup               │               ║
-║  │ Analyze → populate  │ Integrate → connect │               ║
-║  │ 4 input modes       │ Consent at each step│               ║
-║  └─────────────────────┴─────────────────────┘               ║
+║  ┌──────────────┬──────────────┬──────────────────┐           ║
+║  │ scan         │ setup        │ create-framework │           ║
+║  │ Analyze →    │ Integrate →  │ Scaffold new     │           ║
+║  │ populate     │ connect      │ frameworks       │           ║
+║  │ 4 input modes│ Consent/step │ Guided or Direct │           ║
+║  └──────────────┴──────────────┴──────────────────┘           ║
 ╠═══════════════════════════════════════════════════════════════╣
 ║                    PROCESS LAYER                              ║
 ║  daily/                                                       ║
@@ -237,10 +238,10 @@ OpenClaw agents:
 
 | Layer | Files | Purpose |
 |-------|-------|---------|
-| Knowledge (frameworks/) | 140 | 35 frameworks × 4 files each |
+| Knowledge (frameworks/) | 144 | 36 frameworks × 4 files each |
 | Status (status/) | ~25 | 10 domains + people + decisions + indexes |
 | Agents (agents/) | ~25 | 6 archetypes + templates + orchestration |
-| Skills (skills/) | ~12 | scan + setup + references |
+| Skills (skills/) | ~13 | scan + setup + create-framework + references |
 | Process (daily/) | 5 | Briefing, reflection, check-in, framework-of-day |
 | Docs & Guides | ~15 | README, CLAUDE.md, guides, examples |
 | **Total** | **~243** | |

@@ -34,7 +34,7 @@ graph TB
     classDef process fill:#553c9a,stroke:#6b46c1,color:#e9d8fd
 
     subgraph KNOW ["KNOWLEDGE LAYER — What the agent knows about humans"]
-        F[35 Frameworks] --> EP[Epistemology<br/><i>How to think</i>]
+        F[36 Frameworks] --> EP[Epistemology<br/><i>How to think</i>]
         F --> DM[Decision-Making<br/><i>How to decide</i>]
         F --> BP[Behavioral Psychology<br/><i>How people act</i>]
         F --> CT[Cognitive Therapy<br/><i>Reframing patterns</i>]
@@ -62,8 +62,9 @@ graph TB
     end
 
     subgraph SKILLS ["ACTION LAYER — How it learns and integrates"]
-        SK[2 Skills] --> SC[Scan<br/><i>Analyze & populate</i>]
+        SK[3 Skills] --> SC[Scan<br/><i>Analyze & populate</i>]
         SK --> SE[Setup<br/><i>Integrate with your repo</i>]
+        SK --> CF[Create Framework<br/><i>Scaffold new frameworks</i>]
     end
 
     subgraph DAILY ["PROCESS LAYER — Daily rhythm"]
@@ -121,6 +122,89 @@ graph LR
 
 **The cycle never stops.** Every conversation is a data point. Every framework application is a chance to update your status, refine your personality profile, or catch a pattern. The system gets more useful over time — not because it stores more, but because it understands more.
 
+### The Full Picture
+
+The cycle above shows the mechanics. The diagram below shows *how the system thinks* — what it detects, how it responds, and what it's ultimately building toward.
+
+```mermaid
+graph TB
+    classDef input fill:#1a365d,stroke:#2a4365,color:#bee3f8
+    classDef detect fill:#2d3748,stroke:#4a5568,color:#e2e8f0
+    classDef state fill:#553c9a,stroke:#6b46c1,color:#e9d8fd
+    classDef respond fill:#22543d,stroke:#276749,color:#c6f6d5
+    classDef store fill:#744210,stroke:#975a16,color:#fefcbf
+    classDef vision fill:#742a2a,stroke:#9b2c2c,color:#fed7d7
+
+    subgraph INPUT ["WHAT COMES IN"]
+        I1[Conversation]
+        I2[Documents]
+        I3[Email · Calendar · Messages]
+        I4[Repo activity]
+    end
+
+    subgraph DETECT ["WHAT THE SYSTEM SEES"]
+        direction TB
+        D1["Problems & Gaps<br/><i>Avoidance, stalls, drift,<br/>broken streaks, overcommitment</i>"]
+        D2["Thriving & Flourishing<br/><i>Sustained satisfaction, upward trends,<br/>values-action alignment, creative output</i>"]
+        D3["Relational Dynamics<br/><i>Support given & received,<br/>reciprocity balance, stakeholder impact</i>"]
+        D4["Meaning Signals<br/><i>Purpose alignment, legacy potential,<br/>generative work, contribution</i>"]
+    end
+
+    subgraph STATE ["HOW IT READS YOU"]
+        S1{"User State Check"}
+        S2["Calm · Receptive"]
+        S3["Activated · Anxious"]
+        S4["Flat · Withdrawn"]
+        S5["Energized · Productive"]
+        S1 --> S2 & S3 & S4 & S5
+    end
+
+    subgraph RESPOND ["HOW AGENTS RESPOND"]
+        R1["The Mirror<br/><i>Full reflection: patterns,<br/>meaning questions,<br/>relational awareness</i>"]
+        R2["The Briefer<br/><i>State-paced briefing:<br/>what's working + priorities +<br/>people to show up for</i>"]
+        R3["The Tracker<br/><i>Positive trends & streaks<br/>alongside gaps.<br/>Reciprocity tracking.</i>"]
+        R4["The Strategist<br/><i>Sufficiency checks.<br/>Stakeholder awareness.<br/>Release recommendations.</i>"]
+    end
+
+    subgraph STORE ["WHAT GETS CAPTURED"]
+        ST1["Domains<br/><i>Issues + Thriving notes</i>"]
+        ST2["People<br/><i>Support% · Challenge%<br/>Giving% · What I Give</i>"]
+        ST3["Decisions<br/><i>Who's Affected<br/>Released as valid outcome</i>"]
+    end
+
+    subgraph VISION ["WHAT IT'S ALL BUILDING TOWARD"]
+        V["Surface patterns → Calm the mind → Act with integrity → Live fully"]
+    end
+
+    I1 & I2 & I3 & I4 --> D1 & D2 & D3 & D4
+    D1 & D2 & D3 & D4 --> S1
+    S2 -->|"full depth"| R1
+    S3 -->|"warmth first,<br/>one insight max"| R2
+    S4 -->|"gentle,<br/>don't demand"| R2
+    S5 -->|"match energy,<br/>go deeper"| R1
+    R1 & R2 & R3 & R4 --> ST1 & ST2 & ST3
+    ST1 & ST2 & ST3 -->|"continuous learning"| DETECT
+    R1 & R2 & R3 & R4 --> V
+
+    class I1,I2,I3,I4 input
+    class D1,D2,D3,D4 detect
+    class S1,S2,S3,S4,S5 state
+    class R1,R2,R3,R4 respond
+    class ST1,ST2,ST3 store
+    class V vision
+```
+
+**What changed from a typical self-knowledge system:**
+
+| Traditional Approach | Mirror Palace |
+|---------------------|---------------|
+| Detect problems | Detect problems **and** thriving |
+| Track what others do for you | Track what you give **and** receive |
+| Always analyze | Read your state — **back off when you need calm** |
+| Optimize endlessly | Know when **enough is enough** |
+| Self-focused | **Stakeholder-aware** — who else does this affect? |
+| Clarity as the goal | Clarity **in service of** a fulfilling life |
+
 ---
 
 ## The 10 Life Domains
@@ -150,13 +234,13 @@ Every area of your life gets tracked, scored, and cross-linked.
 | **Personal Growth** | `GRO` | Domain, format, active/paused, integration level |
 | **Spirituality** | `SPR` | Practice type, frequency, depth, daily integration |
 
-**Plus:** People Records (support%, challenge%, needs met/unmet) and a Decisions Ledger (status, reversibility, domain links, regret check).
+**Plus:** People Records (support%, challenge%, giving% — what you receive AND what you give) and a Decisions Ledger (status, reversibility, who's affected, domain links, regret check).
 
 ---
 
 ## The Framework Library
 
-35 frameworks across 14 categories. Each one has:
+36 frameworks across 15 categories. Each one has:
 
 | File | Purpose |
 |------|---------|
@@ -202,8 +286,8 @@ PATTERN DETECTION               ├── Big Five (OCEAN)
 ├── Failure Modes (7 types)     ├── Enneagram (9 types)
 └── Psychological Contracts     └── MBTI (16 types)
 
-ANTI-PATTERNS
-└── System Anti-Patterns (12)
+ANTI-PATTERNS                   INTEGRATED PRACTICE
+└── System Anti-Patterns (12)   └── Rational Yoga
 ```
 
 > ⚠️ **Influence Defense** is explicitly *defensive* — recognizing techniques used on you, not techniques to use on others.
@@ -216,12 +300,12 @@ Six pre-built agent personalities. Deploy one or all six.
 
 | Archetype | What It Does | Voice |
 |-----------|-------------|-------|
-| **The Mirror** | Detects patterns across weeks. Names what you're avoiding. | Like a letter from a friend who knows you deeply |
-| **The Briefer** | "3 things that matter today." Reads all reports, cuts the noise. | Sharp chief of staff |
-| **The Tracker** | "You said X. You did Y." Compares intent to reality. | Terse, factual, no judgment |
+| **The Mirror** | Detects patterns across weeks. Names what's working and what you're avoiding. Asks "what is this in service of?" Notices relational imbalances. Paces to your state. | Like a letter from a friend who knows you deeply |
+| **The Briefer** | "3 things that matter today." Leads with what's working. Adjusts briefing intensity to your energy and emotional state. | Sharp chief of staff |
+| **The Tracker** | "You said X. You did Y." Reports positive trends and sustained streaks alongside gaps. Tracks relational reciprocity. | Terse, factual, no judgment |
 | **The Watcher** | Monitors changes across repos, docs, status. Flags drift. | Methodical completist |
-| **The Strategist** | Tracks goal pipelines. Flags stalls. Maintains momentum. | Strategic but direct |
-| **The Operator** | Domain-specific ops. Watches signals, drafts responses. | Operational, brief |
+| **The Strategist** | Tracks goal pipelines. Flags stalls. Recommends releasing goals that no longer serve. Asks "who else does this matter to?" | Strategic but direct |
+| **The Operator** | Domain-specific ops. Watches signals, drafts responses. Notes stakeholder impact. | Operational, brief |
 
 Each archetype has a `SOUL.md` (personality + scope), `MEMORY.md` (what it knows), `HEARTBEAT.md` (when it runs), and a `README.md` explaining when to deploy it.
 
@@ -281,13 +365,27 @@ Works with **Claude Code** and **OpenClaw**.
 │  frameworks/ (knowledge)        │
 │  status/    (your data)         │
 │  agents/    (archetypes)        │
-│  skills/    (scan + setup)      │
+│  skills/    (scan+setup+create) │
 │  daily/     (process)           │
 │  index.md   (routing table)     │
 └─────────────────────────────────┘
 ```
 
 See [`guides/claude-code-setup.md`](guides/claude-code-setup.md) or [`guides/openclaw-setup.md`](guides/openclaw-setup.md).
+
+---
+
+## Philosophy
+
+The system optimizes for **clarity in service of flourishing** — not just seeing yourself clearly, but using that clarity to build a life worth living.
+
+```
+Surface patterns  →  Calm the mind  →  Act with integrity  →  Live fully
+```
+
+Every component is oriented toward this progression: agents detect what's working alongside what's broken, adjust their intensity to your state, track relational reciprocity (not just what you receive), consider who else your decisions affect, and know when enough is enough.
+
+See [`docs/ROADMAP.md`](docs/ROADMAP.md) for the full philosophy and how it's applied.
 
 ---
 
