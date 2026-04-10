@@ -66,9 +66,17 @@ graph TD
 
     IDENTITY --> SIC[self-image-cybernetics]
     IDENTITY --> TP[teleological-psychology]
+    IDENTITY --> RSI[rational-self-interest]
     IDENTITY --> BF[big-five]
     IDENTITY --> EN[enneagram]
     IDENTITY --> MB[mbti]
+
+    START --> PRACTICE[Building an integrated practice]
+    PRACTICE --> Q11{Need rational framework?}
+    Q11 --> RY[rational-yoga]
+    PRACTICE --> Q12{Body-mind connection?}
+    Q12 --> EA2[embodied-awareness]
+    Q12 --> RY2[rational-yoga]
 ```
 
 ---
@@ -100,6 +108,7 @@ graph TD
 | `SIC` | Self-Image | [Self-Image Cybernetics](frameworks/self-image/self-image-cybernetics/) | Self-concept is limiting behavior, identity doesn't match actions | `personality-assessments/`, `status/domains/personal-growth-learning.md` | teleological-psychology, identity-reinforcement |
 | `TP` | Self-Image | [Teleological Psychology](frameworks/self-image/teleological-psychology/) | Examining hidden goals, belonging strategies, purpose narratives | `status/domains/`, `status/decisions/` | self-image-cybernetics, stories-vs-facts |
 | `SOG` | Self-Image | [Systems Over Goals](frameworks/self-image/systems-over-goals/) | Building sustainable practices instead of chasing endpoints | `status/domains/` | identity-reinforcement, behavior-equation |
+| `RSI` | Self-Image | [Rational Self-Interest](frameworks/self-image/rational-self-interest/) | Guilt about self-prioritization, values misalignment, living by default rather than choice | `status/domains/personal-growth-learning.md`, `status/domains/career-work.md`, `status/decisions/` | systems-over-goals, identity-reinforcement, north-star-test, ikigai-diagnostic |
 | `4F` | Trauma Recovery | [Four-F Survival Types](frameworks/trauma-recovery/four-f-survival-types/) | Stress response feels disproportionate, flashback-like reactions | `status/domains/`, `status/people/` | childhood-emotional-neglect, five-wounds |
 | `CEN` | Trauma Recovery | [Childhood Emotional Neglect](frameworks/trauma-recovery/childhood-emotional-neglect/) | Difficulty identifying needs, counter-dependence, emotional numbness | `status/people/`, `status/domains/partner-love.md` | four-f-survival-types, emotionally-immature-parents |
 | `EIP` | Trauma Recovery | [Emotionally Immature Parents](frameworks/trauma-recovery/emotionally-immature-parents/) | Recognizing parent patterns, internalizer/externalizer dynamics | `status/people/`, `status/domains/family-friends.md` | childhood-emotional-neglect, family-systems-differentiation |
@@ -119,6 +128,7 @@ graph TD
 | `FM` | Pattern Detection | [Failure Modes](frameworks/pattern-detection/failure-modes/) | Recurring behavioral pattern detected, need to name and intervene | `status/domains/` | distortion-detection, awareness-as-intervention |
 | `PC` | Pattern Detection | [Psychological Contracts](frameworks/pattern-detection/psychological-contracts/) | Invisible relational agreements, nervous system bias in relationships | `status/people/` | failure-modes, family-systems-differentiation |
 | `SAP` | Anti-Patterns | [System Anti-Patterns](frameworks/anti-patterns/system-anti-patterns/) | Designing or auditing a productivity/tracking system | — | adhd-design-rules, north-star-test |
+| `RY` | Integrated Practice | [Rational Yoga](frameworks/integrated-practice/rational-yoga/) | Seeking unified physical/psychological/ethical practice grounded in evidence, not mysticism | `status/domains/health-fitness.md`, `status/domains/personal-growth-learning.md`, `status/domains/spirituality.md` | embodied-awareness, awareness-as-intervention, systems-over-goals, identity-reinforcement |
 
 ---
 
