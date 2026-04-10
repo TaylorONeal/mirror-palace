@@ -308,6 +308,14 @@ That knowledge — structured, accessible, continuously updated — is what turn
 
 ---
 
+## Acknowledgments
+
+This project grew out of too many late nights, too many frameworks studied, and too many projects running at once. It draws from the memory palace tradition, graph-based knowledge systems like Graphify, and every psychology, behavioral science, coaching, and self-development framework I've ever studied and actually applied — there are genuinely too many to list.
+
+If you recognize your work in here and feel it needs a credit, reach out. The frameworks are described by concept, not by name, because this is a toolkit for application, not an academic citation index. But the ideas belong to the people who developed them, and this project wouldn't exist without their work.
+
+---
+
 ## License
 
 MIT
