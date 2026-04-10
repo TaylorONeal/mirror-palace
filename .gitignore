@@ -16,3 +16,8 @@ Thumbs.db
 
 # Node (if scripts are added later)
 node_modules/
+status/people/audrey.md
+status/people/rachel.md
+status/people/steph-smith.md
+status/decisions/DEC-*.md
+status/scan-report-*.md
