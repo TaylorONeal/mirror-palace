@@ -1,43 +1,43 @@
 # Syncing Mirror Palace
 
-Mirror Palace lives in two repos. This document explains how they relate and how to keep them in sync safely.
+Mirror Palace is designed to live in two copies. This document explains how they relate and how to keep them in sync safely.
 
 ---
 
-## The Two Repos
+## The Two Copies
 
 ```
-┌──────────────────────────────────────────────┐
-│  PRIVATE: flight-deck/mirror-palace/          │
-│                                               │
-│  Your personal copy. Contains:                │
-│  - All frameworks (same as public)            │
-│  - Filled-in status domains (YOUR data)       │
-│  - People records (YOUR relationships)        │
-│  - Decisions ledger (YOUR decisions)          │
-│  - Personality results (YOUR profile)         │
-│  - Agent memory files (observations of YOU)   │
-│                                               │
-│  This is YOUR mirror. Private. Confidential.  │
-└──────────────────┬───────────────────────────┘
-                   │
-                   │  frameworks, docs, guides
-                   │  flow BOTH directions
-                   │
-                   │  personal data flows
-                   │  ONE direction only: DOWN
-                   │
-┌──────────────────▼───────────────────────────┐
-│  PUBLIC: TaylorONeal/mirror-palace             │
-│                                               │
-│  The open-source toolkit. Contains:           │
-│  - All frameworks (theory, templates, prompts)│
-│  - Blank status templates                     │
-│  - Empty people/decisions templates           │
-│  - Docs, guides, examples                     │
-│                                               │
-│  General purpose. No personal data. Ever.     │
-└──────────────────────────────────────────────┘
++-------------------------------------------------+
+|  PRIVATE COPY (your personal workspace)         |
+|                                                 |
+|  Contains:                                      |
+|  - All frameworks (same as public)              |
+|  - Filled-in status domains (YOUR data)         |
+|  - People records (YOUR relationships)          |
+|  - Decisions ledger (YOUR decisions)            |
+|  - Personality results (YOUR profile)           |
+|  - Agent memory files (observations of YOU)     |
+|                                                 |
+|  This is YOUR mirror. Private. Confidential.    |
++-----------------------+-------------------------+
+                        |
+                        |  frameworks, docs, guides
+                        |  flow BOTH directions
+                        |
+                        |  personal data flows
+                        |  ONE direction only: DOWN
+                        |
++-----------------------v-------------------------+
+|  PUBLIC REPO                                    |
+|                                                 |
+|  The open-source toolkit. Contains:             |
+|  - All frameworks (theory, templates, prompts)  |
+|  - Blank status templates                       |
+|  - Empty people/decisions templates             |
+|  - Docs, guides, examples                       |
+|                                                 |
+|  General purpose. No personal data. Ever.       |
++-------------------------------------------------+
 ```
 
 ---
@@ -48,26 +48,26 @@ If you're starting fresh:
 
 ```bash
 # Clone the public repo into your private workspace
-cd /path/to/your-private-repo
-git clone https://github.com/TaylorONeal/mirror-palace.git
+cd /path/to/your-private-workspace
+git clone <public-repo-url> mirror-palace
 
-# Or add as a subdirectory (no submodule)
-cp -r /path/to/mirror-palace /path/to/your-private-repo/mirror-palace
+# Or copy it as a standalone directory
+cp -r /path/to/mirror-palace /path/to/your-private-workspace/mirror-palace
 ```
 
 Then start filling in your status domains, people records, and templates. That data stays local.
 
 ---
 
-## Pulling Updates from Public → Private
+## Pulling Updates from Public -> Private
 
 When the public repo gets new frameworks, improved theory, or bug fixes:
 
 ```bash
-cd /path/to/your-private-repo/mirror-palace
+cd /path/to/your-private-workspace/mirror-palace
 
 # Add upstream remote (one-time)
-git remote add upstream https://github.com/TaylorONeal/mirror-palace.git
+git remote add upstream <public-repo-url>
 
 # Fetch latest
 git fetch upstream main
@@ -87,7 +87,7 @@ git checkout upstream/main -- docs/ guides/ README.md CONTRIBUTING.md
 
 ---
 
-## Pushing Improvements from Private → Public
+## Pushing Improvements from Private -> Public
 
 When you improve a framework's theory, template, or agent-prompt and want to share it:
 
@@ -116,12 +116,12 @@ grep -ri "YOUR_NAME\|specific-names\|real-addresses\|@gmail\|scores\|status:" pa
 
 ### Step 3: Push clean
 
-Easiest method — edit directly on GitHub or in a clean clone:
+Easiest method -- edit directly on GitHub or in a clean clone:
 
 ```bash
 cd /tmp
-git clone https://github.com/TaylorONeal/mirror-palace.git mp-clean
-cp /path/to/your-private-repo/mirror-palace/frameworks/category/name/theory.md mp-clean/frameworks/category/name/theory.md
+git clone <public-repo-url> mp-clean
+cp /path/to/your-workspace/mirror-palace/frameworks/category/name/theory.md mp-clean/frameworks/category/name/theory.md
 cd mp-clean
 git add -A
 git commit -m "Improve [framework] theory"
@@ -145,7 +145,7 @@ agents/*/MEMORY.md         (agent observations about you)
 agents/*/WORKING.md        (session state)
 ```
 
-The **templates** and **_template/** versions of these files are safe — they're blank.
+The **templates** and **_template/** versions of these files are safe -- they're blank.
 
 ---
 
@@ -156,5 +156,5 @@ The **templates** and **_template/** versions of these files are safe — they'r
 | Get a new framework from public | `git checkout upstream/main -- frameworks/category/name/` |
 | Update docs from public | `git checkout upstream/main -- docs/ guides/` |
 | Share an improved framework | Copy clean file to a fresh clone, push from there |
-| Add a new framework to public | Same as above — write it general, push clean |
-| Update my personal status | Edit directly in flight-deck. It stays there. |
+| Add a new framework to public | Same as above -- write it general, push clean |
+| Update my personal status | Edit in your private copy only. It stays there. |

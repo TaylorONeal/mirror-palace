@@ -47,18 +47,34 @@ for file in $(echo "$STAGED_FILES" | grep "^status/domains/" || true); do
     fi
 done
 
-# --- Check 3: Block files containing real names ---
-# Add known names here as the system learns them
-KNOWN_NAMES="audrey|rachel|steph-smith"
-for file in $(echo "$STAGED_FILES" | grep "\.md$" || true); do
+# --- Check 3: Block files containing known private-repo references ---
+# The private workspace name must NEVER appear in this repo
+BLOCKED_KEYWORDS="flight-deck"
+for file in $(echo "$STAGED_FILES" | grep -E "\.(md|sh|yml|yaml|json|toml)$" || true); do
     if [ -f "$file" ]; then
-        if grep -qiE "$KNOWN_NAMES" "$file" 2>/dev/null; then
-            echo -e "${RED}BLOCKED:${NC} File contains known personal names:"
+        if grep -qiE "$BLOCKED_KEYWORDS" "$file" 2>/dev/null; then
+            echo -e "${RED}BLOCKED:${NC} File contains private-repo reference:"
             echo "  - $file"
             BLOCKED=1
         fi
     fi
 done
+
+# --- Check 3b: Block files containing real names ---
+# Add known names to your PRIVATE copy of this hook only.
+# This public version ships with an empty list.
+KNOWN_NAMES=""
+if [ -n "$KNOWN_NAMES" ]; then
+    for file in $(echo "$STAGED_FILES" | grep "\.md$" || true); do
+        if [ -f "$file" ]; then
+            if grep -qiE "$KNOWN_NAMES" "$file" 2>/dev/null; then
+                echo -e "${RED}BLOCKED:${NC} File contains known personal names:"
+                echo "  - $file"
+                BLOCKED=1
+            fi
+        fi
+    done
+fi
 
 # --- Check 4: Block index files that reference real data ---
 for file in $(echo "$STAGED_FILES" | grep -E "(ISSUE-INDEX|PEOPLE-INDEX|DECISIONS-INDEX)" || true); do

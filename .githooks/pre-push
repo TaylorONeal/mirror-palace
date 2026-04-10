@@ -33,6 +33,16 @@ if echo "$REMOTE" | grep -qi "mirror-palace"; then
         BLOCKED=1
     fi
 
+    # Check for private-repo references in all tracked files
+    for file in $(echo "$ALL_FILES" | grep -E "\.(md|sh|yml|yaml|json|toml)$"); do
+        if [ -f "$file" ]; then
+            if grep -qiE "flight-deck" "$file" 2>/dev/null; then
+                echo -e "${RED}BLOCKED:${NC} Private-repo reference found in: $file"
+                BLOCKED=1
+            fi
+        fi
+    done
+
     # Check for email addresses in all tracked .md files
     for file in $(echo "$ALL_FILES" | grep "\.md$"); do
         if [ -f "$file" ]; then
