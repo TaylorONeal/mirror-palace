@@ -8,21 +8,23 @@ Each skill lives in its own directory under `skills/` and contains:
 
 ```
 skills/
-  _template/          ← Template for creating new skills
+  _template/              ← Template for creating new skills
     SKILL.md
-  scan/               ← Analyze inputs to recommend frameworks
+  scan/                   ← Analyze inputs to recommend frameworks
     SKILL.md
     references/
       signal-patterns.md
       mcp-connectors.md
       report-template.md
-  setup/              ← Integrate mirror-palace into a repo
+  setup/                  ← Integrate mirror-palace into a repo
     SKILL.md
     references/
       integration-checklist.md
       agents-md-patch.md
       claude-md-patch.md
       openclaw-setup.md
+  create-framework/       ← Scaffold a new framework from a concept
+    SKILL.md
 ```
 
 ## SKILL.md Structure
@@ -57,3 +59,6 @@ Analyze documents, conversations, connected services, or existing repos to ident
 
 ### setup
 Integrate mirror-palace into an existing project. Patches AGENTS.md and CLAUDE.md, sets up framework references, configures agents, and verifies the integration. User consent required at every step.
+
+### create-framework
+Scaffold a complete new framework from a concept, paper, book, or raw idea. Generates all four files (README.md, theory.md, template.md, agent-prompt.md), validates quality and distinctness against existing frameworks, and updates index.md. Two modes: Guided (interactive) and Direct (one-shot from source material).
