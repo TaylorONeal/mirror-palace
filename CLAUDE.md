@@ -42,8 +42,65 @@ Six pre-built agent personalities in `agents/archetypes/`. Each has SOUL.md (ide
 - **scan** — Analyze documents, conversations, or connected services to recommend frameworks and populate the status system
 - **setup** — Integrate mirror-palace into an existing repo (AGENTS.md, CLAUDE.md patches) with user consent at every step
 
+## Two-Repo Architecture
+
+Mirror Palace exists in two places:
+
+| Repo | Visibility | Contains |
+|------|-----------|----------|
+| `flight-deck/mirror-palace/` | **Private** | Your personal data: filled-in status domains, people records, decisions, personality assessments, agent memory |
+| `TaylorONeal/mirror-palace` | **Public (open source)** | Blank frameworks, empty templates, general docs. No personal data ever. |
+
+**The public repo is the upstream. The private copy diverges as you use it.**
+
+### What goes where
+
+| Content | Private (flight-deck) | Public (open source) |
+|---------|----------------------|---------------------|
+| Framework theory/templates/prompts | Yes | Yes |
+| Filled-in status domains (scores, notes) | Yes | **NEVER** |
+| People records (names, dynamics) | Yes | **NEVER** |
+| Decisions ledger (real decisions) | Yes | **NEVER** |
+| Personality assessment results | Yes | **NEVER** |
+| Agent MEMORY.md (observations) | Yes | **NEVER** |
+| New frameworks (general) | Yes | Yes (sync upstream) |
+| docs/, guides/, examples/ | Yes | Yes |
+
+### Syncing: pulling upstream improvements
+
+When the public repo gets new frameworks or improvements:
+
+```bash
+cd /path/to/flight-deck/mirror-palace
+git remote add upstream https://github.com/TaylorONeal/mirror-palace.git  # one-time
+git fetch upstream main
+git checkout upstream/main -- frameworks/NEW-CATEGORY/NEW-FRAMEWORK/
+```
+
+Only pull specific files/folders. Never do a full merge — it would overwrite your filled-in data.
+
+### Syncing: pushing general improvements upstream
+
+When you improve a framework theory, template, or agent-prompt (not personal data):
+
+```bash
+cd /path/to/flight-deck/mirror-palace
+# Verify the file has NO personal data
+grep -i "YOURNAME\|specific-person\|real-address" path/to/file.md
+# If clean, copy to a temp clone and push
+```
+
+Or simpler: edit directly on GitHub / in a clean clone of the public repo.
+
+### Safety rules for syncing
+
+1. **NEVER push status/, people records, or decisions to the public repo**
+2. **NEVER push agent MEMORY.md files to the public repo** — they contain observations about you
+3. **Always grep for personal data before pushing anything upstream**
+4. **When in doubt, don't push** — it's easier to manually copy a clean file than to scrub a leaked one
+
 ## Rules
 - **No author names.** Frameworks are referenced by concept only. Never attribute to specific people.
-- **No personal data.** Everything is generalized. Templates are blank starters.
+- **No personal data in the public repo.** Templates are blank starters. Filled-in data stays in flight-deck only.
 - **Influence defense is defensive.** The influence-defense frameworks are about recognizing techniques used on you, never about using them on others.
 - **Depth over breadth.** Every framework should be genuinely useful, not a placeholder.
