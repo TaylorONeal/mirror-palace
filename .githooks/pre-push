@@ -1,0 +1,69 @@
+#!/bin/bash
+# ============================================================
+# Mirror Palace Pre-Push Hook
+# Final safety gate before anything reaches GitHub.
+# ============================================================
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+echo ""
+echo "=== Mirror Palace Pre-Push Safety Gate ==="
+echo ""
+
+REMOTE="$1"
+
+# Check if pushing to the public mirror-palace repo
+if echo "$REMOTE" | grep -qi "mirror-palace"; then
+    echo "Pushing to PUBLIC mirror-palace repo. Running full scan..."
+    echo ""
+
+    BLOCKED=0
+
+    # Scan ALL tracked files (not just staged)
+    ALL_FILES=$(git ls-files)
+
+    # Check for personal data paths
+    PERSONAL=$(echo "$ALL_FILES" | grep -E "(status/people/[^_R]|status/decisions/DEC-|scan-report|MEMORY\.md|WORKING\.md|SYNC\.md)" || true)
+    if [ -n "$PERSONAL" ]; then
+        echo -e "${RED}BLOCKED:${NC} Personal data files are tracked:"
+        echo "$PERSONAL" | while read -r f; do echo "  - $f"; done
+        BLOCKED=1
+    fi
+
+    # Check for email addresses in all tracked .md files
+    for file in $(echo "$ALL_FILES" | grep "\.md$"); do
+        if [ -f "$file" ]; then
+            if grep -qE "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" "$file" 2>/dev/null; then
+                echo -e "${RED}BLOCKED:${NC} Email address found in: $file"
+                BLOCKED=1
+            fi
+        fi
+    done
+
+    # Check for filled-in status data
+    for file in $(echo "$ALL_FILES" | grep "^status/domains/" || true); do
+        if [ -f "$file" ]; then
+            if grep -qiE "score:\s*[0-9]|status:\s*(red|yellow|green)" "$file" 2>/dev/null; then
+                echo -e "${RED}BLOCKED:${NC} Filled-in status data in: $file"
+                BLOCKED=1
+            fi
+        fi
+    done
+
+    if [ "$BLOCKED" -eq 1 ]; then
+        echo ""
+        echo -e "${RED}PUSH BLOCKED.${NC} Personal data would be exposed."
+        echo "Remove personal files with: git rm <file>"
+        echo "Or bypass with: git push --no-verify (NOT RECOMMENDED)"
+        echo ""
+        exit 1
+    fi
+
+    echo -e "${GREEN}All clear.${NC} No personal data in tracked files."
+    echo ""
+fi
+
+exit 0

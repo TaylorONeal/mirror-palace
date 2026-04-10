@@ -16,8 +16,68 @@ Thumbs.db
 
 # Node (if scripts are added later)
 node_modules/
-status/people/audrey.md
-status/people/rachel.md
-status/people/steph-smith.md
+
+# ============================================================
+# PERSONAL DATA PROTECTION
+# Everything below prevents private data from being pushed
+# to the public mirror-palace repo.
+# ============================================================
+
+# --- People records (contain real names and relationship data) ---
+# Block ALL .md files in status/people/ EXCEPT the templates
+status/people/*.md
+
+# --- Decisions (contain real decisions with context) ---
+# Block all decision files (DEC-001.md, DEC-002.md, etc.)
 status/decisions/DEC-*.md
+
+# --- Filled-in domain status files ---
+# These get populated with personal scores, notes, issues
+# Block all .md in status/domains/ EXCEPT the template
+status/domains/*.md
+
+# --- Scan reports (contain analyzed personal data) ---
 status/scan-report-*.md
+status/scan-report*.md
+
+# --- Agent memory files (contain observations about you) ---
+agents/archetypes/*/MEMORY.md
+agents/archetypes/*/WORKING.md
+
+# --- Index files that get populated with personal data ---
+status/ISSUE-INDEX.md
+status/people/PEOPLE-INDEX.md
+status/decisions/DECISIONS-INDEX.md
+
+# --- Private sync/config docs ---
+SYNC.md
+*.private.md
+*.local.md
+
+# --- Catch-all: any file with "personal" or "private" in name ---
+*personal*
+*private*
+
+# ============================================================
+# SAFE FILES (these are general and OK to push public)
+# ============================================================
+# To push a file that matches a pattern above, use:
+#   git add --force path/to/file.md
+#
+# Safe files that won't match the patterns above:
+#   frameworks/         (all theory, templates, prompts, READMEs)
+#   agents/_template/   (blank templates)
+#   agents/archetypes/*/SOUL.md
+#   agents/archetypes/*/README.md
+#   agents/orchestration/
+#   skills/
+#   daily/              (blank templates)
+#   guides/
+#   examples/
+#   docs/
+#   index.md
+#   README.md
+#   CLAUDE.md
+#   CONTRIBUTING.md
+#   LICENSE
+# ============================================================
