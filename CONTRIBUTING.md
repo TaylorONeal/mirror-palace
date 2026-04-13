@@ -17,6 +17,7 @@ This repository is public-facing framework infrastructure.
 - Direct identifiers (email, phone, address, SSN, account IDs, birth dates, handles tied to private context).
 - Any combined detail set that can re-identify a person.
 - Your private hook blocklists or internal-only keyword lists. Keep those in your local copy, not in this public repo.
+- Public hooks should remain generic. Add your own private repo names, personal names, and internal identifiers only in local-only copies.
 
 ### If a leak is detected (treat as P1/S1)
 1. Remove the leaked content immediately in a new commit.

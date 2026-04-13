@@ -100,6 +100,8 @@ grep -ri "YOUR_NAME\|specific-names\|real-addresses\|@gmail\|scores\|status:" pa
 
 If you use custom privacy hooks or local keyword blocklists for your own workspace, keep those rules in your private/local copy only. The public repo should stay generic so other users can add their own local boundaries.
 
+Explicit rule: the shared/public version should contain generic hooks only. User-specific blocklists, private repo names, personal names, and internal workspace identifiers belong only in local copies.
+
 ### Step 2: Decide if it's safe
 
 | File type | Safe to push? |

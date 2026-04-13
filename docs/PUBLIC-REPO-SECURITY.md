@@ -18,7 +18,8 @@ Any personal-data leakage is treated as a **P1/S1 incident**.
 3. Exclude direct identifiers (email, phone, address, account IDs, birth dates).
 4. Exclude quasi-identifiers that can combine into re-identification.
 5. Review diffs before commit with a privacy lens.
-6. Keep personal privacy blocklists local. If you maintain custom hook rules for private repo names, personal names, or internal workspace identifiers, store those in your local copy only, not in the public repo.
+6. Keep personal privacy blocklists local. If you maintain custom hook rules for private repo names, personal names, internal workspace identifiers, or other sensitive keywords, store those in your local copy only, not in the public repo.
+7. The public repo should ship generic hooks and generic documentation. Individual users should add their own private keyword lists, name blocklists, and internal identifiers in local-only copies.
 
 ## Response Workflow for Suspected Leakage
 1. **Contain:** remove leaked material immediately in HEAD.
