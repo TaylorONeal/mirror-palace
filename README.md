@@ -2,6 +2,8 @@
 
 ### A cognitive framework toolkit that teaches AI agents how *you* work — so they can help you work better.
 
+> **Security-first public-repo rule:** This repository contains only generalized framework content. Personal/user-specific data must remain segregated in private systems and never be committed here.
+
 ---
 
 ## Why This Exists
