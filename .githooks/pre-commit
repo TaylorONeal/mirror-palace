@@ -47,18 +47,21 @@ for file in $(echo "$STAGED_FILES" | grep "^status/domains/" || true); do
     fi
 done
 
-# --- Check 3: Block files containing known private-repo references ---
-# The private workspace name must NEVER appear in this repo
-BLOCKED_KEYWORDS="flight-deck"
-for file in $(echo "$STAGED_FILES" | grep -E "\.(md|sh|yml|yaml|json|toml)$" || true); do
-    if [ -f "$file" ]; then
-        if grep -qiE "$BLOCKED_KEYWORDS" "$file" 2>/dev/null; then
-            echo -e "${RED}BLOCKED:${NC} File contains private-repo reference:"
-            echo "  - $file"
-            BLOCKED=1
+# --- Check 3: Block files containing known private-workspace references ---
+# Add private repo/workspace names to your LOCAL copy of this hook only.
+# The public repo should remain generic.
+BLOCKED_KEYWORDS=""
+if [ -n "$BLOCKED_KEYWORDS" ]; then
+    for file in $(echo "$STAGED_FILES" | grep -E "\.(md|sh|yml|yaml|json|toml)$" || true); do
+        if [ -f "$file" ]; then
+            if grep -qiE "$BLOCKED_KEYWORDS" "$file" 2>/dev/null; then
+                echo -e "${RED}BLOCKED:${NC} File contains private-workspace reference:"
+                echo "  - $file"
+                BLOCKED=1
+            fi
         fi
-    fi
-done
+    done
+fi
 
 # --- Check 3b: Block files containing real names ---
 # Add known names to your PRIVATE copy of this hook only.
