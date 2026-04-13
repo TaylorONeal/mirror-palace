@@ -17,9 +17,9 @@ Open `template.md` in the same framework folder. Fill it out for your current si
 ## Step 4: Run the Scan (optional, 3 min)
 
 If you're using Claude Code or OpenClaw, run the scan skill:
-- Point it at your existing documents, journals, or notes
-- It will analyze your writing for signals and recommend additional frameworks
-- It can partially populate your status domains and personality assessments
+- Point it at a small set of existing documents, journals, or notes
+- It will look for recurring patterns and recommend relevant frameworks
+- It can help draft structured status updates for your review
 
 See [`claude-code-setup.md`](claude-code-setup.md) or [`openclaw-setup.md`](openclaw-setup.md) for integration.
 
@@ -42,4 +42,4 @@ Browse `status/domains/`. Pick the 2-3 domains that matter most right now. Add a
 | 2 | Initialize 3-4 status domains. Run scan if using Claude Code. |
 | 3 | Deploy 1-2 agent archetypes (start with The Mirror and The Briefer). |
 | 4 | Start weekly reflections. Add people records for key relationships. |
-| 5+ | The system will tell you what's next — stale data surfaces, patterns emerge, frameworks get recommended automatically. |
+| 5+ | Review what has actually been useful, add frameworks selectively, and keep the system grounded in real use rather than maximal setup. |

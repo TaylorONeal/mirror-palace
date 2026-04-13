@@ -10,18 +10,18 @@
 
 AI agents are getting good at remembering what you're working on. Your projects, your tasks, your calendar, your code. That's table stakes.
 
-What they don't remember is **how you work**. How you make decisions. Where you freeze. What triggers your avoidance. Which relationships drain you. What your stress response looks like. What you actually mean when you say "I'm fine." How your energy moves through the day. What you lie to yourself about.
+What they don't remember is **how you work**. How you make decisions. Where you get stuck. What tends to trigger avoidance. How your stress response affects execution. How your energy moves through the day. Which environments help and which ones create drag.
 
-That second kind of memory — the memory of *you* — is where the real leverage is.
+That second kind of memory, the memory of *your patterns*, is where the real leverage is.
 
 > **Project memory helps you finish things.**
 > **Self-knowledge memory helps you build a life that works.**
 
-A calendar briefing tells you what's happening today. Mirror Palace tells the agent *who is showing up today* — and what that person actually needs to hear.
+A calendar briefing tells you what's happening today. Mirror Palace gives an agent a structured way to reason about the patterns behind the day.
 
-The difference between a prescient daily briefing and a transformative one isn't more data. It's depth. It's the agent knowing that when you start three new projects in a week, you're probably avoiding something. That when you go quiet in relationships, it's not preference — it's a pattern. That your best work happens in specific energy windows and everything outside those windows is friction pretending to be discipline.
+The difference between a generic briefing and a genuinely useful one is not more raw data. It's better interpretation. If a new project spree usually signals drift, that matters. If low sleep reliably changes what kind of work is realistic, that matters. If a repeated delay pattern shows up around certain decisions, that matters too.
 
-Mirror Palace is the structured knowledge base that makes that depth possible. Not a personality quiz. Not a chatbot with a memory feature. A comprehensive, continuously-learning system of 35+ psychological frameworks, behavioral science models, and self-knowledge instruments — organized so AI agents can actually use them in real-time to help you grow, decide, and act with less suffering and more clarity.
+Mirror Palace is the structured knowledge base for that layer. Not a personality quiz. Not a chatbot memory dump. A framework library, status system, and agent toolkit organized so AI systems can support clearer thinking, better decisions, and more grounded action.
 
 ---
 
@@ -122,7 +122,7 @@ graph LR
     end
 ```
 
-**The cycle never stops.** Every conversation is a data point. Every framework application is a chance to update your status, refine your personality profile, or catch a pattern. The system gets more useful over time — not because it stores more, but because it understands more.
+The system gets more useful over time because patterns can be revisited, refined, and connected across decisions, domains, and routines. The goal is not passive accumulation. The goal is better judgment.
 
 ### The Full Picture
 
