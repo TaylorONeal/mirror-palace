@@ -98,6 +98,8 @@ When you improve a framework's theory, template, or agent-prompt and want to sha
 grep -ri "YOUR_NAME\|specific-names\|real-addresses\|@gmail\|scores\|status:" path/to/file.md
 ```
 
+If you use custom privacy hooks or local keyword blocklists for your own workspace, keep those rules in your private/local copy only. The public repo should stay generic so other users can add their own local boundaries.
+
 ### Step 2: Decide if it's safe
 
 | File type | Safe to push? |

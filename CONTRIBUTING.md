@@ -16,6 +16,7 @@ This repository is public-facing framework infrastructure.
 - Personal narratives, relationship histories, career histories, or company anecdotes tied to identifiable individuals.
 - Direct identifiers (email, phone, address, SSN, account IDs, birth dates, handles tied to private context).
 - Any combined detail set that can re-identify a person.
+- Your private hook blocklists or internal-only keyword lists. Keep those in your local copy, not in this public repo.
 
 ### If a leak is detected (treat as P1/S1)
 1. Remove the leaked content immediately in a new commit.
