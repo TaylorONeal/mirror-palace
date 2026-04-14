@@ -1,0 +1,7 @@
+status/
+daily/
+.claude/
+.git/
+skills/_template/
+examples/
+SYNC.md

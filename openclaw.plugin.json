@@ -1,0 +1,9 @@
+{
+  "id": "mirror-palace",
+  "skills": [
+    "skills/scan",
+    "skills/setup",
+    "skills/create-framework"
+  ],
+  "configSchema": {}
+}
