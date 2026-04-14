@@ -1,8 +1,8 @@
 {
   "name": "mirror-palace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
-  "description": "Cognitive framework toolkit — 36+ psychology, decision-making, and behavioral science frameworks for AI agents and humans. Includes life domain tracking, relationship records, decisions ledger, agent archetypes, and skills for scanning, setup, and framework creation.",
+  "description": "Cognitive framework toolkit — 36+ psychology, decision-making, and behavioral science frameworks for AI agents and humans. All templates are blank scaffolds intended for local use only. No cloud services, API keys, or external credentials are required. No personal data is collected, stored, or transmitted. Status tracking, people records, and decision ledgers are maintained locally by the user and never leave the local filesystem.",
   "openclaw": {
     "compat": {
       "pluginApi": ">=2026.3.24",
