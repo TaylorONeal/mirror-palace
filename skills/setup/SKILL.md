@@ -12,6 +12,7 @@ requires:
   - "Target repo must exist and be accessible"
   - "mirror-palace repo must be accessible (for framework references)"
   - "User consent at every phase"
+  - "No API keys or cloud credentials required — all data stays local"
 outputs:
   - "Updated CLAUDE.md with mirror-palace references"
   - "Updated AGENTS.md with framework and status integration"

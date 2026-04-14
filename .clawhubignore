@@ -1,7 +1,12 @@
 status/
 daily/
 .claude/
+**/.claude/
 .git/
 skills/_template/
 examples/
+agents/_template/
+agents/archetypes/
+agents/orchestration/
 SYNC.md
+CONTRIBUTING.md

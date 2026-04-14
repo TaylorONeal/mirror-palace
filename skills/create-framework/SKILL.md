@@ -12,6 +12,7 @@ requires:
   - "mirror-palace/index.md must be accessible"
   - "mirror-palace/frameworks/ directory must exist"
   - "Concept description or source material (paper, book, idea)"
+  - "No API keys or cloud credentials required — all data stays local"
 outputs:
   - "frameworks/{category}/{id}/README.md"
   - "frameworks/{category}/{id}/theory.md"

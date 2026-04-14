@@ -14,7 +14,8 @@ trigger-patterns:
 requires:
   - "mirror-palace/index.md must be accessible"
   - "mirror-palace/status/ directory structure must exist"
-  - "For connected mode: MCP server configuration"
+  - "For connected mode: MCP server configuration (user-provided, local only)"
+  - "No API keys or cloud credentials required — all data stays local"
 outputs:
   - "Framework recommendations with confidence scores"
   - "Status domain updates (proposed, pending user confirmation)"
