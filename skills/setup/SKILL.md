@@ -1,7 +1,7 @@
 ---
 name: setup
 description: Integrate mirror-palace into an existing repository with user consent at every step
-version: 2.0
+version: 2.0.0
 trigger-patterns:
   - "set up mirror-palace"
   - "integrate mirror-palace into my repo"

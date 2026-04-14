@@ -1,5 +1,6 @@
 ---
 name: create-framework
+version: 1.0.0
 description: Scaffold a complete new framework from a concept — generates all 4 files, validates quality, and updates the index
 trigger-patterns:
   - "create a new framework"

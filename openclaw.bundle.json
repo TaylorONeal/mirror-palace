@@ -1,0 +1,8 @@
+{
+  "hostTargets": ["openclaw"],
+  "skills": [
+    "skills/scan",
+    "skills/setup",
+    "skills/create-framework"
+  ]
+}
