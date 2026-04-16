@@ -8,7 +8,8 @@ const { FaBrain, FaUsers, FaChartLine, FaEye, FaClipboardList, FaCog,
         FaBookOpen, FaSearch, FaSync, FaGithub, FaCode, FaHeart,
         FaShieldAlt, FaLightbulb, FaCalendarCheck, FaArrowRight,
         FaStar, FaDatabase, FaUserCog, FaPuzzlePiece, FaRocket,
-        FaBalanceScale, FaComments, FaFolderOpen, FaPlug } = require("react-icons/fa");
+        FaBalanceScale, FaComments, FaFolderOpen, FaPlug,
+        FaTelegram, FaMobileAlt, FaCloud, FaNetworkWired, FaRobot } = require("react-icons/fa");
 
 // ─── COLOR PALETTE ───
 const BG_DARK    = "0f0f23";
@@ -58,6 +59,11 @@ async function main() {
     userCog: [FaUserCog, PURPLE], puzzle: [FaPuzzlePiece, CORAL], rocket: [FaRocket, CORAL],
     balance: [FaBalanceScale, TEAL], comments: [FaComments, PURPLE], folder: [FaFolderOpen, GOLD],
     plug: [FaPlug, TEAL],
+    telegram: [FaTelegram, TEAL],
+    mobile: [FaMobileAlt, CORAL],
+    cloud: [FaCloud, PURPLE],
+    network: [FaNetworkWired, GOLD],
+    robot: [FaRobot, TEAL],
   };
   for (const [key, [Comp, color]] of Object.entries(iconMap)) {
     icons[key] = await iconToBase64Png(Comp, "#" + color);
@@ -720,7 +726,183 @@ async function main() {
   });
 
   // ═══════════════════════════════════════════════════════════
-  // SLIDE 16: THE DEEPER POINT
+  // SLIDE 16: OPENCLAW + TELEGRAM
+  // ═══════════════════════════════════════════════════════════
+  slide = pres.addSlide();
+  slide.background = { color: BG_DARK };
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0, y: 0, w: 10, h: 0.06, fill: { color: TEAL } });
+
+  slide.addText("HOW YOU ACTUALLY USE IT", {
+    x: 0.5, y: 0.3, w: 9, h: 0.5, fontSize: 14, fontFace: "Calibri",
+    color: TEAL, bold: true, charSpacing: 6, margin: 0
+  });
+  slide.addText("OpenClaw + Telegram", {
+    x: 0.5, y: 0.75, w: 9, h: 0.45, fontSize: 20, fontFace: "Calibri",
+    color: LIGHT_GRAY, margin: 0
+  });
+
+  // Left side: OpenClaw runtime description
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.4, w: 4.3, h: 3.5, fill: { color: BG_CARD }, shadow: makeCardShadow() });
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.4, w: 4.3, h: 0.05, fill: { color: TEAL } });
+  slide.addImage({ data: icons.robot, x: 0.8, y: 1.65, w: 0.35, h: 0.35 });
+  slide.addText("OPENCLAW", {
+    x: 1.3, y: 1.6, w: 3, h: 0.45, fontSize: 15, fontFace: "Calibri",
+    color: TEAL, bold: true, valign: "middle", margin: 0
+  });
+  slide.addText("Open-source agent runtime", {
+    x: 0.8, y: 2.15, w: 3.8, h: 0.3, fontSize: 12, fontFace: "Calibri", color: LIGHT_GRAY, margin: 0
+  });
+  const oclawFeatures = [
+    { label: "Agent runtime", desc: "Runs your Mirror Palace agents locally or in the cloud" },
+    { label: "Any LLM backend", desc: "Claude, GPT, local models" },
+    { label: "Multi-channel", desc: "Telegram, Discord, web, CLI" },
+    { label: "Open source", desc: "You own the infrastructure" },
+  ];
+  oclawFeatures.forEach((f, i) => {
+    const y = 2.6 + i * 0.52;
+    slide.addShape(pres.shapes.RECTANGLE, { x: 0.8, y, w: 3.8, h: 0.42, fill: { color: TEAL, transparency: 92 } });
+    slide.addText(f.label, { x: 1.0, y, w: 1.3, h: 0.42, fontSize: 11, fontFace: "Calibri", color: TEAL, bold: true, valign: "middle", margin: 0 });
+    slide.addText(f.desc, { x: 2.3, y, w: 2.2, h: 0.42, fontSize: 10, fontFace: "Calibri", color: LIGHT_GRAY, valign: "middle", margin: 0 });
+  });
+
+  // Right side: Telegram conversational loop
+  slide.addShape(pres.shapes.RECTANGLE, { x: 5.2, y: 1.4, w: 4.3, h: 3.5, fill: { color: BG_CARD }, shadow: makeCardShadow() });
+  slide.addShape(pres.shapes.RECTANGLE, { x: 5.2, y: 1.4, w: 4.3, h: 0.05, fill: { color: CORAL } });
+  slide.addImage({ data: icons.telegram, x: 5.5, y: 1.65, w: 0.35, h: 0.35 });
+  slide.addText("TELEGRAM", {
+    x: 6.0, y: 1.6, w: 3, h: 0.45, fontSize: 15, fontFace: "Calibri",
+    color: CORAL, bold: true, valign: "middle", margin: 0
+  });
+  slide.addText("Full conversational loop", {
+    x: 5.5, y: 2.15, w: 3.8, h: 0.3, fontSize: 12, fontFace: "Calibri", color: LIGHT_GRAY, margin: 0
+  });
+  const tgFeatures = [
+    { label: "Agents push to you", desc: "Morning briefings, pattern alerts, drift warnings" },
+    { label: "You talk back", desc: "Run frameworks, update status, ask questions" },
+    { label: "Full conversations", desc: "Not just commands. Real dialogue with your agents." },
+    { label: "From your phone", desc: "No app install. Works anywhere Telegram does." },
+  ];
+  tgFeatures.forEach((f, i) => {
+    const y = 2.6 + i * 0.52;
+    slide.addShape(pres.shapes.RECTANGLE, { x: 5.5, y, w: 3.8, h: 0.42, fill: { color: CORAL, transparency: 92 } });
+    slide.addText(f.label, { x: 5.7, y, w: 1.5, h: 0.42, fontSize: 11, fontFace: "Calibri", color: CORAL, bold: true, valign: "middle", margin: 0 });
+    slide.addText(f.desc, { x: 7.2, y, w: 2.0, h: 0.42, fontSize: 10, fontFace: "Calibri", color: LIGHT_GRAY, valign: "middle", margin: 0 });
+  });
+
+  // ═══════════════════════════════════════════════════════════
+  // SLIDE 17: THE AGENT ECOSYSTEM
+  // ═══════════════════════════════════════════════════════════
+  slide = pres.addSlide();
+  slide.background = { color: BG_DARKER };
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0, y: 0, w: 10, h: 0.06, fill: { color: PURPLE } });
+
+  slide.addText("THE AGENT ECOSYSTEM", {
+    x: 0.5, y: 0.3, w: 9, h: 0.5, fontSize: 14, fontFace: "Calibri",
+    color: PURPLE, bold: true, charSpacing: 6, margin: 0
+  });
+  slide.addText("Mirror Palace as a knowledge layer for any agent runtime", {
+    x: 0.5, y: 0.75, w: 9, h: 0.4, fontSize: 18, fontFace: "Calibri",
+    color: LIGHT_GRAY, margin: 0
+  });
+
+  // Three platform cards
+  const platforms = [
+    {
+      name: "Claude Code",
+      status: "LIVE",
+      statusColor: TEAL,
+      desc: "Direct integration via CLAUDE.md and AGENTS.md. Agents read frameworks, update status, and apply patterns in every session.",
+      color: TEAL
+    },
+    {
+      name: "OpenClaw",
+      status: "LIVE",
+      statusColor: TEAL,
+      desc: "Open-source agent runtime with Telegram, Discord, and web channels. Full conversational loop with your Mirror Palace agents from your phone.",
+      color: CORAL
+    },
+    {
+      name: "Claude Managed Agents",
+      status: "APRIL 2026",
+      statusColor: GOLD,
+      desc: "Anthropic's new managed infrastructure for autonomous agents. Persistent state, sandboxed execution, long-running tasks. Mirror Palace provides the self-knowledge layer.",
+      color: PURPLE
+    },
+  ];
+  platforms.forEach((p, i) => {
+    const y = 1.4 + i * 1.3;
+    slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y, w: 9, h: 1.1, fill: { color: BG_CARD }, shadow: makeCardShadow() });
+    slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y, w: 0.07, h: 1.1, fill: { color: p.color } });
+    slide.addText(p.name, { x: 0.85, y: y + 0.1, w: 3, h: 0.35, fontSize: 16, fontFace: "Calibri", color: p.color, bold: true, margin: 0 });
+    // Status badge
+    slide.addShape(pres.shapes.RECTANGLE, { x: 7.8, y: y + 0.12, w: 1.4, h: 0.3, fill: { color: p.statusColor, transparency: 80 } });
+    slide.addText(p.status, { x: 7.8, y: y + 0.12, w: 1.4, h: 0.3, fontSize: 9, fontFace: "Calibri", color: p.statusColor, bold: true, align: "center", valign: "middle", charSpacing: 2, margin: 0 });
+    slide.addText(p.desc, { x: 0.85, y: y + 0.5, w: 8.3, h: 0.5, fontSize: 11, fontFace: "Calibri", color: LIGHT_GRAY, margin: 0, lineSpacingMultiple: 1.3 });
+  });
+
+  // Bottom insight
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 4.85, w: 9, h: 0.4, fill: { color: PURPLE, transparency: 90 } });
+  slide.addText("The pattern: frameworks are the knowledge layer. The runtime is swappable.", {
+    x: 0.7, y: 4.85, w: 8.6, h: 0.4, fontSize: 12, fontFace: "Calibri",
+    color: PURPLE, bold: true, valign: "middle", margin: 0
+  });
+
+  // ═══════════════════════════════════════════════════════════
+  // SLIDE 18: WHERE THIS IS GOING
+  // ═══════════════════════════════════════════════════════════
+  slide = pres.addSlide();
+  slide.background = { color: BG_DARK };
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0, y: 0, w: 10, h: 0.06, fill: { color: GOLD } });
+
+  slide.addText("WHERE THIS IS GOING", {
+    x: 0.5, y: 0.3, w: 9, h: 0.5, fontSize: 14, fontFace: "Calibri",
+    color: GOLD, bold: true, charSpacing: 6, margin: 0
+  });
+
+  // Big thesis
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.0, w: 9, h: 1.0, fill: { color: GOLD, transparency: 90 } });
+  slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.0, w: 0.07, h: 1.0, fill: { color: GOLD } });
+  slide.addText("Agent platforms are converging on persistent, stateful agents. The missing piece isn't better tooling. It's better understanding of the human in the loop.", {
+    x: 0.85, y: 1.0, w: 8.4, h: 1.0, fontSize: 16, fontFace: "Calibri",
+    color: WHITE, valign: "middle", margin: 0, lineSpacingMultiple: 1.3
+  });
+
+  // Timeline / progression
+  const timeline = [
+    {
+      era: "NOW",
+      items: "Claude Code integration, OpenClaw + Telegram, continuous learning protocol active",
+      color: TEAL
+    },
+    {
+      era: "EMERGING",
+      items: "Claude Managed Agents with persistent Mirror Palace state, long-running agent threads that remember your patterns across sessions",
+      color: PURPLE
+    },
+    {
+      era: "NEXT",
+      items: "Any agent runtime that supports structured memory can load Mirror Palace. Your self-knowledge travels with you across platforms.",
+      color: GOLD
+    },
+  ];
+  timeline.forEach((t, i) => {
+    const y = 2.3 + i * 1.0;
+    slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y, w: 9, h: 0.8, fill: { color: BG_CARD } });
+    slide.addShape(pres.shapes.RECTANGLE, { x: 0.5, y, w: 0.06, h: 0.8, fill: { color: t.color } });
+    // Era badge
+    slide.addShape(pres.shapes.RECTANGLE, { x: 0.8, y: y + 0.15, w: 1.2, h: 0.3, fill: { color: t.color, transparency: 80 } });
+    slide.addText(t.era, { x: 0.8, y: y + 0.15, w: 1.2, h: 0.3, fontSize: 11, fontFace: "Calibri", color: t.color, bold: true, align: "center", valign: "middle", charSpacing: 3, margin: 0 });
+    slide.addText(t.items, { x: 2.2, y: y + 0.05, w: 7.0, h: 0.7, fontSize: 12, fontFace: "Calibri", color: LIGHT_GRAY, valign: "middle", margin: 0 });
+  });
+
+  // Closing line
+  slide.addText("Whoever owns the self-knowledge layer wins the agent UX war.", {
+    x: 0.5, y: 5.0, w: 9, h: 0.4, fontSize: 14, fontFace: "Calibri",
+    color: GOLD, italic: true, align: "center", margin: 0
+  });
+
+  // ═══════════════════════════════════════════════════════════
+  // SLIDE 19: THE DEEPER POINT
   // ═══════════════════════════════════════════════════════════
   slide = pres.addSlide();
   slide.background = { color: BG_DARKER };
@@ -754,7 +936,7 @@ async function main() {
   });
 
   // ═══════════════════════════════════════════════════════════
-  // SLIDE 17: CALL TO ACTION
+  // SLIDE 20: CALL TO ACTION
   // ═══════════════════════════════════════════════════════════
   slide = pres.addSlide();
   slide.background = { color: BG_DARK };
