@@ -2,19 +2,27 @@
 
 Your first 15 minutes with Mirror Palace.
 
-## Step 1: Browse the Index (2 min)
+## Step 1: Find Your Route (2 min)
 
-Open [`index.md`](../index.md). Look at the **Situation Router** diagram. Find your current situation. Note which 2-3 frameworks are recommended.
+Open the [Route Index](../routes/README.md). Find the situation that matches what you're dealing with. Each route tells you which frameworks to use, in what order, and when to stop.
 
-## Step 2: Read One Framework (5 min)
+If you're not sure which route fits, start with [Emotional Signal Unclear](../routes/emotional-signal-unclear.md) -- it's designed to help you find your entry point.
 
-Go to the recommended framework folder. Read `theory.md`. Don't skim — this is where the depth lives.
+**Already know what framework you want?** Skip routes and go straight to [`index.md`](../index.md) for the full framework matrix.
 
-## Step 3: Fill Out the Template (5 min)
+## Step 2: Read the Route Card (3 min)
+
+Read the route card for your situation. Pay attention to the **Recommended Sequence** (which frameworks, in what order) and **When NOT to Use This Route** (so you don't force a bad fit).
+
+## Step 3: Read the First Framework (5 min)
+
+Go to the first framework in the route's sequence. Read `theory.md`. Don't skim -- this is where the depth lives.
+
+## Step 4: Fill Out the Template (5 min)
 
 Open `template.md` in the same framework folder. Fill it out for your current situation. This is where the framework becomes personal.
 
-## Step 4: Run the Scan (optional, 3 min)
+## Step 5: Run the Scan (optional, 3 min)
 
 If you're using Claude Code or OpenClaw, run the scan skill:
 - Point it at a small set of existing documents, journals, or notes
@@ -23,7 +31,7 @@ If you're using Claude Code or OpenClaw, run the scan skill:
 
 See [`claude-code-setup.md`](claude-code-setup.md) or [`openclaw-setup.md`](openclaw-setup.md) for integration.
 
-## Step 5: Initialize Your Status (optional)
+## Step 6: Initialize Your Status (optional)
 
 Browse `status/domains/`. Pick the 2-3 domains that matter most right now. Add a few starter issues. You don't need to fill out all 10 domains on day one — the scan skill and daily briefings will surface gaps over time.
 
@@ -32,7 +40,8 @@ Browse `status/domains/`. Pick the 2-3 domains that matter most right now. Add a
 - Don't try to read every framework in one sitting
 - Don't fill out all 10 domain status files immediately
 - Don't deploy all 6 agent archetypes at once
-- Don't skip the template.md — reading theory without applying it creates false understanding
+- Don't skip the template.md -- reading theory without applying it creates false understanding
+- Don't ignore a route's "When NOT to Use" section -- forcing a bad fit is worse than no framework at all
 
 ## Recommended Path
 

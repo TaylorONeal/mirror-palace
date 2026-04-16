@@ -4,9 +4,9 @@ A visual guide to how Mirror Palace is structured and how data flows through it.
 
 ---
 
-## Five Layers
+## Six Layers
 
-Mirror Palace is organized into five distinct layers, each with a clear responsibility:
+Mirror Palace is organized into six distinct layers, each with a clear responsibility:
 
 ```
 ╔═══════════════════════════════════════════════════════════════╗
@@ -18,6 +18,16 @@ Mirror Palace is organized into five distinct layers, each with a clear responsi
 ║  │ theory.md  │template.md │agent-prompt│ README.md  │       ║
 ║  │ Deep       │ Fill-in    │ Copy-paste │ Metadata   │       ║
 ║  │ explanation│ worksheet  │ for agents │ & routing  │       ║
+║  └────────────┴────────────┴────────────┴────────────┘       ║
+╠═══════════════════════════════════════════════════════════════╣
+║                     ROUTING LAYER                             ║
+║  routes/                                                      ║
+║  8 route cards mapping situations to framework sequences      ║
+║  The bridge between signal detection and framework use        ║
+║  ┌────────────┬────────────┬────────────┬────────────┐       ║
+║  │ Situation  │ Sequence   │ Guardrails │ Fallbacks  │       ║
+║  │ What's     │ Which      │ When to    │ What to    │       ║
+║  │ happening  │ frameworks │ stop       │ try instead│       ║
 ║  └────────────┴────────────┴────────────┴────────────┘       ║
 ╠═══════════════════════════════════════════════════════════════╣
 ║                      STATUS LAYER                             ║
@@ -72,6 +82,13 @@ Mirror Palace is organized into five distinct layers, each with a clear responsi
                     │  "avoiding" → failure-modes    │
                     │  "career" → career-work domain │
                     │  "conversation" → people record│
+                    └──────────────┬───────────────┘
+                                   │
+                    ┌──────────────▼───────────────┐
+                    │       ROUTE MATCHING          │
+                    │  Signal → route card matched   │
+                    │  Framework sequence loaded      │
+                    │  Guardrails & fallbacks set     │
                     └──────────────┬───────────────┘
                                    │
               ┌────────────────────┼────────────────────┐
@@ -134,6 +151,8 @@ USER SITUATION          →    FRAMEWORKS           →    STATUS UPDATES
                               Failure Modes             personal-growth.md
                               North Star Test           ISSUE-INDEX.md
 ```
+
+> **Note:** Routes now provide explicit sequencing and guardrails beyond what the `index.md` table offers. Where `index.md` maps situations to framework sets, route cards define the order frameworks should be applied, when to stop, and what to try if a framework isn't landing. See `routes/README.md` for details.
 
 ---
 
@@ -239,9 +258,10 @@ OpenClaw agents:
 | Layer | Files | Purpose |
 |-------|-------|---------|
 | Knowledge (frameworks/) | 144 | 36 frameworks × 4 files each |
+| Routes (routes/) | ~10 | 8 route cards + README + template |
 | Status (status/) | ~25 | 10 domains + people + decisions + indexes |
 | Agents (agents/) | ~25 | 6 archetypes + templates + orchestration |
 | Skills (skills/) | ~13 | scan + setup + create-framework + references |
 | Process (daily/) | 5 | Briefing, reflection, check-in, framework-of-day |
 | Docs & Guides | ~15 | README, CLAUDE.md, guides, examples |
-| **Total** | **~243** | |
+| **Total** | **~253** | |

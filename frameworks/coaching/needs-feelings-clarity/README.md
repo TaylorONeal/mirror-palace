@@ -3,6 +3,7 @@ id: needs-feelings-clarity
 category: coaching
 tags: [needs, feelings, communication, discernment, emotional-clarity, nvc-adjacent]
 pairs-with: [structured-self-coaching, stories-vs-facts, awareness-as-intervention, family-systems-differentiation]
+routes: [shame-spiral, conflict-blame, relationship-rupture, friendship-ambiguity, emotional-signal-unclear]
 complexity: medium
 agent-ready: true
 use-when:

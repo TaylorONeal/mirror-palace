@@ -13,7 +13,12 @@ Every framework lives in `frameworks/{category}/{name}/` with exactly 4 files:
 - `theory.md` — deep explanation of the concept
 - `template.md` — ready-to-fill starter worksheet
 - `agent-prompt.md` — copy-paste prompt snippet for agents applying this framework
-- `README.md` — YAML front-matter with `use-when`, `avoid-when`, `updates`, `pairs-with` fields
+- `README.md` — YAML front-matter with `use-when`, `avoid-when`, `updates`, `pairs-with`, `routes` fields
+
+## Routes — Framework Sequencing Layer
+Routes live in `routes/` and map common situation classes to framework sequences with ordering rationale, contraindications, and fallback paths. 8 routes cover: shame spirals, overthinking/fusion, conflict/blame, relationship rupture, friendship ambiguity, career stuckness, decision paralysis, and unclear emotional signals.
+
+**When a user presents a situation, check routes first.** Routes provide sequencing that individual frameworks do not. See `routes/README.md` for the full index and `index.md` for the route table.
 
 ## Guiding Philosophy
 Mirror Palace helps people build lives that are aware, empowered, and fulfilling. The system guides a progression:

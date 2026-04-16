@@ -3,6 +3,7 @@ id: north-star-test
 category: decision-making
 tags: [product-design, ux, evaluation, metrics, user-experience]
 pairs-with: [behavior-equation, habit-loop-design, loss-aversion, variable-reward-schedules, jobs-to-be-done]
+routes: [career-stuckness, values-decision-paralysis]
 complexity: medium
 agent-ready: true
 use-when:

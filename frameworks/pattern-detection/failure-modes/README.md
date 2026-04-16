@@ -14,6 +14,7 @@ pairs-with:
   - structured-self-coaching
   - stories-vs-facts
   - psychological-contracts
+routes: [career-stuckness]
 complexity: low
 agent-ready: true
 use-when:

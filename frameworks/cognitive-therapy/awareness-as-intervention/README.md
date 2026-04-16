@@ -3,6 +3,7 @@ id: awareness-as-intervention
 category: cognitive-therapy
 tags: [awareness, mindfulness, pattern-detection, non-judgment, observation]
 pairs-with: [distortion-detection, linguistic-reframing, self-image-cybernetics, teleological-psychology]
+routes: [overthinking-fusion, emotional-signal-unclear]
 complexity: low
 agent-ready: true
 use-when:
