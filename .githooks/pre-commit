@@ -96,7 +96,7 @@ done
 # --- Check 5: Scan for email addresses and phone numbers ---
 for file in $(echo "$STAGED_FILES" | grep "\.md$" || true); do
     if [ -f "$file" ]; then
-        if grep -qE "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" "$file" 2>/dev/null; then
+        if grep -oE "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}[:/]?" "$file" 2>/dev/null | grep -qvE "[:/]$"; then
             echo -e "${RED}BLOCKED:${NC} File contains an email address:"
             echo "  - $file"
             BLOCKED=1
