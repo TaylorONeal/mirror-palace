@@ -1,7 +1,7 @@
 # CLAUDE.md — Mirror Palace
 
 ## What This Repo Is
-A cognitive framework toolkit. 36+ psychology, decision-making, and behavioral science frameworks organized for both human reference and AI agent consumption. Includes a life domain status tracking system, people records, decisions ledger, personality assessments, 6 agent archetypes, and 3 core skills (scan + setup + create-framework).
+A cognitive framework toolkit. 36+ psychology, decision-making, and behavioral science frameworks organized for both human reference and AI agent consumption. Includes a life domain status tracking system, people records, decisions ledger, personality assessments, 6 agent archetypes, and 4 core skills (scan + setup + create-framework + create-keynote).
 
 ## Every Session
 1. Read this file
@@ -59,6 +59,7 @@ Six pre-built agent personalities in `agents/archetypes/`. Each has SOUL.md (ide
 - **scan** — Analyze documents, conversations, or connected services to recommend frameworks and populate the status system
 - **setup** — Integrate mirror-palace into an existing repo (AGENTS.md, CLAUDE.md patches) with user consent at every step
 - **create-framework** — Scaffold a complete new framework from a concept, paper, or idea. Generates all 4 files, validates quality, and updates index.md + all dependent files (README.md, ARCHITECTURE.md, signal-patterns.md, CLAUDE.md counts)
+- **create-keynote** — Generate a keynote-style PowerPoint from any repo. Explores the codebase, builds a visually rich .pptx with dark-theme slides and shape-based diagrams. Outputs the generation script for iteration.
 
 ## Rules
 - **No personal data.** Templates are blank starters. Fill them in for your own private use.

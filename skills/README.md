@@ -25,6 +25,8 @@ skills/
       openclaw-setup.md
   create-framework/       ← Scaffold a new framework from a concept
     SKILL.md
+  create-keynote/         ← Generate a keynote PowerPoint from any repo
+    SKILL.md
 ```
 
 ## SKILL.md Structure
@@ -62,3 +64,6 @@ Integrate mirror-palace into an existing project. Patches AGENTS.md and CLAUDE.m
 
 ### create-framework
 Scaffold a complete new framework from a concept, paper, book, or raw idea. Generates all four files (README.md, theory.md, template.md, agent-prompt.md), validates quality and distinctness against existing frameworks, and updates index.md. Two modes: Guided (interactive) and Direct (one-shot from source material).
+
+### create-keynote
+Generate a keynote-style PowerPoint presentation from any repository. Explores the repo, identifies the narrative arc (problem, insight, architecture, differentiation), and builds a visually rich .pptx with dark-theme slides, shape-based diagrams, and minimal text. Three modes: Auto (fully automatic), Guided (user shapes audience/tone), and Refresh (re-run after edits).
