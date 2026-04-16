@@ -135,13 +135,35 @@ graph TD
 
 ---
 
+## Routes — Situation-Based Framework Sequences
+
+Routes add a structured middle layer between signal detection and framework application. Each route maps a common class of situation to a recommended framework sequence with ordering rationale, contraindications, and fallback paths.
+
+**Don't know which framework to use? Start with a route.**
+
+| If you're experiencing... | Route | Primary Framework |
+|---------------------------|-------|-------------------|
+| Shame, self-attack, collapse | [Shame Spiral](routes/shame-spiral.md) | ACT |
+| Overthinking, rumination, avoidance | [Overthinking / Fusion](routes/overthinking-fusion.md) | ACT |
+| Conflict full of blame or faux-feelings | [Conflict / Blame](routes/conflict-blame.md) | Needs & Feelings |
+| Relationship rupture, attachment alarm | [Relationship Rupture](routes/relationship-rupture.md) | EFT |
+| Friendship confusion, mixed signals | [Friendship Ambiguity](routes/friendship-ambiguity.md) | Needs & Feelings |
+| Career confusion, stuckness, drift | [Career Stuckness](routes/career-stuckness.md) | Ikigai |
+| Decision paralysis, competing values | [Values / Decision Paralysis](routes/values-decision-paralysis.md) | Reversibility |
+| "Something is off but I can't name it" | [Emotional Signal Unclear](routes/emotional-signal-unclear.md) | Needs & Feelings |
+
+See the full [Route Index](routes/README.md) for details, agent usage, and how to contribute new routes.
+
+---
+
 ## How Agents Should Use This Index
 
-1. **Match the situation** — Use the router diagram or scan the "Use When" column
-2. **Load the framework** — Read the matched framework's `agent-prompt.md` for a ready-to-use prompt snippet
-3. **Apply it** — Use the framework to analyze, respond, or intervene
-4. **Update data** — Check the "Update When Triggered" column and propose updates to the relevant status/people/decisions files
-5. **Cross-reference** — Check "Pairs With" for complementary frameworks that may also apply
+1. **Check routes first** — If the user's situation maps to a route, use the route's framework sequence and guardrails
+2. **Match the situation** — Use the router diagram or scan the "Use When" column for individual frameworks
+3. **Load the framework** — Read the matched framework's `agent-prompt.md` for a ready-to-use prompt snippet
+4. **Apply it** — Use the framework to analyze, respond, or intervene
+5. **Update data** — Check the "Update When Triggered" column and propose updates to the relevant status/people/decisions files
+6. **Cross-reference** — Check "Pairs With" for complementary frameworks that may also apply
 
 ## How the Scan Skill Uses This Index
 

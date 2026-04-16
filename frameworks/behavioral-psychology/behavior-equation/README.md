@@ -3,6 +3,7 @@ id: behavior-equation
 category: behavioral-psychology
 tags: [behavior-change, motivation, friction, triggers, habits]
 pairs-with: [habit-loop-design, jobs-to-be-done, north-star-test, variable-reward-schedules, loss-aversion]
+routes: [overthinking-fusion]
 complexity: medium
 agent-ready: true
 use-when:

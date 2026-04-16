@@ -3,6 +3,7 @@ id: ikigai-diagnostic
 category: decision-making
 tags: [purpose, career, self-assessment, gaps, direction]
 pairs-with: [regret-minimization, concept-formation, identity-reinforcement, reversibility-classification]
+routes: [career-stuckness]
 complexity: high
 agent-ready: true
 use-when:

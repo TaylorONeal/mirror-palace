@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirror Palace Framework Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --bg-raised: #222240;
+    --bg-card: #2a2a48;
+    --bg-card-hover: #32325a;
+    --border: #3a3a5c;
+    --text: #e0dfe8;
+    --text-muted: #9896aa;
+    --text-dim: #6e6c82;
+    --heading: #f0eff8;
+
+    --amber: #e8a951;
+    --amber-dim: #b8843a;
+    --amber-bg: rgba(232,169,81,0.08);
+    --teal: #4ec9b0;
+    --teal-dim: #3a9a86;
+    --teal-bg: rgba(78,201,176,0.08);
+    --rose: #e06c8e;
+    --rose-dim: #b35470;
+    --rose-bg: rgba(224,108,142,0.08);
+    --blue: #6c9ee0;
+    --blue-dim: #5480b8;
+    --blue-bg: rgba(108,158,224,0.08);
+    --purple: #b08ce0;
+    --purple-dim: #8a6cb8;
+    --purple-bg: rgba(176,140,224,0.08);
+    --green: #7ec47e;
+    --green-dim: #5fa05f;
+    --green-bg: rgba(126,196,126,0.08);
+    --orange: #e0934e;
+    --orange-dim: #b87436;
+    --orange-bg: rgba(224,147,78,0.08);
+    --cyan: #4ecde0;
+    --cyan-dim: #3aa4b4;
+    --cyan-bg: rgba(78,205,224,0.08);
+    --pink: #e06cb0;
+    --pink-dim: #b8548a;
+    --pink-bg: rgba(224,108,176,0.08);
+    --lime: #a4d04e;
+    --lime-dim: #82a83c;
+    --lime-bg: rgba(164,208,78,0.08);
+    --coral: #e07060;
+    --coral-dim: #b85a4c;
+    --coral-bg: rgba(224,112,96,0.08);
+    --slate: #8890a8;
+    --slate-dim: #6c7488;
+    --slate-bg: rgba(136,144,168,0.08);
+    --gold: #d4b44e;
+    --gold-dim: #aa903c;
+    --gold-bg: rgba(212,180,78,0.08);
+    --indigo: #7070e0;
+    --indigo-dim: #5858b8;
+    --indigo-bg: rgba(112,112,224,0.08);
+    --mint: #4ed0a8;
+    --mint-dim: #3ca886;
+    --mint-bg: rgba(78,208,168,0.08);
+    --red: #e05858;
+    --red-dim: #b84444;
+    --red-bg: rgba(224,88,88,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- NAV --- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26,26,46,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 52px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--heading);
+    white-space: nowrap;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+  .nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+    flex-shrink: 0;
+  }
+  .nav a:hover { color: var(--heading); background: var(--bg-raised); }
+
+  /* --- SECTIONS --- */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  section { padding: 80px 0 40px; }
+  section + section { padding-top: 40px; }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: var(--heading);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--heading);
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    color: var(--heading);
+    font-weight: 400;
+  }
+
+  p { color: var(--text-muted); max-width: 680px; }
+  p + p { margin-top: 12px; }
+
+  /* --- HERO --- */
+  .hero {
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .hero h1 { margin-bottom: 24px; }
+  .hero p { margin: 0 auto 32px; font-size: 1.05rem; }
+  .progression {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .progression-step {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .progression-arrow { color: var(--text-dim); font-size: 1.2rem; }
+
+  /* --- MERMAID --- */
+  .mermaid-wrap {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 24px;
+    margin: 24px 0;
+    overflow-x: auto;
+  }
+  .mermaid-wrap .mermaid { display: flex; justify-content: center; }
+  .mermaid-wrap .mermaid svg { max-width: 100%; height: auto; }
+
+  /* --- SEARCH --- */
+  .search-wrap {
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .search-wrap input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px 16px 10px 40px;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--teal); }
+  .search-wrap input::placeholder { color: var(--text-dim); }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    font-size: 14px;
+    pointer-events: none;
+  }
+
+  /* --- CATEGORY GROUPS --- */
+  .category-group { margin-bottom: 40px; }
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .category-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .category-header h3 { margin: 0; }
+  .category-header .cat-desc {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  /* --- FRAMEWORK CARDS --- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 12px;
+  }
+  .fw-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    position: relative;
+  }
+  .fw-card:hover { background: var(--bg-card-hover); border-color: var(--text-dim); }
+  .fw-card.expanded { background: var(--bg-card-hover); }
+  .fw-card-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--heading);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fw-card-title .chevron {
+    font-size: 12px;
+    color: var(--text-dim);
+    transition: transform 0.2s;
+  }
+  .fw-card.expanded .fw-card-title .chevron { transform: rotate(90deg); }
+  .fw-card-what {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+  .fw-card-detail {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .fw-card.expanded .fw-card-detail { display: block; }
+  .fw-card-detail strong { color: var(--text); }
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-dim);
+    padding: 32px;
+    font-size: 14px;
+    display: none;
+  }
+
+  /* --- ROUTE CARDS --- */
+  .route-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .route-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .route-card h4 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin-bottom: 8px;
+  }
+  .route-card .route-problem {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .route-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .route-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--bg);
+  }
+  .step-name { color: var(--text); padding-top: 2px; }
+  .step-name .optional { color: var(--text-dim); font-style: italic; }
+  .route-details { margin-top: 0; }
+  .route-details summary {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-dim);
+    cursor: pointer;
+    padding: 4px 0;
+    user-select: none;
+  }
+  .route-details summary:hover { color: var(--text-muted); }
+  .route-details-content {
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 8px 0 4px;
+    line-height: 1.6;
+  }
+  .route-details-content p { margin-bottom: 6px; max-width: none; }
+  .route-details-content strong { color: var(--text); }
+
+  /* --- AGENT CARDS --- */
+  .agent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .agent-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .agent-card h4 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin-bottom: 4px;
+  }
+  .agent-role {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .agent-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+  .agent-frameworks { font-size: 12px; color: var(--text-dim); }
+  .agent-frameworks span { color: var(--text-muted); }
+
+  /* --- QUICK REF TABLE --- */
+  .ref-table-wrap {
+    overflow-x: auto;
+    margin-top: 24px;
+  }
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .ref-table th {
+    text-align: left;
+    padding: 12px 16px;
+    background: var(--bg-raised);
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ref-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ref-table tr:hover td { background: var(--bg-raised); }
+  .ref-table td:first-child { color: var(--text); }
+  .ref-table td:last-child { color: var(--teal); font-weight: 500; }
+
+  /* --- FOOTER --- */
+  .footer {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--text-dim);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 640px) {
+    .hero { padding: 80px 0 40px; }
+    .card-grid { grid-template-columns: 1fr; }
+    .route-cards { grid-template-columns: 1fr; }
+    .agent-grid { grid-template-columns: 1fr; }
+    .category-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .category-header .cat-desc { margin-left: 0; text-align: left; }
+    .progression { gap: 6px; }
+    .progression-step { font-size: 0.85rem; padding: 6px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">Mirror Palace</span>
+    <a href="#architecture">Architecture</a>
+    <a href="#frameworks">Frameworks</a>
+    <a href="#routes">Routes</a>
+    <a href="#relationships">Relationships</a>
+    <a href="#agents">Agents</a>
+    <a href="#quickref">Quick Reference</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container">
+    <h1>Mirror Palace Framework Map</h1>
+    <p>A cognitive framework toolkit. 36 frameworks across 16 categories, 8 situation routes, and 6 agent archetypes. The system never prescribes a vision of the good life. It helps users discover and pursue their own.</p>
+    <div class="progression">
+      <span class="progression-step">Surface patterns</span>
+      <span class="progression-arrow">&rarr;</span>
+      <span class="progression-step">Calm the mind</span>
+      <span class="progression-arrow">&rarr;</span>
+      <span class="progression-step">Act with integrity</span>
+      <span class="progression-arrow">&rarr;</span>
+      <span class="progression-step">Live fully</span>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture">
+  <div class="container">
+    <h2>Architecture at a Glance</h2>
+    <p>Five layers working together: routing selects frameworks, frameworks inform status, agents apply frameworks, skills maintain the system.</p>
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+graph TB
+    subgraph "ROUTING LAYER"
+        R["routes/"]
+        R1["8 route cards"]
+        R2["Situation &rarr; Sequence &rarr; Guardrails"]
+    end
+
+    subgraph "KNOWLEDGE LAYER"
+        F["frameworks/"]
+        F1["36 frameworks x 4 files"]
+        F2["theory + template + agent-prompt + README"]
+    end
+
+    subgraph "STATUS LAYER"
+        S["status/"]
+        S1["10 life domains"]
+        S2["People records"]
+        S3["Decisions ledger"]
+    end
+
+    subgraph "AGENT LAYER"
+        A["agents/"]
+        A1["6 archetypes"]
+        A2["SOUL + MEMORY + HEARTBEAT"]
+    end
+
+    subgraph "ACTION LAYER"
+        SK["skills/"]
+        SK1["scan"]
+        SK2["setup"]
+        SK3["create-framework"]
+    end
+
+    R --> F
+    F --> S
+    A --> F
+    A --> S
+    SK --> F
+    SK --> S
+      </pre>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORKS -->
+<section id="frameworks">
+  <div class="container">
+    <h2>The 16 Framework Categories</h2>
+    <p style="margin-bottom:24px;">36 frameworks organized by domain. Click any card to expand details.</p>
+
+    <div class="search-wrap">
+      <span class="search-icon">&#9906;</span>
+      <input type="text" id="fw-search" placeholder="Filter frameworks by name or keyword..." autocomplete="off">
+    </div>
+
+    <div id="categories-container">
+
+      <!-- Epistemology -->
+      <div class="category-group" data-category="epistemology">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--blue)"></span>
+          <h3 style="color:var(--blue)">Epistemology</h3>
+          <span class="cat-desc">How we think about thinking</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="concept formation reasoning definitions grounded epistemology">
+            <div class="fw-card-title">Concept Formation <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Grounds reasoning in clear definitions</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Reasoning feels ungrounded, concepts are vague, noise is overwhelming signal</div>
+          </div>
+          <div class="fw-card" data-keywords="mirror cognitive architecture agent cognition narratives epistemology">
+            <div class="fw-card-title">MIRROR Cognitive Architecture <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Structures persistent internal narratives for agents</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Designing agent cognition, structuring persistent internal narratives</div>
+          </div>
+          <div class="fw-card" data-keywords="information compression context keep discard epistemology">
+            <div class="fw-card-title">Information Compression <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Decides what to keep vs. discard</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Context is getting long, need to decide what to keep vs discard</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decision-Making -->
+      <div class="category-group" data-category="decision-making">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--teal)"></span>
+          <h3 style="color:var(--teal)">Decision-Making</h3>
+          <span class="cat-desc">Choosing under uncertainty</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="reversibility classification one-way two-way door decision">
+            <div class="fw-card-title">Reversibility Classification <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Sorts decisions into one-way and two-way doors</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Any decision -- first classify it before analyzing. Many agonized-over decisions are actually reversible.</div>
+          </div>
+          <div class="fw-card" data-keywords="regret minimization 80 year old test life choices paralysis">
+            <div class="fw-card-title">Regret Minimization <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">The 80-year-old test</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> High-stakes life choices, paralysis on big moves. "At 80, will you regret not doing this?"</div>
+          </div>
+          <div class="fw-card" data-keywords="north star test priority ranking features actions">
+            <div class="fw-card-title">North Star Test <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Forces priority ranking</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Evaluating features, actions, or priorities. What matters most? What would you sacrifice for what?</div>
+          </div>
+          <div class="fw-card" data-keywords="ikigai diagnostic career purpose capability passion livelihood">
+            <div class="fw-card-title">Ikigai Diagnostic <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Maps capability, passion, need, and livelihood</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Career/purpose misalignment, feeling lost about direction. Identifies which quadrant is empty.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Behavioral Psychology -->
+      <div class="category-group" data-category="behavioral-psychology">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--orange)"></span>
+          <h3 style="color:var(--orange)">Behavioral Psychology</h3>
+          <span class="cat-desc">Why people do what they do</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="jobs to be done product hire design behavioral">
+            <div class="fw-card-title">Jobs to Be Done <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Reveals what people actually hire a product/action to do</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Designing products, understanding why people do things</div>
+          </div>
+          <div class="fw-card" data-keywords="behavior equation motivation ability prompt habit intervention">
+            <div class="fw-card-title">Behavior Equation <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Models motivation x ability x prompt</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Building habits, designing interventions, things aren't getting done</div>
+          </div>
+          <div class="fw-card" data-keywords="habit loop design cue routine reward breaking creating">
+            <div class="fw-card-title">Habit Loop Design <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Cue, routine, reward architecture</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Creating new habits or breaking old ones</div>
+          </div>
+          <div class="fw-card" data-keywords="variable reward schedules engagement unpredictable motivation">
+            <div class="fw-card-title">Variable Reward Schedules <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Explains engagement through unpredictable rewards</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Designing engagement systems, maintaining motivation</div>
+          </div>
+          <div class="fw-card" data-keywords="loss aversion gains losses streak framing asymmetry">
+            <div class="fw-card-title">Loss Aversion <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Models the asymmetry of gains vs. losses</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Streak design, notification language, framing choices</div>
+          </div>
+          <div class="fw-card" data-keywords="identity reinforcement actions values confidence stated">
+            <div class="fw-card-title">Identity Reinforcement <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Connects actions to stated identity</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Connecting actions to stated values, building confidence</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cognitive Therapy -->
+      <div class="category-group" data-category="cognitive-therapy">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--purple)"></span>
+          <h3 style="color:var(--purple)">Cognitive Therapy</h3>
+          <span class="cat-desc">Seeing thinking clearly</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="distortion detection cognitive catastrophizing all-or-nothing should">
+            <div class="fw-card-title">Distortion Detection <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Names common cognitive distortions</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Catastrophizing, all-or-nothing thinking, should-statements. Names them clearly without pathologizing.</div>
+          </div>
+          <div class="fw-card" data-keywords="linguistic reframing perspective shift language communication">
+            <div class="fw-card-title">Linguistic Reframing <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Shifts perspective through language</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> User is stuck, needs perspective shift, communication design</div>
+          </div>
+          <div class="fw-card" data-keywords="awareness as intervention pattern naming recurring seeing">
+            <div class="fw-card-title">Awareness as Intervention <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Names the pattern as the intervention</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Pattern is recurring, naming it may be enough. Sometimes seeing it clearly is all you need.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Function -->
+      <div class="category-group" data-category="executive-function">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--cyan)"></span>
+          <h3 style="color:var(--cyan)">Executive Function</h3>
+          <span class="cat-desc">Getting things done when the brain won't cooperate</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="executive function model cognitive support adhd">
+            <div class="fw-card-title">Executive Function Model <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Maps which cognitive function needs support</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Understanding which cognitive function needs support</div>
+          </div>
+          <div class="fw-card" data-keywords="adhd design rules real humans executive variance">
+            <div class="fw-card-title">ADHD Design Rules <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Design principles for real humans</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Designing systems for real humans with executive function variance</div>
+          </div>
+          <div class="fw-card" data-keywords="time blindness scheduling estimating duration deadline distorted">
+            <div class="fw-card-title">Time Blindness <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Addresses the distorted sense of time</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Scheduling, estimating duration, deadline language</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Continuous Learning -->
+      <div class="category-group" data-category="continuous-learning">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--lime)"></span>
+          <h3 style="color:var(--lime)">Continuous Learning</h3>
+          <span class="cat-desc">Learning that actually sticks</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="closed loop learning observe model test revise experience">
+            <div class="fw-card-title">Closed-Loop Learning <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Observe, model, test, revise cycle</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Want to learn from experience, not just accumulate information</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Self-Image -->
+      <div class="category-group" data-category="self-image">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--gold)"></span>
+          <h3 style="color:var(--gold)">Self-Image</h3>
+          <span class="cat-desc">Who you think you are (and how that shapes everything)</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="self-image cybernetics thermostat self-concept limiting identity">
+            <div class="fw-card-title">Self-Image Cybernetics <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Models the self-concept as a thermostat</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Self-concept is limiting behavior, identity doesn't match actions</div>
+          </div>
+          <div class="fw-card" data-keywords="teleological psychology hidden goals belonging strategies purpose">
+            <div class="fw-card-title">Teleological Psychology <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Examines hidden goals and belonging strategies</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Examining hidden goals, belonging strategies, purpose narratives</div>
+          </div>
+          <div class="fw-card" data-keywords="systems over goals sustainable practices endpoints chasing">
+            <div class="fw-card-title">Systems Over Goals <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Replaces endpoint-chasing with sustainable practices</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Building sustainable practices instead of chasing endpoints</div>
+          </div>
+          <div class="fw-card" data-keywords="rational self-interest self-prioritization values ethics guilt">
+            <div class="fw-card-title">Rational Self-Interest <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Grounds self-prioritization in rational ethics</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Guilt about self-prioritization, values misalignment, living by default rather than choice</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trauma Recovery -->
+      <div class="category-group" data-category="trauma-recovery">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--rose)"></span>
+          <h3 style="color:var(--rose)">Trauma Recovery</h3>
+          <span class="cat-desc">Understanding where patterns come from</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="four-f survival types fight flight freeze fawn stress response">
+            <div class="fw-card-title">Four-F Survival Types <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Maps fight/flight/freeze/fawn responses</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Stress response feels disproportionate, flashback-like reactions</div>
+          </div>
+          <div class="fw-card" data-keywords="childhood emotional neglect counter-dependence numbness needs">
+            <div class="fw-card-title">Childhood Emotional Neglect <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Identifies counter-dependence and emotional numbness patterns</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Difficulty identifying needs, counter-dependence, emotional numbness</div>
+          </div>
+          <div class="fw-card" data-keywords="emotionally immature parents internalizer externalizer dynamics">
+            <div class="fw-card-title">Emotionally Immature Parents <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Recognizes parent patterns and internalization</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Recognizing parent patterns, internalizer/externalizer dynamics</div>
+          </div>
+          <div class="fw-card" data-keywords="family systems differentiation enmeshment triangulation multigenerational">
+            <div class="fw-card-title">Family Systems Differentiation <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Maps enmeshment, triangulation, multigenerational patterns</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Enmeshment, triangulation, multigenerational patterns</div>
+          </div>
+          <div class="fw-card" data-keywords="eft relationship lens attachment alarm protest withdrawal rupture repair">
+            <div class="fw-card-title">EFT Relationship Lens <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Attachment alarm, protest, withdrawal, rupture/repair</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Repeating romantic conflict, pursue-withdraw dynamics</div>
+          </div>
+          <div class="fw-card" data-keywords="five wounds core wound identification mask body-pattern links">
+            <div class="fw-card-title">Five Wounds <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Core wound identification and mask patterns</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Core wound identification, mask patterns, body-pattern links</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coaching -->
+      <div class="category-group" data-category="coaching">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--amber)"></span>
+          <h3 style="color:var(--amber)">Coaching</h3>
+          <span class="cat-desc">Structured reflection and action</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="structured self-coaching weekly reflection practice growth">
+            <div class="fw-card-title">Structured Self-Coaching <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Weekly reflection practice</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Weekly reflection, need structured growth practice</div>
+          </div>
+          <div class="fw-card" data-keywords="stories vs facts narrative observable reality separation">
+            <div class="fw-card-title">Stories vs Facts <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Separates narrative from observable reality</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Narrative is running the show, need to separate story from reality</div>
+          </div>
+          <div class="fw-card" data-keywords="developmental stages readiness challenge safety assessment">
+            <div class="fw-card-title">Developmental Stages <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Assesses readiness for challenge vs. need for safety</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Assessing readiness for challenge vs need for safety</div>
+          </div>
+          <div class="fw-card" data-keywords="act acceptance commitment therapy defusion values avoidance shame">
+            <div class="fw-card-title">Acceptance &amp; Commitment Therapy (ACT) <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Defusion, acceptance, values, committed action</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Fusion, avoidance, shame spirals, comparison, or overprocessing are blocking values-guided action</div>
+          </div>
+          <div class="fw-card" data-keywords="needs feelings clarity emotions interpretations strategy language">
+            <div class="fw-card-title">Needs &amp; Feelings Clarity <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Separates feelings from interpretations, needs from strategies</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Emotional language is muddy, accusation-heavy, or confused with strategy</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Influence Defense -->
+      <div class="category-group" data-category="influence-defense">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--red)"></span>
+          <h3 style="color:var(--red)">Influence Defense</h3>
+          <span class="cat-desc">Recognizing what's being done to you</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="behavioral signal reading interpersonal dynamics incongruence off">
+            <div class="fw-card-title">Behavioral Signal Reading <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Reads interpersonal dynamics and incongruence</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Something feels off in a conversation, reading dynamics</div>
+          </div>
+          <div class="fw-card" data-keywords="leverage point awareness power dynamics pressure negotiation">
+            <div class="fw-card-title">Leverage Point Awareness <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Recognizes power dynamics and pressure tactics</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Recognizing power dynamics, negotiation, someone applying pressure</div>
+          </div>
+          <div class="fw-card" data-keywords="manipulation watchouts techniques reciprocity authority scarcity pressured">
+            <div class="fw-card-title">Manipulation Watchouts <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Identifies specific manipulation techniques</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Feeling pressured, reciprocity trap, authority play, scarcity push</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Somatic -->
+      <div class="category-group" data-category="somatic">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--pink)"></span>
+          <h3 style="color:var(--pink)">Somatic</h3>
+          <span class="cat-desc">The body knows things the mind doesn't</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="subconscious repatterning cognitive behavioral change bridge body">
+            <div class="fw-card-title">Subconscious Repatterning <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Bridges cognitive understanding to behavioral change</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Cognitive understanding isn't translating to behavior change</div>
+          </div>
+          <div class="fw-card" data-keywords="embodied awareness felt experience head body sensation">
+            <div class="fw-card-title">Embodied Awareness <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Gets out of the head and into felt experience</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Need to get out of the head, body has information</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personality Assessments -->
+      <div class="category-group" data-category="personality-assessments">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--indigo)"></span>
+          <h3 style="color:var(--indigo)">Personality Assessments</h3>
+          <span class="cat-desc">Self-knowledge tools</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="big five openness conscientiousness extraversion agreeableness neuroticism">
+            <div class="fw-card-title">Big Five <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Maps openness, conscientiousness, extraversion, agreeableness, neuroticism</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Building self-knowledge, understanding behavioral tendencies</div>
+          </div>
+          <div class="fw-card" data-keywords="enneagram motivation patterns stress growth dynamics types">
+            <div class="fw-card-title">Enneagram <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Maps motivation patterns and stress/growth dynamics</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Understanding motivation patterns, stress/growth dynamics</div>
+          </div>
+          <div class="fw-card" data-keywords="mbti communication style cognitive function preferences">
+            <div class="fw-card-title">MBTI <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Maps communication style and cognitive preferences</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Communication style, cognitive function preferences</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pattern Detection -->
+      <div class="category-group" data-category="pattern-detection">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--coral)"></span>
+          <h3 style="color:var(--coral)">Pattern Detection</h3>
+          <span class="cat-desc">Naming what keeps happening</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="failure modes recurring behavioral patterns undermine goals intervene">
+            <div class="fw-card-title">Failure Modes <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Names recurring behavioral patterns that undermine goals</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Recurring behavioral pattern detected, need to name and intervene</div>
+          </div>
+          <div class="fw-card" data-keywords="psychological contracts invisible relational agreements nervous system bias">
+            <div class="fw-card-title">Psychological Contracts <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Surfaces invisible relational agreements</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Invisible relational agreements, nervous system bias in relationships</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anti-Patterns -->
+      <div class="category-group" data-category="anti-patterns">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--slate)"></span>
+          <h3 style="color:var(--slate)">Anti-Patterns</h3>
+          <span class="cat-desc">What not to build</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="system anti-patterns productivity system failures auditing designing">
+            <div class="fw-card-title">System Anti-Patterns <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Identifies common productivity system failures</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Designing or auditing a productivity/tracking system</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integrated Practice -->
+      <div class="category-group" data-category="integrated-practice">
+        <div class="category-header">
+          <span class="category-dot" style="background:var(--mint)"></span>
+          <h3 style="color:var(--mint)">Integrated Practice</h3>
+          <span class="cat-desc">Bringing it all together</span>
+        </div>
+        <div class="card-grid">
+          <div class="fw-card" data-keywords="rational yoga unified physical psychological ethical evidence practice">
+            <div class="fw-card-title">Rational Yoga <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Unified physical/psychological/ethical practice</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Seeking unified practice grounded in evidence, not mysticism</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end categories-container -->
+    <div class="no-results" id="no-results">No frameworks match your search.</div>
+  </div>
+</section>
+
+<!-- ROUTES -->
+<section id="routes">
+  <div class="container">
+    <h2>Route Map</h2>
+    <p>Routes are the structured middle layer between "I know something is wrong" and "here's a framework." Each route maps a situation to a framework sequence with guardrails.</p>
+
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+graph TD
+    START{"What's happening?"}
+
+    START --> SHAME["Shame / self-attack / collapse"]
+    START --> THINK["Overthinking / fusion / avoidance"]
+    START --> CONFLICT["Conflict / blame / faux-feelings"]
+    START --> RUPTURE["Relationship rupture"]
+    START --> FRIEND["Friendship ambiguity"]
+    START --> CAREER["Career confusion / drift"]
+    START --> DECIDE["Decision paralysis"]
+    START --> UNCLEAR["Can't name the feeling"]
+
+    SHAME --> S1["1. Needs & Feelings Clarity"]
+    S1 --> S2["2. ACT (defusion)"]
+    S2 --> S3["3. Distortion Detection"]
+
+    THINK --> T1["1. ACT (defusion)"]
+    T1 --> T2["2. Awareness as Intervention"]
+    T2 --> T3["3. Behavior Equation"]
+
+    CONFLICT --> C1["1. Needs & Feelings Clarity"]
+    C1 --> C2["2. Stories vs Facts"]
+    C2 --> C3["3. ACT"]
+
+    RUPTURE --> R1["1. Needs & Feelings Clarity"]
+    R1 --> R2["2. EFT Relationship Lens"]
+    R2 --> R3["3. Psychological Contracts"]
+
+    FRIEND --> F1["1. Needs & Feelings Clarity"]
+    F1 --> F2["2. Psychological Contracts"]
+    F2 --> F3["3. Stories vs Facts"]
+
+    CAREER --> K1["1. Ikigai Diagnostic"]
+    K1 --> K2["2. North Star Test"]
+    K2 --> K3["3. Failure Modes"]
+    K3 --> K4["4. Regret Minimization"]
+
+    DECIDE --> D1["1. Reversibility Classification"]
+    D1 --> D2["2. North Star Test"]
+    D2 --> D3["3. Regret Minimization"]
+
+    UNCLEAR --> U1["1. Needs & Feelings Clarity"]
+    U1 --> U2["2. Embodied Awareness"]
+    U2 --> U3["3. Awareness as Intervention"]
+    U3 --> U4["Reroute to specific route"]
+      </pre>
+    </div>
+
+    <h3 style="margin-top:32px;margin-bottom:4px;">Route Detail Cards</h3>
+    <p style="margin-bottom:8px;">Each route includes a framework sequence, stop conditions, and contraindications.</p>
+
+    <div class="route-cards">
+
+      <div class="route-card">
+        <h4>Shame / Self-Attack / Collapse</h4>
+        <div class="route-problem">Shame spirals self-reinforce. The user generates evidence for the shame narrative, which deepens fusion, which generates more evidence.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--amber)">1</span><span class="step-name">Needs &amp; Feelings Clarity</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--amber)">2</span><span class="step-name">ACT (defusion)</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--amber)">3</span><span class="step-name">Distortion Detection <span class="optional">(optional)</span></span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p><strong>Stop if:</strong> User becomes more activated. Childhood material surfaces they're not ready for. The shame is connected to ongoing harm.</p>
+          <p><strong>Not this route if:</strong> The shame is appropriate guilt about genuinely harmful behavior. The user needs stabilization first.</p>
+        </div></details>
+      </div>
+
+      <div class="route-card">
+        <h4>Overthinking / Fusion / Avoidance</h4>
+        <div class="route-problem">Overthinking masquerades as diligence. The user feels productive because they're "working on it" mentally, but no action occurs.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--teal)">1</span><span class="step-name">ACT (defusion)</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--teal)">2</span><span class="step-name">Awareness as Intervention <span class="optional">(optional)</span></span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--teal)">3</span><span class="step-name">Behavior Equation <span class="optional">(optional)</span></span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p><strong>Stop if:</strong> ACT becomes another layer of overthinking. The stuck-ness masks a real constraint.</p>
+          <p><strong>Not this route if:</strong> The "overthinking" is legitimate deliberation on a genuinely complex decision. The rumination has a shame quality.</p>
+        </div></details>
+      </div>
+
+      <div class="route-card">
+        <h4>Conflict / Blame / Faux-Feelings</h4>
+        <div class="route-problem">"I feel abandoned" is not a feeling. These are interpretations encoded as feelings, and they escalate conflict because each person hears accusations, not vulnerability.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--purple)">1</span><span class="step-name">Needs &amp; Feelings Clarity</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--purple)">2</span><span class="step-name">Stories vs Facts <span class="optional">(optional)</span></span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--purple)">3</span><span class="step-name">ACT <span class="optional">(optional)</span></span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p><strong>Stop if:</strong> NFC is being used to tone-police legitimate anger. The user is more interested in being right.</p>
+          <p><strong>Not this route if:</strong> The conflict involves real harm. The issue is a genuine attachment rupture.</p>
+        </div></details>
+      </div>
+
+      <div class="route-card">
+        <h4>Relationship Rupture / Attachment Activation</h4>
+        <div class="route-problem">Attachment-activated conflict gets processed at the surface level. The couple argues about content when the real issue is connection and safety.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--rose)">1</span><span class="step-name">Needs &amp; Feelings Clarity</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--rose)">2</span><span class="step-name">EFT Relationship Lens</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--rose)">3</span><span class="step-name">Psychological Contracts <span class="optional">(optional)</span></span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p><strong>Stop if:</strong> EFT language is being used to diagnose the partner. The framework is justifying staying in a harmful dynamic.</p>
+          <p><strong>Not this route if:</strong> Active abuse or coercion. Primarily logistical conflict. Very new relationship.</p>
+        </div></details>
+      </div>
+
+      <div class="route-card">
+        <h4>Friendship Ambiguity / Mixed Signals</h4>
+        <div class="route-problem">Friendships have their own dynamics: unclear reciprocity, invisible contracts, effort imbalances that go unspoken.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--green)">1</span><span class="step-name">Needs &amp; Feelings Clarity</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--green)">2</span><span class="step-name">Psychological Contracts</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--green)">3</span><span class="step-name">Stories vs Facts <span class="optional">(optional)</span></span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p><strong>Not this route if:</strong> The bond is deep enough for attachment dynamics. The "friendship" involves manipulation.</p>
+        </div></details>
+      </div>
+
+      <div class="route-card">
+        <h4>Career Confusion / Stuckness / Drift</h4>
+        <div class="route-problem">Career stuckness generates two loops: endless information gathering or impulsive pivots. Both avoid the harder question of what actually matters.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--orange)">1</span><span class="step-name">Ikigai Diagnostic</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--orange)">2</span><span class="step-name">North Star Test</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--orange)">3</span><span class="step-name">Failure Modes <span class="optional">(optional)</span></span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--orange)">4</span><span class="step-name">Regret Minimization <span class="optional">(optional)</span></span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p><strong>Not this route if:</strong> The stuckness is actually depression or burnout. The user has clear direction but is blocked by a specific constraint.</p>
+        </div></details>
+      </div>
+
+      <div class="route-card">
+        <h4>Values Conflict / Decision Paralysis</h4>
+        <div class="route-problem">Genuinely competing values make a decision feel impossible. The tradeoffs are real, not avoidance-driven.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--blue)">1</span><span class="step-name">Reversibility Classification</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--blue)">2</span><span class="step-name">North Star Test</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--blue)">3</span><span class="step-name">Regret Minimization</span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p><strong>Not this route if:</strong> The paralysis is fear-driven. The decision involves another person and relational dynamics.</p>
+        </div></details>
+      </div>
+
+      <div class="route-card">
+        <h4>Emotional Signal Unclear (Meta-Route)</h4>
+        <div class="route-problem">The user knows something is off but can't identify what. This is the entry point for people who can't yet name their situation.</div>
+        <div class="route-steps">
+          <div class="route-step"><span class="step-num" style="background:var(--cyan)">1</span><span class="step-name">Needs &amp; Feelings Clarity</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--cyan)">2</span><span class="step-name">Embodied Awareness</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--cyan)">3</span><span class="step-name">Awareness as Intervention</span></div>
+          <div class="route-step"><span class="step-num" style="background:var(--cyan)">&rarr;</span><span class="step-name">Reroute to specific route</span></div>
+        </div>
+        <details class="route-details"><summary>Guardrails</summary><div class="route-details-content">
+          <p>Once the feeling or need becomes clearer, move to the appropriate situation-specific route above.</p>
+        </div></details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELATIONSHIPS -->
+<section id="relationships">
+  <div class="container">
+    <h2>Framework Relationships</h2>
+    <p>How the 36 frameworks connect. Clusters form around shared concerns: core coaching tools, decision-making, trauma/attachment, behavior design, and identity.</p>
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+graph LR
+    subgraph "Most Connected"
+        ACT["ACT"]
+        NFC["Needs & Feelings"]
+        DD["Distortion Detection"]
+        AAI["Awareness as Intervention"]
+        FM["Failure Modes"]
+        SVF["Stories vs Facts"]
+    end
+
+    ACT --- NFC
+    ACT --- SVF
+    ACT --- AAI
+    ACT --- EA["Embodied Awareness"]
+    NFC --- SVF
+    NFC --- SSC["Self-Coaching"]
+    NFC --- AAI
+    DD --- AAI
+    DD --- FM
+    DD --- LR["Linguistic Reframing"]
+    FM --- CLL["Closed-Loop Learning"]
+    SVF --- SSC
+
+    subgraph "Decision Cluster"
+        RC["Reversibility"]
+        RM["Regret Min"]
+        NST["North Star"]
+        IK["Ikigai"]
+    end
+
+    RC --- RM
+    RC --- NST
+    RM --- IK
+    NST --- BEQ["Behavior Equation"]
+
+    subgraph "Trauma / Attachment"
+        FF["Four-F Types"]
+        CEN["Emotional Neglect"]
+        EIP["Immature Parents"]
+        FSD["Family Systems"]
+        EFT["EFT Relationship"]
+        FW["Five Wounds"]
+    end
+
+    FF --- CEN
+    FF --- FW
+    CEN --- EIP
+    EIP --- FSD
+    FSD --- PC["Psych Contracts"]
+    EFT --- NFC
+    EFT --- PC
+    EFT --- FSD
+
+    subgraph "Behavior Design"
+        BEQ --- HLD["Habit Loop"]
+        HLD --- VRS["Variable Rewards"]
+        VRS --- LA["Loss Aversion"]
+        BEQ --- ADR["ADHD Design"]
+        ADR --- EFM["Exec Function"]
+        EFM --- TB["Time Blindness"]
+    end
+
+    subgraph "Identity"
+        SIC["Self-Image Cybernetics"]
+        TP["Teleological Psych"]
+        SOG["Systems Over Goals"]
+        IR["Identity Reinforcement"]
+        RSI["Rational Self-Interest"]
+    end
+
+    SIC --- TP
+    SIC --- IR
+    SOG --- IR
+    SOG --- BEQ
+    RSI --- SOG
+    RSI --- IR
+    RSI --- NST
+      </pre>
+    </div>
+  </div>
+</section>
+
+<!-- AGENTS -->
+<section id="agents">
+  <div class="container">
+    <h2>The 6 Agent Archetypes</h2>
+    <p>Pre-built agent personalities that apply frameworks in distinct styles.</p>
+    <div class="agent-grid">
+      <div class="agent-card">
+        <h4>The Mirror</h4>
+        <div class="agent-role" style="color:var(--purple)">Pattern Detection</div>
+        <div class="agent-desc">Names contradictions, tracks patterns across weeks, asks the hard questions. Warm but not soft.</div>
+        <div class="agent-frameworks">Key: <span>failure-modes, distortion-detection, awareness-as-intervention, regret-minimization</span></div>
+      </div>
+      <div class="agent-card">
+        <h4>The Briefer</h4>
+        <div class="agent-role" style="color:var(--teal)">Daily Briefing</div>
+        <div class="agent-desc">Morning state report. "What's Working" before pattern alerts. State-responsive -- minimal on hard days.</div>
+        <div class="agent-frameworks">Key: <span>north-star-test, failure-modes</span></div>
+      </div>
+      <div class="agent-card">
+        <h4>The Tracker</h4>
+        <div class="agent-role" style="color:var(--green)">Progress Tracking</div>
+        <div class="agent-desc">Reports positive trends alongside gaps. Tracks reciprocity in relationships.</div>
+        <div class="agent-frameworks">Key: <span>identity-reinforcement, systems-over-goals</span></div>
+      </div>
+      <div class="agent-card">
+        <h4>The Strategist</h4>
+        <div class="agent-role" style="color:var(--amber)">Strategic Planning</div>
+        <div class="agent-desc">Recommends releasing goals, not just adding them. "Who else does this matter to?"</div>
+        <div class="agent-frameworks">Key: <span>ikigai-diagnostic, regret-minimization</span></div>
+      </div>
+      <div class="agent-card">
+        <h4>The Operator</h4>
+        <div class="agent-role" style="color:var(--orange)">Domain Execution</div>
+        <div class="agent-desc">Handles operational tasks within a specific domain. Notes stakeholder impact.</div>
+        <div class="agent-frameworks">Key: <span>behavior-equation, executive-function-model</span></div>
+      </div>
+      <div class="agent-card">
+        <h4>The Watcher</h4>
+        <div class="agent-role" style="color:var(--cyan)">Change Detection</div>
+        <div class="agent-desc">Monitors for significant shifts. Writes change logs for other agents.</div>
+        <div class="agent-frameworks">Key: <span>awareness-as-intervention, failure-modes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK REFERENCE -->
+<section id="quickref">
+  <div class="container">
+    <h2>Quick Reference</h2>
+    <p>Which framework for what -- a lookup table for common needs.</p>
+    <div class="ref-table-wrap">
+      <table class="ref-table">
+        <thead><tr><th>I need to...</th><th>Start with</th></tr></thead>
+        <tbody>
+          <tr><td>Make a decision</td><td>Reversibility Classification</td></tr>
+          <tr><td>Understand why I'm stuck</td><td>Failure Modes</td></tr>
+          <tr><td>Stop overthinking</td><td>ACT</td></tr>
+          <tr><td>Clean up emotional language</td><td>Needs &amp; Feelings Clarity</td></tr>
+          <tr><td>Understand a relationship conflict</td><td>EFT Relationship Lens</td></tr>
+          <tr><td>Figure out my career direction</td><td>Ikigai Diagnostic</td></tr>
+          <tr><td>Build a habit</td><td>Behavior Equation + Habit Loop Design</td></tr>
+          <tr><td>Catch my cognitive distortions</td><td>Distortion Detection</td></tr>
+          <tr><td>Design for executive function variance</td><td>ADHD Design Rules</td></tr>
+          <tr><td>Understand my personality patterns</td><td>Big Five + Enneagram</td></tr>
+          <tr><td>Recognize manipulation</td><td>Manipulation Watchouts</td></tr>
+          <tr><td>Connect body and mind</td><td>Embodied Awareness</td></tr>
+          <tr><td>Learn from experience</td><td>Closed-Loop Learning</td></tr>
+          <tr><td>Build a sustainable practice</td><td>Systems Over Goals</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  36 frameworks. 8 routes. 6 agents. 10 domains. One system.
+</div>
+
+<script>
+  // Mermaid init
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      darkMode: true,
+      background: '#222240',
+      primaryColor: '#3a3a5c',
+      primaryTextColor: '#e0dfe8',
+      primaryBorderColor: '#4a4a6c',
+      lineColor: '#6e6c82',
+      secondaryColor: '#2a2a48',
+      tertiaryColor: '#1a1a2e',
+      fontFamily: 'DM Sans, sans-serif',
+      fontSize: '13px',
+      clusterBkg: '#2a2a48',
+      clusterBorder: '#4a4a6c',
+      edgeLabelBackground: '#222240',
+      nodeTextColor: '#e0dfe8'
+    },
+    flowchart: {
+      curve: 'basis',
+      padding: 16
+    }
+  });
+
+  // Card expand/collapse
+  document.querySelectorAll('.fw-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('expanded');
+    });
+  });
+
+  // Search/filter
+  const searchInput = document.getElementById('fw-search');
+  const categoriesContainer = document.getElementById('categories-container');
+  const noResults = document.getElementById('no-results');
+
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase().trim();
+    let anyVisible = false;
+
+    document.querySelectorAll('.category-group').forEach(group => {
+      let groupHasVisible = false;
+      group.querySelectorAll('.fw-card').forEach(card => {
+        const title = card.querySelector('.fw-card-title').textContent.toLowerCase();
+        const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+        const what = card.querySelector('.fw-card-what').textContent.toLowerCase();
+        const detail = card.querySelector('.fw-card-detail').textContent.toLowerCase();
+        const match = !q || title.includes(q) || keywords.includes(q) || what.includes(q) || detail.includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) groupHasVisible = true;
+      });
+      group.style.display = groupHasVisible ? '' : 'none';
+      if (groupHasVisible) anyVisible = true;
+    });
+
+    noResults.style.display = anyVisible ? 'none' : 'block';
+  });
+</script>
+
+</body>
+</html>
