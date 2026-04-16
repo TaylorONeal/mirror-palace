@@ -50,7 +50,7 @@ if echo "$REMOTE" | grep -qi "mirror-palace"; then
     # Check for email addresses in all tracked .md files
     for file in $(echo "$ALL_FILES" | grep "\.md$"); do
         if [ -f "$file" ]; then
-            if grep -qE "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" "$file" 2>/dev/null; then
+            if grep -oE "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}[:/]?" "$file" 2>/dev/null | grep -qvE "[:/]$"; then
                 echo -e "${RED}BLOCKED:${NC} Email address found in: $file"
                 BLOCKED=1
             fi
