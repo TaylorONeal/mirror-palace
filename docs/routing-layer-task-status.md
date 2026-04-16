@@ -1,7 +1,7 @@
 # Framework Routing Layer — Task Status & Continuation
 
 **Last updated:** 2026-04-16
-**Status:** Phase 1 + Phase 2 Complete. Phase 3 (agent integration) pending.
+**Status:** Phases 1-3 Complete. Pushed to GitHub. Phase 4 (refinement) pending.
 
 ---
 
@@ -49,13 +49,13 @@
 - [x] Created `FRAMEWORK-MAP.md` (public-ready visualization with definitions)
 - [x] Created `framework-map.html` (interactive HTML visualization with mermaid diagrams)
 
-### Phase 3: Agent Integration (remaining)
+### Phase 3: Agent Integration (complete)
 - [x] Prompt scaffolds written in each route card (done as part of Phase 1-2)
-- [ ] Update `guides/getting-started.md` to reference routes as entry point
-- [ ] Update scan skill to suggest routes alongside frameworks
-- [ ] Update `guides/claude-code-setup.md` for managed agent route consumption
-- [ ] Update `guides/openclaw-setup.md` for route consumption
-- [ ] Write a "How to Use Routes" agent guide
+- [x] Updated `guides/getting-started.md` to reference routes as entry point
+- [x] Updated scan skill (v2.1) to suggest routes alongside frameworks
+- [x] Updated `guides/claude-code-setup.md` for managed agent route consumption
+- [x] Updated `guides/openclaw-setup.md` for route consumption
+- [x] Route usage instructions embedded in `routes/README.md` (serves as agent guide)
 
 ### Phase 4: Refinement
 - [ ] Collect usage feedback
@@ -68,12 +68,19 @@
 |------|--------|-------|
 | `docs/PRD-framework-routing.md` | Complete | The full PRD |
 | `docs/routing-layer-task-status.md` | This file | Continuation tracking |
-| `routes/` | Not yet created | Phase 1 deliverable |
-| `docs/ROADMAP.md` | Needs update | Should reference PRD |
-| `CLAUDE.md` | Needs update | Should mention routing layer |
+| `routes/` | Complete | 8 route cards + template + README |
+| `docs/ROADMAP.md` | Updated | References PRD and current initiative |
+| `CLAUDE.md` | Updated | Routing layer + git/SSH + lessons learned |
+| `FRAMEWORK-MAP.md` | Complete | Public-ready visual reference |
+| `framework-map.html` | Complete | Interactive HTML visualization |
+
+### Git & Deployment Setup (complete)
+- [x] SSH deploy key configured (mirror-palace-sandbox, ed25519, read-write)
+- [x] Sandbox can push directly to GitHub — no manual relay
+- [x] Lessons learned logged in CLAUDE.md
 
 ## Continuation Prompt
 
 If picking this up in a new session, start with:
 
-> Read `docs/PRD-framework-routing.md` and `docs/routing-layer-task-status.md` in the mirror-palace repo. The PRD for the framework routing layer is complete. Continue with Phase 1 implementation: create the `routes/` directory, the route card template, the route index README, and the first 4 route cards (shame-spiral, conflict-blame, overthinking-fusion, emotional-signal-unclear). Extract the detailed route specs from the PRD's Section 10 into standalone files. Keep everything public-safe — no personal data, no user-specific content.
+> Read `CLAUDE.md` and `docs/routing-layer-task-status.md` in the mirror-palace repo. Phases 1-3 of the framework routing layer are complete and pushed to GitHub. The remaining work is Phase 4 (refinement): collect usage feedback, consider v2 situation classes (trauma processing, system design), and potentially build a `/route` executable skill. For git: SSH deploy key is configured, sandbox can push directly.
