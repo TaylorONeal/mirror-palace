@@ -65,6 +65,21 @@ Six pre-built agent personalities in `agents/archetypes/`. Each has SOUL.md (ide
 - **setup** — Integrate mirror-palace into an existing repo (AGENTS.md, CLAUDE.md patches) with user consent at every step
 - **create-framework** — Scaffold a complete new framework from a concept, paper, or idea. Generates all 4 files, validates quality, and updates index.md + all dependent files (README.md, ARCHITECTURE.md, signal-patterns.md, CLAUDE.md counts)
 
+## Git & Deployment
+- **Remote:** `git@github.com:TaylorONeal/mirror-palace.git` (SSH)
+- **Deploy key:** `mirror-palace-sandbox` (ed25519, read-write) is registered on GitHub. The sandbox can push directly via SSH.
+- **Before first push in a session:** Run `ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null` if `~/.ssh/known_hosts` doesn't exist yet.
+- **Pre-push hook:** "Mirror Palace Safety Gate" checks for personal data. Must pass before any push.
+- **If `index.lock` blocks git:** `rm -f .git/index.lock` — it's always a stale leftover, never a live process in this context.
+- **Push workflow:** The Cowork sandbox cannot commit/push against the mounted folder due to `.git/index.lock` permission issues on the mount. All git write operations (commit, push, merge, rebase) must go through terminal Claude. The sandbox can read, diff, and verify, but the final commit+push step always needs terminal Claude.
+
+## Lessons Learned
+- **SSH over HTTPS for sandbox git.** HTTPS auth fails in sandboxed environments (no TTY for credential prompts). Always use SSH + deploy key.
+- **Deploy keys via CLI, not browser.** `gh repo deploy-key add` is faster and works from any terminal. Skip the GitHub settings UI.
+- **Kill stale lock files immediately.** `.git/index.lock` from crashed git operations is always safe to `rm -f`. Don't try to work around it.
+- **Git writes go through terminal Claude.** The Cowork sandbox mount prevents `.git/index.lock` deletion, which blocks all git write ops. Don't attempt commit/push from the sandbox. Prepare files, verify diffs, then give the user a single instruction block labeled "TERMINAL CLAUDE" to paste.
+- **Generate SSH key + add known_hosts in one shot.** When setting up a new sandbox session: `ssh-keygen -t ed25519 -C "mirror-palace-sandbox" -f ~/.ssh/id_ed25519 -N "" && ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null`.
+
 ## Rules
 - **No personal data.** Templates are blank starters. Fill them in for your own private use.
 - **Influence defense is defensive.** The influence-defense frameworks are about recognizing techniques used on you, never about using them on others.
