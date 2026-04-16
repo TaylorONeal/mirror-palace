@@ -947,28 +947,47 @@ async function main() {
 
   slide.addShape(pres.shapes.RECTANGLE, { x: 0, y: 0, w: 10, h: 0.06, fill: { color: TEAL } });
 
-  slide.addImage({ data: icons.rocket, x: 4.5, y: 0.6, w: 0.8, h: 0.8 });
+  slide.addImage({ data: icons.rocket, x: 4.5, y: 0.4, w: 0.7, h: 0.7 });
 
   slide.addText("WHAT'S NEXT", {
-    x: 0.5, y: 1.5, w: 9, h: 0.5, fontSize: 14, fontFace: "Calibri",
+    x: 0.5, y: 1.15, w: 9, h: 0.4, fontSize: 14, fontFace: "Calibri",
     color: TEAL, bold: true, align: "center", charSpacing: 6, margin: 0
   });
 
   slide.addText("Build agents that actually understand\nthe humans they serve.", {
-    x: 0.5, y: 2.1, w: 9, h: 1.0, fontSize: 26, fontFace: "Calibri",
+    x: 0.5, y: 1.55, w: 9, h: 0.85, fontSize: 24, fontFace: "Calibri",
     color: WHITE, align: "center", bold: true, margin: 0, lineSpacingMultiple: 1.3
   });
 
   // Open source badge
-  slide.addShape(pres.shapes.RECTANGLE, { x: 3.0, y: 3.4, w: 4.0, h: 0.65, fill: { color: TEAL, transparency: 85 } });
+  slide.addShape(pres.shapes.RECTANGLE, { x: 3.0, y: 2.55, w: 4.0, h: 0.55, fill: { color: TEAL, transparency: 85 } });
   slide.addText("Open Source  \u00b7  MIT Licensed  \u00b7  GitHub", {
-    x: 3.0, y: 3.4, w: 4.0, h: 0.65, fontSize: 14, fontFace: "Calibri",
+    x: 3.0, y: 2.55, w: 4.0, h: 0.55, fontSize: 13, fontFace: "Calibri",
     color: TEAL, bold: true, align: "center", valign: "middle", margin: 0
   });
 
   slide.addText("github.com/TaylorONeal/mirror-palace", {
-    x: 0.5, y: 4.3, w: 9, h: 0.5, fontSize: 14, fontFace: "Calibri",
+    x: 0.5, y: 3.2, w: 9, h: 0.4, fontSize: 14, fontFace: "Calibri",
     color: LIGHT_GRAY, align: "center", margin: 0
+  });
+
+  // Live resources section
+  slide.addText("LIVE NOW", {
+    x: 0.5, y: 3.8, w: 9, h: 0.3, fontSize: 10, fontFace: "Calibri",
+    color: MID_GRAY, align: "center", charSpacing: 4, margin: 0
+  });
+
+  const resources = [
+    { name: "FRAMEWORK-MAP.md", desc: "Full system reference with all 36 frameworks, categories, and connections", color: TEAL },
+    { name: "framework-map.html", desc: "Interactive visual map with Mermaid diagrams. Open in any browser.", color: CORAL },
+    { name: "docs/routing-layer-task-status.md", desc: "Routing layer implementation status and continuation instructions", color: GOLD },
+  ];
+  resources.forEach((r, i) => {
+    const x = 0.5 + i * 3.1;
+    slide.addShape(pres.shapes.RECTANGLE, { x, y: 4.2, w: 2.9, h: 1.05, fill: { color: BG_CARD } });
+    slide.addShape(pres.shapes.RECTANGLE, { x, y: 4.2, w: 2.9, h: 0.04, fill: { color: r.color } });
+    slide.addText(r.name, { x: x + 0.12, y: 4.3, w: 2.66, h: 0.3, fontSize: 10, fontFace: "Calibri", color: r.color, bold: true, margin: 0 });
+    slide.addText(r.desc, { x: x + 0.12, y: 4.6, w: 2.66, h: 0.55, fontSize: 9, fontFace: "Calibri", color: MID_GRAY, margin: 0, lineSpacingMultiple: 1.2 });
   });
 
   // Bottom bar
