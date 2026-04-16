@@ -89,7 +89,7 @@ async function main() {
   // Divider line
   slide.addShape(pres.shapes.RECTANGLE, { x: 3.5, y: 3.4, w: 3, h: 0.03, fill: { color: TEAL, transparency: 50 } });
 
-  slide.addText("[Speaker Name]", {
+  slide.addText("Taylor O'Neal", {
     x: 0.5, y: 3.7, w: 9, h: 0.5, fontSize: 18, fontFace: "Calibri",
     color: LIGHT_GRAY, align: "center", margin: 0
   });
@@ -784,9 +784,9 @@ async function main() {
     color: TEAL, bold: true, align: "center", valign: "middle", margin: 0
   });
 
-  slide.addText("[github.com/your-repo/mirror-palace]", {
+  slide.addText("github.com/TaylorONeal/mirror-palace", {
     x: 0.5, y: 4.3, w: 9, h: 0.5, fontSize: 14, fontFace: "Calibri",
-    color: MID_GRAY, align: "center", margin: 0
+    color: LIGHT_GRAY, align: "center", margin: 0
   });
 
   // Bottom bar
