@@ -3,6 +3,7 @@ id: reversibility-classification
 category: decision-making
 tags: [decisions, reversibility, speed, analysis, prioritization]
 pairs-with: [regret-minimization, information-compression, concept-formation, north-star-test]
+routes: [values-decision-paralysis]
 complexity: low
 agent-ready: true
 use-when:

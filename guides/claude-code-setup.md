@@ -17,12 +17,16 @@ Add to your repo's `CLAUDE.md` or `AGENTS.md`:
 This repo uses mirror-palace cognitive frameworks.
 Framework reference: ../mirror-palace/frameworks/
 Framework index: ../mirror-palace/index.md
+Route index: ../mirror-palace/routes/README.md
 
-When facing decisions, pattern detection, or behavioral design:
-1. Consult ../mirror-palace/index.md for applicable frameworks
-2. Load the relevant framework's agent-prompt.md
-3. Apply the framework to the current context
-4. Check the framework's README.md 'updates' field and propose status updates
+When facing a user situation:
+1. Check ../mirror-palace/routes/README.md to match the situation to a route
+2. If a route matches, follow its recommended framework sequence and guardrails
+3. If no route matches, consult ../mirror-palace/index.md for individual frameworks
+4. Load the relevant framework's agent-prompt.md
+5. Apply the framework to the current context
+6. Check the route's "Stop If" conditions after each framework step
+7. Check the framework's README.md 'updates' field and propose status updates
 ```
 
 ## Option 2: Submodule Mode (Version-Controlled)

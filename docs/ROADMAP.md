@@ -4,6 +4,18 @@ How Mirror Palace thinks about what it's building and why.
 
 ---
 
+## Current Initiative: Framework Routing Layer
+
+**Status:** Implemented (Phase 1-2 complete, Phase 3 in progress)
+**PRD:** [`docs/PRD-framework-routing.md`](PRD-framework-routing.md)
+**Task Tracking:** [`docs/routing-layer-task-status.md`](routing-layer-task-status.md)
+
+The framework routing layer adds a structured middle layer between signal detection and framework application. 8 route cards map common situation classes (shame spirals, overthinking, conflict, relationship rupture, friendship ambiguity, career stuckness, decision paralysis, unclear emotional signals) to recommended framework sequences with ordering rationale, contraindications, stop conditions, and fallback paths. Routes live in `routes/` and are cross-linked to frameworks, signal-patterns, index.md, and agent documentation.
+
+**Remaining work:** Usage feedback collection, v2 situation classes (trauma processing, system design), potential `route` skill for executable routing.
+
+---
+
 ## The Progression
 
 Mirror Palace guides a single progression, applied across every component:

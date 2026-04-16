@@ -17,17 +17,23 @@ git clone <mirror-palace-url>
 
 Place it in your OpenClaw workspace or as a submodule in your project.
 
-## Step 2: Register Frameworks
+## Step 2: Register Frameworks and Routes
 
-In your OpenClaw agent configuration, add a knowledge source reference:
+In your OpenClaw agent configuration, add knowledge source references:
 
 ```yaml
 knowledge_sources:
-  - name: mirror-palace
+  - name: mirror-palace-frameworks
     path: ./mirror-palace/frameworks/
     index: ./mirror-palace/index.md
     type: framework-library
+  - name: mirror-palace-routes
+    path: ./mirror-palace/routes/
+    index: ./mirror-palace/routes/README.md
+    type: route-library
 ```
+
+Routes provide situation-based framework sequencing. When an agent detects a user situation, it should check routes first for a recommended framework sequence before falling back to individual framework selection.
 
 ## Step 3: Deploy Agent Archetypes
 

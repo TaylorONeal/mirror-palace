@@ -3,6 +3,7 @@ id: acceptance-and-commitment-therapy
 category: coaching
 tags: [act, defusion, acceptance, present-moment, values, committed-action]
 pairs-with: [needs-feelings-clarity, stories-vs-facts, awareness-as-intervention, embodied-awareness]
+routes: [shame-spiral, conflict-blame, overthinking-fusion]
 complexity: medium
 agent-ready: true
 use-when:

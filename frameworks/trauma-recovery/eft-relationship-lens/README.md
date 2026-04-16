@@ -3,6 +3,7 @@ id: eft-relationship-lens
 category: trauma-recovery
 tags: [attachment, relationship, protest, withdrawal, rupture-repair, emotionally-focused]
 pairs-with: [needs-feelings-clarity, family-systems-differentiation, psychological-contracts, structured-self-coaching]
+routes: [relationship-rupture]
 complexity: medium
 agent-ready: true
 use-when:

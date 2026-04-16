@@ -3,6 +3,7 @@ id: distortion-detection
 category: cognitive-therapy
 tags: [cbt, cognitive-distortions, information-design, language, framing]
 pairs-with: [linguistic-reframing, awareness-as-intervention, adhd-design-rules, time-blindness]
+routes: [shame-spiral]
 complexity: medium
 agent-ready: true
 use-when:

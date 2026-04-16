@@ -16,6 +16,7 @@ pairs-with:
   - childhood-emotional-neglect
   - structured-self-coaching
   - failure-modes
+routes: [emotional-signal-unclear]
 complexity: low
 agent-ready: true
 use-when:

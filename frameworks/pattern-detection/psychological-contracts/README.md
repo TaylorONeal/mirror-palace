@@ -14,6 +14,7 @@ pairs-with:
   - structured-self-coaching
   - embodied-awareness
   - stories-vs-facts
+routes: [relationship-rupture, friendship-ambiguity]
 complexity: medium
 agent-ready: true
 use-when:

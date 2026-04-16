@@ -3,6 +3,7 @@ id: regret-minimization
 category: decision-making
 tags: [decisions, regret, courage, fear, long-term-thinking]
 pairs-with: [reversibility-classification, ikigai-diagnostic, identity-reinforcement, concept-formation]
+routes: [career-stuckness, values-decision-paralysis]
 complexity: low
 agent-ready: true
 use-when:

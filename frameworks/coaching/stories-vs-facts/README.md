@@ -14,6 +14,7 @@ pairs-with:
   - psychological-contracts
   - embodied-awareness
   - developmental-stages
+routes: [conflict-blame, friendship-ambiguity]
 complexity: low
 agent-ready: true
 use-when:

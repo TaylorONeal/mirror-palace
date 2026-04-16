@@ -17,6 +17,7 @@ requires:
   - "For connected mode: MCP server configuration (user-provided, local only)"
   - "No API keys or cloud credentials required — all data stays local"
 outputs:
+  - "Route recommendations (situation-matched framework sequences with guardrails)"
   - "Framework recommendations with confidence scores"
   - "Status domain updates (proposed, pending user confirmation)"
   - "People record updates (proposed, pending user confirmation)"
@@ -68,14 +69,24 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 **Output:** Signal list with framework mappings
 **Consent required:** No (read-only analysis)
 
-### Step 3: Framework Mapping
+### Step 3: Route and Framework Mapping
 **Input:** Signal list
-**Action:** Aggregate signals by framework. For each framework with 2+ signals:
+**Action:** First, check if the detected signals match a situation route. Routes provide recommended framework sequences with ordering and guardrails.
+
+**Route matching (check first):**
+- Review `routes/README.md` for the 8 situation classes
+- If signals cluster around a route's common signals, recommend that route
+- The route card provides the framework sequence, ordering rationale, contraindications, and fallback routes
+- Include the "Suggested Route" column from `references/signal-patterns.md` to support matching
+
+**Individual framework mapping (for signals that don't match a route):**
+- Aggregate signals by framework. For each framework with 2+ signals:
 - Read the framework's `README.md` for `use-when` conditions
 - Confirm the framework applies (signals match use-when criteria)
 - Check `pairs-with` for complementary frameworks
 - Check `updates` field for which status files should be refreshed
-**Output:** Ranked framework recommendations with supporting evidence
+
+**Output:** Route recommendations (if applicable) + ranked framework recommendations with supporting evidence
 **Consent required:** No
 
 ### Step 4: Status Proposals
@@ -163,13 +174,14 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 **Output:** Draft decision records
 **Consent required:** Yes — confirm each decision record
 
-### Step 6: Framework Recommendations
+### Step 6: Route and Framework Recommendations
 **Action:** Based on everything gathered, produce the scan report (see `references/report-template.md`):
-- Top 5 frameworks that apply to current situation
+- Matched routes (if any) with the recommended framework sequence and ordering rationale
+- Top 5 individual frameworks that apply to current situation
 - Category relevance map
 - Signals detected with sources
 - Suggested agent archetype(s)
-- Next steps
+- Next steps (route-guided if a route matched, framework-guided otherwise)
 **Output:** Complete scan report
 **Consent required:** No (read-only output)
 
@@ -340,3 +352,4 @@ Do not ask the user to fill out forms. Propose specific updates based on what th
 |---------|------|---------|
 | 1.0 | — | Initial specification with 4 modes |
 | 2.0 | — | Added detailed step-by-step procedures, consent gates, cross-source correlation, error handling, cost estimates |
+| 2.1 | — | Added route-aware scanning: signals now map to routes (via Suggested Route column in signal-patterns.md), scan report includes matched routes with framework sequences, route matching checked before individual framework mapping |
