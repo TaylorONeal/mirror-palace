@@ -37,27 +37,23 @@ The confidence layer is a text-first module that runs after cognitive processing
 
 ---
 
-## PRD Coverage Status
+## PRD Coverage Gaps (New)
 
-PRD coverage audit and recommended sequence is tracked in:
+PRD coverage audit and recommended sequence for missing key functionality is tracked in:
 
 - [`docs/PRD-gap-analysis.md`](PRD-gap-analysis.md)
 
-Previously missing key PRDs:
+Top missing PRDs identified:
 1. Scan Skill v2
 2. Continuous Learning + Status Update Engine
 3. Agent Orchestration + Memory Policy
 4. Safety, Privacy, and Data Governance
 
-Status: PRDs created for all four:
+PRDs now created for all four:
 - [`docs/PRD-scan-skill-v2.md`](PRD-scan-skill-v2.md)
 - [`docs/PRD-continuous-learning-status-engine.md`](PRD-continuous-learning-status-engine.md)
 - [`docs/PRD-agent-orchestration-memory-policy.md`](PRD-agent-orchestration-memory-policy.md)
 - [`docs/PRD-safety-privacy-data-governance.md`](PRD-safety-privacy-data-governance.md)
-
-Remaining PRD gaps (medium priority):
-1. Integrations Runtime (OpenClaw / MCP / External Connectors)
-2. Daily Briefing Engine + UX Contract
 
 ---
 
