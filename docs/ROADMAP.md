@@ -6,13 +6,54 @@ How Mirror Palace thinks about what it's building and why.
 
 ## Current Initiative: Framework Routing Layer
 
-**Status:** Implemented (Phase 1-2 complete, Phase 3 in progress)
+**Status:** Implemented (Phases 1-3 complete, refinement pending)
 **PRD:** [`docs/PRD-framework-routing.md`](PRD-framework-routing.md)
 **Task Tracking:** [`docs/routing-layer-task-status.md`](routing-layer-task-status.md)
 
 The framework routing layer adds a structured middle layer between signal detection and framework application. 8 route cards map common situation classes (shame spirals, overthinking, conflict, relationship rupture, friendship ambiguity, career stuckness, decision paralysis, unclear emotional signals) to recommended framework sequences with ordering rationale, contraindications, stop conditions, and fallback paths. Routes live in `routes/` and are cross-linked to frameworks, signal-patterns, index.md, and agent documentation.
 
 **Remaining work:** Usage feedback collection, v2 situation classes (trauma processing, system design), potential `route` skill for executable routing.
+
+---
+
+## Next Initiative: Confidence Language Overlay
+
+**Status:** PRD complete, implementation planning in progress  
+**PRD:** [`docs/PRD-confidence-language-overlay.md`](PRD-confidence-language-overlay.md)  
+**Specs:**  
+- [`docs/confidence-language/confident-language-taxonomy.md`](confidence-language/confident-language-taxonomy.md)  
+- [`docs/confidence-language/confidence-scoring-system.md`](confidence-language/confidence-scoring-system.md)  
+- [`docs/confidence-language/master-prompt-confidence-mds.md`](confidence-language/master-prompt-confidence-mds.md)
+
+The confidence layer is a text-first module that runs after cognitive processing and before response generation. It scores and rewrites language for certainty, agency, directness, conciseness, and social calibration while respecting existing psych/NLP routes.
+
+### Implementation order
+
+1. **Deterministic detector pass (v0):** hedge/passive/preamble/filler detection with transparent rules.
+2. **Routing hook (v1):** add `confidence_language_analysis` to communication-oriented routes and intent classes.
+3. **Rewrite engine (v1):** generate assertive/collaborative/executive/casual outputs with context safeguards.
+4. **Training loop (v2):** phrase drills, spaced repetition, and user-specific error trend tracking.
+5. **Cross-layer coherence checks (v2):** prevent mismatch between emotional state and language-strength recommendations.
+
+---
+
+## PRD Coverage Status
+
+PRD coverage audit and recommended sequence is tracked in:
+
+- [`docs/PRD-gap-analysis.md`](PRD-gap-analysis.md)
+
+Previously missing key PRDs:
+1. Scan Skill v2
+2. Continuous Learning + Status Update Engine
+3. Agent Orchestration + Memory Policy
+4. Safety, Privacy, and Data Governance
+
+Status: PRDs created for all four:
+- [`docs/PRD-scan-skill-v2.md`](PRD-scan-skill-v2.md)
+- [`docs/PRD-continuous-learning-status-engine.md`](PRD-continuous-learning-status-engine.md)
+- [`docs/PRD-agent-orchestration-memory-policy.md`](PRD-agent-orchestration-memory-policy.md)
+- [`docs/PRD-safety-privacy-data-governance.md`](PRD-safety-privacy-data-governance.md)
 
 ---
 
