@@ -1,7 +1,7 @@
 # CLAUDE.md — Mirror Palace
 
 ## What This Repo Is
-A cognitive framework toolkit. 36+ psychology, decision-making, and behavioral science frameworks organized for both human reference and AI agent consumption. Includes a life domain status tracking system, people records, decisions ledger, personality assessments, 6 agent archetypes, and 3 core skills (scan + setup + create-framework).
+A cognitive framework toolkit. 48 psychology, decision-making, and behavioral science frameworks organized for both human reference and AI agent consumption. Includes a life domain status tracking system, people records, decisions ledger, personality assessments, 6 agent archetypes, and 3 core skills (scan + setup + create-framework).
 
 ## Every Session
 1. Read this file

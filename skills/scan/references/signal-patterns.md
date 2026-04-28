@@ -57,8 +57,12 @@ Signal patterns for the scan skill. When you detect a signal in conversation, do
 | "It's fine" when it clearly isn't | Conversation | `childhood-emotional-neglect`, `distortion-detection` | Medium — one-off or pattern? | Relevant domain, `status/people/` | [emotional-signal-unclear](../../../routes/emotional-signal-unclear.md) |
 | Apologizing for having needs | Conversation, messages | `childhood-emotional-neglect`, `psychological-contracts` | Medium-high if repeated | `status/people/` | [emotional-signal-unclear](../../../routes/emotional-signal-unclear.md) |
 | Catastrophizing ("this will ruin everything") | Conversation, journal | `distortion-detection`, `stories-vs-facts` | High if specific language detected | Relevant domain | [overthinking-fusion](../../../routes/overthinking-fusion.md) |
-| Mind-reading ("they probably think...") | Conversation | `distortion-detection`, `behavioral-signal-reading` | Medium — worth noting pattern | `status/people/` | [conflict-blame](../../../routes/conflict-blame.md) |
+| Mind-reading ("they probably think...") | Conversation | `distortion-detection`, `behavioral-signal-reading`, `nvc-translation` | Medium — worth noting pattern | `status/people/` | [conflict-blame](../../../routes/conflict-blame.md) |
 | Fortune-telling ("this won't work") | Conversation, journal | `distortion-detection` | Medium — check for evidence basis | Relevant domain | [overthinking-fusion](../../../routes/overthinking-fusion.md) |
+| Faux feelings in outgoing draft ("I feel ignored / manipulated / rejected / abandoned / attacked") | Messages, conversation | `nvc-translation`, `needs-feelings-clarity` | High — direct lexicon match | `status/people/` | [conflict-blame](../../../routes/conflict-blame.md) |
+| User pastes a draft message during conflict ("how should I say this?", "is this too harsh?") | Conversation | `nvc-translation` | High — direct request for outgoing-message rewrite | `status/people/`, `status/decisions/` | [conflict-blame](../../../routes/conflict-blame.md) |
+| Demand disguised as request ("you need to...", "you better...", ultimatum followed by "or else") | Messages, conversation | `nvc-translation`, `manipulation-watchouts` | Medium-high — refusal-integrity test will catch it | `status/people/` | [conflict-blame](../../../routes/conflict-blame.md) |
+| Vague virtue-word request ("be more respectful", "be responsible", "be reasonable") | Messages, conversation | `nvc-translation` | Medium — needs behavioral specificity | `status/people/` | [conflict-blame](../../../routes/conflict-blame.md) |
 
 ## Decision and Commitment Signals
 
