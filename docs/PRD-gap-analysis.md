@@ -14,15 +14,15 @@ These are solid, but they cover only part of the platform's core behavior.
 
 ---
 
-## Key PRD Coverage Plan (Recommended)
+## Missing Key PRDs (Recommended)
 
-**Update (2026-04-28):** Top 4 high-priority PRDs from this list are now created (complete):
+**Update (2026-04-28):** Top 4 high-priority PRDs from this list are now created:
 - `docs/PRD-scan-skill-v2.md`
 - `docs/PRD-continuous-learning-status-engine.md`
 - `docs/PRD-agent-orchestration-memory-policy.md`
 - `docs/PRD-safety-privacy-data-governance.md`
 
-## 1) PRD: Scan Skill v2 (Input → Signal Detection → Recommendations) — **High priority** ✅ created
+## 1) PRD: Scan Skill v2 (Input → Signal Detection → Recommendations) — **High priority**
 
 **Why it's key**
 - `scan` is the main onboarding and ingestion path.
@@ -38,7 +38,7 @@ These are solid, but they cover only part of the platform's core behavior.
 
 ---
 
-## 2) PRD: Continuous Learning + Status Update Engine — **High priority** ✅ created
+## 2) PRD: Continuous Learning + Status Update Engine — **High priority**
 
 **Why it's key**
 - This is the persistence layer that makes Mirror Palace more than a static framework library.
@@ -52,7 +52,7 @@ These are solid, but they cover only part of the platform's core behavior.
 
 ---
 
-## 3) PRD: Agent Orchestration + Memory Policy — **High priority** ✅ created
+## 3) PRD: Agent Orchestration + Memory Policy — **High priority**
 
 **Why it's key**
 - Multiple archetypes and orchestration docs exist, but no product-level PRD for runtime coordination.
@@ -66,7 +66,7 @@ These are solid, but they cover only part of the platform's core behavior.
 
 ---
 
-## 4) PRD: Safety, Privacy, and Data Governance — **High priority** ✅ created
+## 4) PRD: Safety, Privacy, and Data Governance — **High priority**
 
 **Why it's key**
 - The system handles highly sensitive personal context.
@@ -110,15 +110,15 @@ These are solid, but they cover only part of the platform's core behavior.
 
 ## Priority Order (Suggested)
 
-1. Scan Skill v2 PRD ✅ created
-2. Continuous Learning + Status Update Engine PRD ✅ created
-3. Agent Orchestration + Memory Policy PRD ✅ created
-4. Safety, Privacy, and Data Governance PRD ✅ created
-5. Integrations Runtime PRD ⏳ pending
-6. Daily Briefing Engine PRD ⏳ pending
+1. Scan Skill v2 PRD
+2. Continuous Learning + Status Update Engine PRD
+3. Agent Orchestration + Memory Policy PRD
+4. Safety, Privacy, and Data Governance PRD
+5. Integrations Runtime PRD
+6. Daily Briefing Engine PRD
 
 ---
 
 ## Suggested next move
 
-Start with **PRD: Integrations Runtime (OpenClaw / MCP / External Connectors)** to close the next highest-impact gap for reliable data flow and permissions handling.
+Start with **PRD: Scan Skill v2** because it is the highest-leverage gateway into routing, updates, and daily workflows.
