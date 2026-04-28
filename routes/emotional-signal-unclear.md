@@ -3,7 +3,7 @@ id: emotional-signal-unclear
 category: meta
 tags: [confusion, meta, unclear, needs, feelings, entry-point]
 complexity: low
-frameworks: [needs-feelings-clarity, embodied-awareness, awareness-as-intervention]
+frameworks: [needs-feelings-clarity, embodied-awareness, awareness-as-intervention, nvc-translation]
 primary-framework: needs-feelings-clarity
 fallback-routes: [shame-spiral, overthinking-fusion, conflict-blame]
 ---
@@ -47,7 +47,7 @@ Cognitive language first because it is the most accessible channel for most peop
 
 ## Stop If
 
-- A clear feeling or need surfaces. The moment it does, this route has done its job. Reroute to the appropriate situation-specific route: [Shame Spiral](shame-spiral.md) if shame is present, [Conflict / Blame](conflict-blame.md) if a relational conflict emerges, [Overthinking / Fusion](overthinking-fusion.md) if rumination is the pattern, [Career Stuckness](career-stuckness.md) if direction is the issue, and so on.
+- A clear feeling or need surfaces. The moment it does, this route has done its job. Reroute to the appropriate situation-specific route: [Shame Spiral](shame-spiral.md) if shame is present, [Conflict / Blame](conflict-blame.md) if a relational conflict emerges, [Overthinking / Fusion](overthinking-fusion.md) if rumination is the pattern, [Career Stuckness](career-stuckness.md) if direction is the issue, and so on. If a clear feeling and need have surfaced AND the user wants to actually say something to another person, hand off to [NVC Translation](../frameworks/coaching/nvc-translation/) for the outgoing-message rewrite.
 - The user becomes more agitated or activated by the exploration. Back off. Offer grounding instead of more questions.
 - The body-awareness step triggers a strong somatic response the user is not ready to process. Do not push past their capacity. Meet them where they are.
 

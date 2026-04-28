@@ -2,7 +2,7 @@
 id: needs-feelings-clarity
 category: coaching
 tags: [needs, feelings, communication, discernment, emotional-clarity, nvc-adjacent]
-pairs-with: [structured-self-coaching, stories-vs-facts, awareness-as-intervention, family-systems-differentiation]
+pairs-with: [nvc-translation, structured-self-coaching, stories-vs-facts, awareness-as-intervention, family-systems-differentiation]
 routes: [shame-spiral, conflict-blame, relationship-rupture, friendship-ambiguity, emotional-signal-unclear]
 complexity: medium
 agent-ready: true
@@ -29,7 +29,7 @@ A framework for separating feelings from interpretations, needs from strategies,
 - **Best for**: turning reactive emotional language into clearer discernment
 - **Complexity**: medium
 - **Time to apply**: 5-15 minutes
-- **Pairs with**: Structured Self-Coaching, Stories vs Facts, Awareness as Intervention
+- **Pairs with**: NVC Translation (outward expression after inward signal is clean), Structured Self-Coaching, Stories vs Facts, Awareness as Intervention
 
 ## Files
 - `theory.md` — Full explanation of the concept
