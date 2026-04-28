@@ -1,6 +1,6 @@
 # Mirror Palace Framework Map
 
-A visual reference for the entire Mirror Palace system: 36 frameworks across 16 categories, 8 situation routes, and how they connect.
+A visual reference for the entire Mirror Palace system: 48 frameworks across 16 categories, 8 situation routes, and how they connect.
 
 ---
 
@@ -26,7 +26,7 @@ graph TB
 
     subgraph "KNOWLEDGE LAYER"
         F[frameworks/]
-        F1[36 frameworks × 4 files]
+        F1[48 frameworks × 4 files]
         F2[theory + template + agent-prompt + README]
     end
 
@@ -157,6 +157,7 @@ Frameworks for self-coaching, narrative separation, and values-guided movement.
 | **Developmental Stages** | Assesses readiness for challenge vs. need for safety | Assessing readiness for challenge vs need for safety |
 | **Acceptance & Commitment Therapy (ACT)** | Defusion, acceptance, values, committed action | Fusion, avoidance, shame spirals, comparison, or overprocessing are blocking values-guided action |
 | **Needs & Feelings Clarity** | Separates feelings from interpretations, needs from strategies | Emotional language is muddy, accusation-heavy, or confused with strategy |
+| **NVC Translation** | Mode-aware rewriting engine: produces OFNR-shaped self-expression, empathy guesses, boundary language, or clarity requests — and refuses to sanitize abuse, evidence, or safety language | Drafting an outgoing message during conflict, generating an empathy guess, distinguishing a request from a demand, or producing clean boundary language |
 
 ### Influence Defense — Recognizing What's Being Done to You
 
@@ -405,9 +406,13 @@ graph LR
     NFC --- SVF
     NFC --- SSC["Structured Self-Coaching"]
     NFC --- AAI
+    NFC --- NVCT["NVC Translation"]
+    NVCT --- DD
+    NVCT --- MW["Manipulation Watchouts"]
     DD --- AAI
     DD --- FM
     DD --- LR["Linguistic Reframing"]
+    NVCT --- LR
     FM --- CLL["Closed-Loop Learning"]
     SVF --- SSC
 
@@ -552,6 +557,6 @@ A system that only finds what's broken trains the user to see only what's broken
 
 ---
 
-*36 frameworks. 8 routes. 6 agents. 10 domains. One system.*
+*48 frameworks. 8 routes. 6 agents. 10 domains. One system.*
 
 *See [index.md](index.md) for the full framework matrix. See [routes/](routes/) for situation-based routing. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the technical architecture.*

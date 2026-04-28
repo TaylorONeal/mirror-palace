@@ -3,7 +3,7 @@ id: conflict-blame
 category: relational
 tags: [conflict, blame, faux-feelings, accusation, communication]
 complexity: low-medium
-frameworks: [needs-feelings-clarity, stories-vs-facts, acceptance-and-commitment-therapy]
+frameworks: [needs-feelings-clarity, stories-vs-facts, acceptance-and-commitment-therapy, nvc-translation]
 primary-framework: needs-feelings-clarity
 fallback-routes: [relationship-rupture, emotional-signal-unclear]
 ---
@@ -33,6 +33,8 @@ Conflicts conducted in faux-feeling language escalate. Each person hears accusat
 
 3. **[ACT](../frameworks/coaching/acceptance-and-commitment-therapy/)** (if needed) -- If the user is fused with the conflict narrative and can't let go even after the language is cleaner, ACT helps defuse from the story and reconnect to values. "What do you actually want from this relationship?" is more useful than another round of grievance.
 
+4. **[NVC Translation](../frameworks/coaching/nvc-translation/)** (if the user is drafting an outgoing message) -- Once the inward signal is clean and the story is separated from the facts, if the user wants to actually send a message, switch to the NVC Translation engine. It produces mode-aware rewrites (self-expression, empathy guess, boundary, clarity request, or preserve-original) and runs integrity checks for refusal, boundary, and harm preservation. NFC produces clean signal; NVC Translation produces the sentence.
+
 ## Why This Order
 
 Language first because nothing downstream works until the language is cleaner. A user who says "I feel manipulated" cannot do useful fact-story separation -- the accusation is baked into the feeling word. Stories vs Facts second because narrative distortion is the most common layer after language distortion. Once the feelings are cleaner, the stories become visible. ACT third because fusion with conflict narratives is the deepest layer and only needs addressing if the first two don't resolve it. If the user is still looping after clean language and clear facts, they are likely fused with the narrative itself, and defusion is the remaining move.
@@ -59,6 +61,7 @@ Language first because nothing downstream works until the language is cleaner. A
 - [Needs & Feelings Clarity](../frameworks/coaching/needs-feelings-clarity/)
 - [Stories vs Facts](../frameworks/coaching/stories-vs-facts/)
 - [ACT](../frameworks/coaching/acceptance-and-commitment-therapy/)
+- [NVC Translation](../frameworks/coaching/nvc-translation/)
 
 ## Prompt Scaffold
 
@@ -107,6 +110,19 @@ If the user's language is cleaner and they can see the story, but they still can
 5. Identify committed action: "What is the smallest real step toward that, even if the discomfort comes with you?"
 
 Do not use ACT to bypass legitimate grievance. If the conflict involves real harm, the user may need boundaries, not defusion.
+
+STEP 4: NVC TRANSLATION (if the user is drafting an outgoing message)
+
+If the user wants to actually say or send something to the other person -- not just understand what is going on -- run the NVC Translation engine on the draft.
+
+1. Confirm consent. If the user is venting and has not asked for a rewrite, do not produce one.
+2. Classify context: personal/draft message/mediation/feedback/HR-or-evidence/abuse-or-safety/public-advocacy/power-asymmetry. If evidence or immediate-safety, preserve the original; offer a separate companion rewrite if useful.
+3. Select mode: self-expression, empathy guess, boundary, clarity request, or preserve-original.
+4. Detect patterns in the draft: absolutizers, labels, faux feelings, mind-reading, demands, threats, vague virtue words, safety language.
+5. Apply rewrite rules and produce 1-3 candidates with rationale and tags.
+6. Run integrity checks: refusal integrity (if "no" is not allowed, it's still a demand), boundary integrity (do not over-soften safety language), harm preservation (do not erase severity), uncertainty preservation (empathy guesses must hedge), not-nice test (fake softness fails).
+
+NVC Translation is not a niceness filter. Hard truths and clean anger are valid outputs. If the user is at an exit decision, boundary mode produces a self-protective consequence statement, not a punishment.
 
 ROUTE GUARDRAILS:
 - If the user becomes more activated at any step, pause. Ask "what do you need right now?" before continuing.

@@ -3,7 +3,7 @@ id: friendship-ambiguity
 category: relational
 tags: [friendship, mixed-signals, boundaries, reciprocity, ambiguity]
 complexity: low-medium
-frameworks: [needs-feelings-clarity, psychological-contracts, stories-vs-facts]
+frameworks: [needs-feelings-clarity, psychological-contracts, stories-vs-facts, nvc-translation]
 primary-framework: needs-feelings-clarity
 fallback-routes: [relationship-rupture, conflict-blame]
 ---
@@ -34,6 +34,8 @@ Without a framework, friendship ambiguity tends to produce one of two loops. The
 2. **Psychological Contracts** -- Once the need is clearer, surface the invisible agreement. Friendships run on implicit contracts that are rarely spoken: "We check in weekly," "We show up for the hard stuff," "We are honest even when it is uncomfortable." When these contracts are violated without acknowledgment, it creates confusion and resentment that feels disproportionate to the specific event. Naming the contract makes it possible to decide whether to renegotiate, accept, or release.
 
 3. **Stories vs Facts** (if needed) -- If the user has built a strong narrative about the friend's motives ("They are pulling away on purpose," "They only reach out when they need something"), separate observed behavior from interpretation. "They have not initiated plans in three months" is a fact. "They do not value me" is a story. The facts may support concern -- but the story is not the same as the facts, and acting on story rather than facts usually makes things worse.
+
+4. **[NVC Translation](../frameworks/coaching/nvc-translation/)** (if the user is drafting an outgoing message) -- If, after the inward work, the user wants to actually reach out to the friend, the NVC Translation engine produces a mode-aware rewrite (self-expression, empathy guess, boundary, or clarity request). For friendship ambiguity, clarity-request mode is often the right choice -- a question that surfaces the missing observation or intent rather than an accusation framed as a feeling.
 
 ## Why This Order
 
