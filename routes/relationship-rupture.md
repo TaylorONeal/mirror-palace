@@ -3,7 +3,7 @@ id: relationship-rupture
 category: relational
 tags: [attachment, rupture, withdrawal, protest, pursue-withdraw, repair]
 complexity: medium-high
-frameworks: [needs-feelings-clarity, eft-relationship-lens, psychological-contracts]
+frameworks: [needs-feelings-clarity, eft-relationship-lens, psychological-contracts, nvc-translation]
 primary-framework: eft-relationship-lens
 fallback-routes: [conflict-blame, friendship-ambiguity]
 ---
@@ -33,6 +33,8 @@ Without a framework, attachment-activated conflict gets processed at the surface
 2. **[EFT Relationship Lens](../frameworks/trauma-recovery/eft-relationship-lens/)** -- Once the language is cleaner, examine the cycle. Identify the pursue-withdraw or attack-defend pattern. Name the attachment alarm underneath. Map the cycle: what triggers protest or withdrawal, what each person's position is protecting, where the repair window is.
 
 3. **[Psychological Contracts](../frameworks/pattern-detection/psychological-contracts/)** (if needed) -- If the rupture involves invisible agreements ("I thought we agreed that..."), unstated expectations, or nervous-system-level relational rules, add this lens. Useful when the conflict has a "betrayal" quality that does not match the actual event -- the resentment is powered by an unspoken contract, not by the surface disagreement.
+
+4. **[NVC Translation](../frameworks/coaching/nvc-translation/)** (if the user is drafting outgoing language) -- For repair attempts, the NVC Translation engine produces self-expression rewrites that lead with observation + feeling + need + request rather than the protest-shaped language that attachment activation tends to generate. If the user is at an exit decision rather than a repair, boundary mode produces a self-protective consequence statement (what the speaker will do), not a punishment of the receiver.
 
 ## Why This Order
 
