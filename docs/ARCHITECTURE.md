@@ -127,6 +127,31 @@ Mirror Palace is organized into six distinct layers, each with a clear responsib
 
 ---
 
+## Language Confidence Overlay (Planned)
+
+Mirror Palace can optionally insert a `confidence_language_analysis` step for communication-heavy prompts. This step is intentionally narrow: it tunes expression quality without replacing framework reasoning.
+
+**Placement**
+1. Signal detection
+2. Route matching + framework application
+3. Cognitive/emotional reframing synthesis
+4. **Confidence language analysis** (taxonomy + scoring + rewrites)
+5. Final response assembly
+
+**Inputs**
+- Raw user text (or transcript)
+- Context mode (meeting, interview, conflict, dating/social, presentation, general)
+- Upstream route + reframing outputs
+
+**Outputs**
+- 5-dimension confidence scores
+- Category-tagged language spans
+- Four rewrite variants (assertive/collaborative/executive/casual confident)
+
+See detailed specs in `docs/confidence-language/`.
+
+---
+
 ## Framework Routing via index.md
 
 The `index.md` file is the central routing table. Every user situation maps to frameworks, and every framework maps to status updates:
