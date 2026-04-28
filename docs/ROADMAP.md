@@ -55,6 +55,10 @@ Status: PRDs created for all four:
 - [`docs/PRD-agent-orchestration-memory-policy.md`](PRD-agent-orchestration-memory-policy.md)
 - [`docs/PRD-safety-privacy-data-governance.md`](PRD-safety-privacy-data-governance.md)
 
+Remaining PRD gaps (medium priority):
+1. Integrations Runtime (OpenClaw / MCP / External Connectors)
+2. Daily Briefing Engine + UX Contract
+
 ---
 
 ## The Progression

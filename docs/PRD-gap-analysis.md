@@ -110,15 +110,15 @@ These are solid, but they cover only part of the platform's core behavior.
 
 ## Priority Order (Suggested)
 
-1. Scan Skill v2 PRD
-2. Continuous Learning + Status Update Engine PRD
-3. Agent Orchestration + Memory Policy PRD
-4. Safety, Privacy, and Data Governance PRD
-5. Integrations Runtime PRD
-6. Daily Briefing Engine PRD
+1. Scan Skill v2 PRD ✅ created
+2. Continuous Learning + Status Update Engine PRD ✅ created
+3. Agent Orchestration + Memory Policy PRD ✅ created
+4. Safety, Privacy, and Data Governance PRD ✅ created
+5. Integrations Runtime PRD ⏳ pending
+6. Daily Briefing Engine PRD ⏳ pending
 
 ---
 
 ## Suggested next move
 
-Start with **PRD: Scan Skill v2** because it is the highest-leverage gateway into routing, updates, and daily workflows.
+Start with **PRD: Integrations Runtime (OpenClaw / MCP / External Connectors)** to close the next highest-impact gap for reliable data flow and permissions handling.
