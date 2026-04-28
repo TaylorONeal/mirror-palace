@@ -169,6 +169,22 @@ graph LR
 
 ---
 
+## Communication Optimization Path (Planned)
+
+For communication-heavy requests, Mirror Palace can run an additional language-quality pass before final response delivery.
+
+**Execution order**
+1. Route selection + framework sequence
+2. Cognitive/emotional synthesis from selected frameworks
+3. Optional `confidence_language_analysis` overlay
+4. Final response generation
+
+This keeps confidence coaching modular: the system first decides *what* to say using existing frameworks, then improves *how* to say it with context-aware language scoring and rewrites.
+
+See `docs/confidence-language/` for taxonomy, scoring, and implementation sequencing.
+
+---
+
 ## The Daily Cycle
 
 Once integrated, Mirror Palace runs a daily rhythm:
