@@ -63,7 +63,24 @@ if [ -n "$BLOCKED_KEYWORDS" ]; then
     done
 fi
 
-# --- Check 3b: Block files containing real names ---
+# --- Check 3b: Block user-specific names in reusable public framework/docs scaffolds ---
+# Public reusable scaffolds should not hard-code specific operator/user names.
+GENERIC_SURFACES=$(echo "$STAGED_FILES" | grep -E "^(frameworks/|docs/|index\.md$|routes/|guides/|skills/)" || true)
+FORBIDDEN_GENERIC_NAMES='\b(Taylor|Chloe)\b'
+if [ -n "$GENERIC_SURFACES" ]; then
+    for file in $GENERIC_SURFACES; do
+        if [ -f "$file" ]; then
+            if grep -qiE "$FORBIDDEN_GENERIC_NAMES" "$file" 2>/dev/null; then
+                echo -e "${RED}BLOCKED:${NC} Reusable public file contains user-specific name(s):"
+                echo "  - $file"
+                echo "  Replace with neutral terms like self/operator/shared/external."
+                BLOCKED=1
+            fi
+        fi
+    done
+fi
+
+# --- Check 3c: Optional local known-name scan ---
 # Add known names to your PRIVATE copy of this hook only.
 # This public version ships with an empty list.
 KNOWN_NAMES=""
