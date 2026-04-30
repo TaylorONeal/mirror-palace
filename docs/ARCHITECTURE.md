@@ -12,7 +12,7 @@ Mirror Palace is organized into six distinct layers, each with a clear responsib
 ╔═══════════════════════════════════════════════════════════════╗
 ║                     KNOWLEDGE LAYER                           ║
 ║  frameworks/                                                  ║
-║  36 frameworks × 4 files = 144 files                         ║
+║  48 frameworks × 4 files = 192 files                         ║
 ║  The agent's training in human psychology                     ║
 ║  ┌────────────┬────────────┬────────────┬────────────┐       ║
 ║  │ theory.md  │template.md │agent-prompt│ README.md  │       ║
@@ -124,6 +124,32 @@ Mirror Palace is organized into six distinct layers, each with a clear responsib
                     │  Low friction. 1-line each.    │
                     └──────────────────────────────┘
 ```
+
+---
+
+## Language Confidence Overlay (Planned)
+
+Mirror Palace can optionally insert a `confidence_language_analysis` step for communication-heavy prompts. This step is intentionally narrow: it tunes expression quality without replacing framework reasoning.
+
+**Placement**
+1. Signal detection
+2. Route matching + framework application
+3. Cognitive/emotional reframing synthesis
+4. **Confidence language analysis** (taxonomy + scoring + rewrites)
+5. Final response assembly
+
+**Inputs**
+- Raw user text (or transcript)
+- Context mode (meeting, interview, conflict, dating/social, presentation, general)
+- Upstream route + reframing outputs
+- Phrasebook reference corpus for rewrite patterns (`docs/confidence-language/references/this-not-that-communication-tips.md`)
+
+**Outputs**
+- 5-dimension confidence scores
+- Category-tagged language spans
+- Four rewrite variants (assertive/collaborative/executive/casual confident)
+
+See detailed specs in `docs/confidence-language/`.
 
 ---
 
@@ -257,7 +283,7 @@ OpenClaw agents:
 
 | Layer | Files | Purpose |
 |-------|-------|---------|
-| Knowledge (frameworks/) | 144 | 36 frameworks × 4 files each |
+| Knowledge (frameworks/) | 192 | 48 frameworks × 4 files each |
 | Routes (routes/) | ~10 | 8 route cards + README + template |
 | Status (status/) | ~25 | 10 domains + people + decisions + indexes |
 | Agents (agents/) | ~25 | 6 archetypes + templates + orchestration |

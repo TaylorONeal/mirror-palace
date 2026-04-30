@@ -35,6 +35,19 @@ Routes sit between signal detection and framework application. They are the stru
 
 ---
 
+
+## Communication Tip Set Placement
+
+The **This Not That** communication phrasebook fits **after route selection**, not as a standalone route.
+
+Why:
+- Routes decide *which psychological lens to use* for the situation class.
+- The tip set optimizes *how the final message is phrased* (confidence, directness, calibration).
+
+Implementation home: `docs/confidence-language/references/this-not-that-communication-tips.md` and the Confidence Language Overlay PRD.
+
+---
+
 ## Important: What Routes Are (and Are Not)
 
 Routes are **starting suggestions**, not prescriptions.
