@@ -17,6 +17,8 @@ The framework routing layer adds a structured middle layer between signal detect
 ## Emerging next layer: signal processing intake
 A useful next layer is a general signal-processing intake pattern that helps agents decide whether an inbound item is action, information, pattern, relationship, opportunity, admin drag, or discard. This would strengthen the bridge from raw inbox/calendar/chat inputs into framework routing, memory updates, and proactive support.
 
+A strong follow-up to this is a response-discerner pattern: after signal classification, decide whether the right output is a direct reply, a reusable clarification, troubleshooting guidance, a system fix, prep only, or suppression. This would prevent many agents from overproducing one-off drafts when a reusable or upstream solution is better.
+
 ---
 
 ## The Progression
