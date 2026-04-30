@@ -44,7 +44,7 @@ const makeCardShadow = () => ({ type: "outer", blur: 6, offset: 2, angle: 135, c
 async function main() {
   const pres = new pptxgen();
   pres.layout = "LAYOUT_16x9";
-  pres.author = "Taylor O'Neal";
+  pres.author = "Your Name";
   pres.title = "Mirror Palace: Teaching AI Agents How You Work";
 
   // Pre-render all icons
@@ -95,7 +95,7 @@ async function main() {
   // Divider line
   slide.addShape(pres.shapes.RECTANGLE, { x: 3.5, y: 3.4, w: 3, h: 0.03, fill: { color: TEAL, transparency: 50 } });
 
-  slide.addText("Taylor O'Neal", {
+  slide.addText("Your Name", {
     x: 0.5, y: 3.7, w: 9, h: 0.5, fontSize: 18, fontFace: "Calibri",
     color: LIGHT_GRAY, align: "center", margin: 0
   });
@@ -966,7 +966,7 @@ async function main() {
     color: TEAL, bold: true, align: "center", valign: "middle", margin: 0
   });
 
-  slide.addText("github.com/TaylorONeal/mirror-palace", {
+  slide.addText("github.com/YOUR_ORG_OR_USER/mirror-palace", {
     x: 0.5, y: 4.3, w: 9, h: 0.5, fontSize: 14, fontFace: "Calibri",
     color: LIGHT_GRAY, align: "center", margin: 0
   });

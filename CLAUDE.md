@@ -66,7 +66,7 @@ Six pre-built agent personalities in `agents/archetypes/`. Each has SOUL.md (ide
 - **create-framework** — Scaffold a complete new framework from a concept, paper, or idea. Generates all 4 files, validates quality, and updates index.md + all dependent files (README.md, ARCHITECTURE.md, signal-patterns.md, CLAUDE.md counts)
 
 ## Git & Deployment
-- **Remote:** `git@github.com:TaylorONeal/mirror-palace.git` (SSH)
+- **Remote:** `git@github.com:YOUR_ORG_OR_USER/mirror-palace.git` (SSH)
 - **Deploy key:** `mirror-palace-sandbox` (ed25519, read-write) is registered on GitHub. The sandbox can push directly via SSH.
 - **Before first push in a session:** Run `ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null` if `~/.ssh/known_hosts` doesn't exist yet.
 - **Pre-push hook:** "Mirror Palace Safety Gate" checks for personal data. Must pass before any push.
