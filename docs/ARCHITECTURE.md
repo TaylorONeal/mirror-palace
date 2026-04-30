@@ -142,6 +142,7 @@ Mirror Palace can optionally insert a `confidence_language_analysis` step for co
 - Raw user text (or transcript)
 - Context mode (meeting, interview, conflict, dating/social, presentation, general)
 - Upstream route + reframing outputs
+- Phrasebook reference corpus for rewrite patterns (`docs/confidence-language/references/this-not-that-communication-tips.md`)
 
 **Outputs**
 - 5-dimension confidence scores

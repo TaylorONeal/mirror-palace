@@ -144,6 +144,17 @@ Return issue-level explanations:
 
 ---
 
+
+## PR-7 Reference Corpus Integration
+
+Integrate the imported phrasebook corpus at:
+- `docs/confidence-language/references/this-not-that-communication-tips.md`
+
+Usage requirements:
+- Seed lexical detector lists (hedges, minimizers, apology-first patterns, indirect asks).
+- Seed rewrite templates for mode-specific outputs (assertive/collaborative/executive/casual_confident).
+- Preserve attribution and CC BY-SA lineage in derivative prompt/data artifacts.
+
 ## 6. Data Contracts
 
 ### Input (minimum)

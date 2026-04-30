@@ -29,6 +29,7 @@
 
 Implement deterministic detectors before model-heavy inference.
 
+- Import phrasebook seed patterns from `references/this-not-that-communication-tips.md`.
 - Hedge lexicon + modal stack detector
 - Passive voice detector
 - Filler/disfluency detector
