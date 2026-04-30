@@ -25,9 +25,13 @@ They are signals that should change interpretation, suppression, pacing, or memo
 - Repeated user corrections are often high-value signals and should be promoted into memory.
 - Calendar and inbox items should earn surface area; not all captured data deserves to become confident guidance.
 - Good proactive support usually comes from pattern recognition, suppression, preparation, or leverage sorting rather than generic reminders.
+- Unread is not the same thing as important.
+- Before generating a reply, decide what kind of response object is actually needed.
 
 ## Recommended integration points
 - connect signal processing to routes and framework selection
 - treat conversation corrections as promotable signals
 - let proactive/daily agents use recent signal patterns as input
 - create examples showing promotion from raw signal -> memory/process/system update
+- add a response-discerner step between signal detection and draft generation
+- document common suppression classes for inbox/calendar-derived noise
