@@ -14,6 +14,9 @@ The framework routing layer adds a structured middle layer between signal detect
 
 **Remaining work:** Usage feedback collection, v2 situation classes (trauma processing, system design), potential `route` skill for executable routing.
 
+## Emerging next layer: signal processing intake
+A useful next layer is a general signal-processing intake pattern that helps agents decide whether an inbound item is action, information, pattern, relationship, opportunity, admin drag, or discard. This would strengthen the bridge from raw inbox/calendar/chat inputs into framework routing, memory updates, and proactive support.
+
 ---
 
 ## The Progression
