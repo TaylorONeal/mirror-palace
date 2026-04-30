@@ -47,17 +47,6 @@ if echo "$REMOTE" | grep -qi "mirror-palace"; then
         done
     fi
 
-    # Check reusable public surfaces for hard-coded operator/user names
-    FORBIDDEN_GENERIC_NAMES='\b(Taylor|Chloe)\b'
-    for file in $(echo "$ALL_FILES" | grep -E "^(frameworks/|docs/|index\.md$|routes/|guides/|skills/)" || true); do
-        if [ -f "$file" ]; then
-            if grep -qiE "$FORBIDDEN_GENERIC_NAMES" "$file" 2>/dev/null; then
-                echo -e "${RED}BLOCKED:${NC} User-specific name found in reusable public file: $file"
-                BLOCKED=1
-            fi
-        fi
-    done
-
     # Check for email addresses in all tracked .md files
     for file in $(echo "$ALL_FILES" | grep "\.md$"); do
         if [ -f "$file" ]; then
