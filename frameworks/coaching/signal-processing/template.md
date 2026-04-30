@@ -24,7 +24,7 @@
 - What does this actually say?
 
 ## Ownership
-- Taylor / Chloe / shared / external / student / relationship / admin system
+- self / operator / shared / external / customer-client / student-member / relationship / admin-system
 
 ## Best Route
 - task
