@@ -64,6 +64,13 @@ graph TD
     INFLUENCE --> LPA[leverage-point-awareness]
     INFLUENCE --> MW[manipulation-watchouts]
 
+    START --> EXPRESS[Drafting an outgoing message during conflict or repair]
+    EXPRESS --> Q13{Do I know what I feel and need?}
+    Q13 -->|not yet| NFC2[needs-feelings-clarity]
+    Q13 -->|yes, now I want to say it| NVCT[nvc-translation]
+    EXPRESS --> Q14{Is this a request or a demand?}
+    Q14 --> NVCT2[nvc-translation]
+
     IDENTITY --> SIC[self-image-cybernetics]
     IDENTITY --> TP[teleological-psychology]
     IDENTITY --> RSI[rational-self-interest]
@@ -119,8 +126,8 @@ graph TD
 | `SVF` | Coaching | [Stories vs Facts](frameworks/coaching/stories-vs-facts/) | Narrative is running the show, need to separate story from reality | `status/decisions/`, `status/domains/` | structured-self-coaching, distortion-detection |
 | `DS` | Coaching | [Developmental Stages](frameworks/coaching/developmental-stages/) | Assessing readiness for challenge vs need for safety | `status/domains/personal-growth-learning.md` | structured-self-coaching, four-f-survival-types |
 | `ACT` | Coaching | [Acceptance & Commitment Therapy](frameworks/coaching/acceptance-and-commitment-therapy/) | Fusion, avoidance, shame spirals, comparison, or overprocessing are blocking values-guided action | `status/domains/`, `status/people/`, `status/decisions/` | needs-feelings-clarity, stories-vs-facts, awareness-as-intervention, embodied-awareness |
-| `NFC` | Coaching | [Needs & Feelings Clarity](frameworks/coaching/needs-feelings-clarity/) | Emotional language is muddy, accusation-heavy, or confused with strategy | `status/domains/`, `status/people/`, `status/decisions/` | structured-self-coaching, stories-vs-facts, awareness-as-intervention |
-| `SIG` | Coaching | [Signal Processing](frameworks/coaching/signal-processing/) | Email, notifications, admin friction, or social/career inbound signals need interpretation and routing, not just triage | `status/domains/`, `status/people/`, `status/decisions/` | needs-feelings-clarity, acceptance-and-commitment-therapy, stories-vs-facts, failure-modes |
+| `NFC` | Coaching | [Needs & Feelings Clarity](frameworks/coaching/needs-feelings-clarity/) | Emotional language is muddy, accusation-heavy, or confused with strategy | `status/domains/`, `status/people/`, `status/decisions/` | nvc-translation, structured-self-coaching, stories-vs-facts, awareness-as-intervention |
+| `NVCT` | Coaching | [NVC Translation](frameworks/coaching/nvc-translation/) | Drafting an outgoing message during conflict, generating an empathy guess, or distinguishing a request from a demand | `status/people/`, `status/decisions/`, `status/domains/` | needs-feelings-clarity, distortion-detection, linguistic-reframing, manipulation-watchouts |
 | `BSR` | Influence Defense | [Behavioral Signal Reading](frameworks/influence-defense/behavioral-signal-reading/) | Something feels off in a conversation, reading dynamics | `status/people/` | manipulation-watchouts, leverage-point-awareness |
 | `LPA` | Influence Defense | [Leverage Point Awareness](frameworks/influence-defense/leverage-point-awareness/) | Recognizing power dynamics, negotiation, someone applying pressure | `status/people/`, `status/decisions/` | behavioral-signal-reading, manipulation-watchouts |
 | `MW` | Influence Defense | [Manipulation Watchouts](frameworks/influence-defense/manipulation-watchouts/) | Feeling pressured, reciprocity trap, authority play, scarcity push | `status/people/`, `status/decisions/` | behavioral-signal-reading, leverage-point-awareness |
@@ -146,7 +153,7 @@ Routes add a structured middle layer between signal detection and framework appl
 |---------------------------|-------|-------------------|
 | Shame, self-attack, collapse | [Shame Spiral](routes/shame-spiral.md) | ACT |
 | Overthinking, rumination, avoidance | [Overthinking / Fusion](routes/overthinking-fusion.md) | ACT |
-| Conflict full of blame or faux-feelings | [Conflict / Blame](routes/conflict-blame.md) | Needs & Feelings |
+| Conflict full of blame or faux-feelings | [Conflict / Blame](routes/conflict-blame.md) | Needs & Feelings → NVC Translation |
 | Relationship rupture, attachment alarm | [Relationship Rupture](routes/relationship-rupture.md) | EFT |
 | Friendship confusion, mixed signals | [Friendship Ambiguity](routes/friendship-ambiguity.md) | Needs & Feelings |
 | Career confusion, stuckness, drift | [Career Stuckness](routes/career-stuckness.md) | Ikigai |

@@ -36,7 +36,7 @@ graph TB
     classDef process fill:#553c9a,stroke:#6b46c1,color:#e9d8fd
 
     subgraph KNOW ["KNOWLEDGE LAYER — What the agent knows about humans"]
-        F[36 Frameworks] --> EP[Epistemology<br/><i>How to think</i>]
+        F[48 Frameworks] --> EP[Epistemology<br/><i>How to think</i>]
         F --> DM[Decision-Making<br/><i>How to decide</i>]
         F --> BP[Behavioral Psychology<br/><i>How people act</i>]
         F --> CT[Cognitive Therapy<br/><i>Reframing patterns</i>]
@@ -242,7 +242,7 @@ Every area of your life gets tracked, scored, and cross-linked.
 
 ## The Framework Library
 
-36 frameworks across 15 categories. Each one has:
+48 frameworks across 15 categories. Each one has:
 
 | File | Purpose |
 |------|---------|
