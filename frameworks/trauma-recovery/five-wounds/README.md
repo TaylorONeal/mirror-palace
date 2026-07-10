@@ -31,9 +31,9 @@ avoid-when:
   - "Body pattern descriptions would trigger body image issues"
   - "The person is not ready for deep wound exploration"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/relationships.md"
-  - "status/domains/identity.md"
+  - "status/domains/"
+  - "status/people/"
+  - "status/domains/personal-growth-learning.md"
 ---
 
 # The Five Wounds

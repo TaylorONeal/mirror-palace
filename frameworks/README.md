@@ -45,6 +45,8 @@ For a one-line "what it does / use when" summary of every framework, see [`FRAME
 
 > ⚠️ **Influence Defense** frameworks are about recognizing techniques used on you, never about using them on others.
 
+> 📐 **A note on Epistemology:** this category is partly agent-architecture-facing, and its frameworks sit at different points on the implemented-vs-aspirational spectrum. Concept Formation and Information Compression are fully usable today (the agent memory hierarchy in [`docs/ARCHITECTURE.md`](../docs/ARCHITECTURE.md) already applies the compression hierarchy). MIRROR Cognitive Architecture is a research blueprint: current agents realize it as a within-turn reasoning discipline plus Mirror Palace's file-based memory (`SOUL.md`/`MEMORY.md`/`WORKING.md`), while its full form — parallel reasoning threads and between-turn reflection — is a direction for deeper work as agent runtimes evolve. See the [framework's Implementation Status section](epistemology/mirror-cognitive-architecture/README.md) for the exact split.
+
 ---
 
 ## How Frameworks Get Selected

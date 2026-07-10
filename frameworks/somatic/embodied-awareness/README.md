@@ -30,8 +30,8 @@ avoid-when:
   - "The person is highly dissociative and body awareness could trigger overwhelm"
   - "Body awareness is being used to avoid necessary cognitive or emotional work"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/health-body.md"
+  - "status/domains/"
+  - "status/domains/health-fitness.md"
 ---
 
 # Embodied Awareness

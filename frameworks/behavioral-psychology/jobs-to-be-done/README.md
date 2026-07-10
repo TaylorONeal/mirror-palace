@@ -16,8 +16,8 @@ avoid-when:
   - "The functional job is genuinely unsolved (emotional layer can wait)"
   - "Very early exploration where the job itself is undefined"
 updates:
-  - "status/domains/career.md"
-  - "status/domains/creative.md"
+  - "status/domains/career-work.md"
+  - "status/domains/fun-recreation.md"
 ---
 
 # Jobs to Be Done

@@ -17,8 +17,8 @@ avoid-when:
   - "The classification is obvious and adding process would be counterproductive"
 updates:
   - "status/decisions/"
-  - "status/domains/career.md"
-  - "status/domains/relationships.md"
+  - "status/domains/career-work.md"
+  - "status/people/"
 ---
 
 # Reversibility Classification

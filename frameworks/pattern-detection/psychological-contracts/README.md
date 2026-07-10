@@ -29,7 +29,7 @@ avoid-when:
   - "The person is in an abusive situation where the problem is not hidden contracts but actual harm"
   - "Excavation would overwhelm someone without adequate support"
 updates:
-  - "status/domains/mental-health.md"
+  - "status/domains/"
   - "status/people/"
 ---
 

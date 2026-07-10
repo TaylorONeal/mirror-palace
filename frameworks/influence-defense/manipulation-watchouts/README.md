@@ -30,7 +30,7 @@ avoid-when:
   - "Someone wants to learn these techniques to use on others"
   - "The situation is genuinely dangerous and requires safety intervention, not framework analysis"
 updates:
-  - "status/domains/mental-health.md"
+  - "status/domains/"
   - "status/people/"
 ---
 

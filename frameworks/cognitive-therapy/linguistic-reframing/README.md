@@ -15,8 +15,7 @@ avoid-when:
   - "User has explicitly asked for unvarnished direct communication"
   - "Energy depletion is the root cause — rest is needed, not linguistic optimization"
 updates:
-  - "status/domains/productivity.md"
-  - "status/domains/mental-health.md"
+  - "status/domains/"
 ---
 
 # Linguistic Reframing

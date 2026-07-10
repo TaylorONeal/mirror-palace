@@ -14,8 +14,8 @@ avoid-when:
   - "User has demonstrated strong temporal awareness and prefers minimal time scaffolding"
   - "Context where approximate time is appropriate (casual planning, brainstorming)"
 updates:
-  - "status/domains/productivity.md"
-  - "status/domains/time-management.md"
+  - "status/domains/"
+  - "status/domains/career-work.md"
 ---
 
 # Time Blindness

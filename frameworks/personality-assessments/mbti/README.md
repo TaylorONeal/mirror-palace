@@ -29,9 +29,9 @@ avoid-when:
   - "Typing others without their input"
   - "The person needs Big Five trait accuracy, not cognitive style mapping"
 updates:
-  - "status/domains/identity.md"
-  - "status/domains/relationships.md"
-  - "status/domains/career.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/people/"
+  - "status/domains/career-work.md"
 ---
 
 # MBTI and Cognitive Functions
