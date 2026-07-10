@@ -1,6 +1,6 @@
 # Mirror Palace Framework Map
 
-A visual reference for the entire Mirror Palace system: 48 frameworks across 16 categories, 8 situation routes, and how they connect.
+A visual reference for the entire Mirror Palace system: 49 frameworks across 15 categories, 8 situation routes, and how they connect.
 
 ---
 
@@ -26,7 +26,7 @@ graph TB
 
     subgraph "KNOWLEDGE LAYER"
         F[frameworks/]
-        F1[48 frameworks × 4 files]
+        F1[49 frameworks × 4 files]
         F2[theory + template + agent-prompt + README]
     end
 
@@ -60,7 +60,7 @@ graph TB
 
 ---
 
-## The 16 Framework Categories
+## The 15 Framework Categories
 
 ### Epistemology — How We Think About Thinking
 
@@ -158,6 +158,7 @@ Frameworks for self-coaching, narrative separation, and values-guided movement.
 | **Acceptance & Commitment Therapy (ACT)** | Defusion, acceptance, values, committed action | Fusion, avoidance, shame spirals, comparison, or overprocessing are blocking values-guided action |
 | **Needs & Feelings Clarity** | Separates feelings from interpretations, needs from strategies | Emotional language is muddy, accusation-heavy, or confused with strategy |
 | **NVC Translation** | Mode-aware rewriting engine: produces OFNR-shaped self-expression, empathy guesses, boundary language, or clarity requests — and refuses to sanitize abuse, evidence, or safety language | Drafting an outgoing message during conflict, generating an empathy guess, distinguishing a request from a demand, or producing clean boundary language |
+| **Signal Processing** | Turns inbound noise into meaningful routing, action, and synthesis — asks what a signal reveals, not just what to do with it | Email, notifications, social signals, or admin friction need interpretation, not just triage; many inbound signals and it's unclear what matters |
 
 ### Influence Defense — Recognizing What's Being Done to You
 
@@ -415,6 +416,10 @@ graph LR
     NVCT --- LR
     FM --- CLL["Closed-Loop Learning"]
     SVF --- SSC
+    SP["Signal Processing"] --- NFC
+    SP --- SVF
+    SP --- FM
+    SP --- ACT
 
     subgraph "Decision Cluster"
         RC["Reversibility"]
@@ -554,9 +559,10 @@ A system that only finds what's broken trains the user to see only what's broken
 | Connect body and mind | Embodied Awareness |
 | Learn from experience | Closed-Loop Learning |
 | Build a sustainable practice | Systems Over Goals |
+| Make sense of a flooded inbox or notification pile | Signal Processing |
 
 ---
 
-*48 frameworks. 8 routes. 6 agents. 10 domains. One system.*
+*49 frameworks. 8 routes. 6 agents. 10 domains. One system.*
 
 *See [index.md](index.md) for the full framework matrix. See [routes/](routes/) for situation-based routing. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the technical architecture.*

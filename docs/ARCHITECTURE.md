@@ -12,7 +12,7 @@ Mirror Palace is organized into six distinct layers, each with a clear responsib
 ╔═══════════════════════════════════════════════════════════════╗
 ║                     KNOWLEDGE LAYER                           ║
 ║  frameworks/                                                  ║
-║  48 frameworks × 4 files = 192 files                         ║
+║  49 frameworks × 4 files = 196 files                         ║
 ║  The agent's training in human psychology                     ║
 ║  ┌────────────┬────────────┬────────────┬────────────┐       ║
 ║  │ theory.md  │template.md │agent-prompt│ README.md  │       ║
@@ -283,11 +283,11 @@ OpenClaw agents:
 
 | Layer | Files | Purpose |
 |-------|-------|---------|
-| Knowledge (frameworks/) | 192 | 48 frameworks × 4 files each |
+| Knowledge (frameworks/) | 196 | 49 frameworks × 4 files each |
 | Routes (routes/) | ~10 | 8 route cards + README + template |
 | Status (status/) | ~25 | 10 domains + people + decisions + indexes |
 | Agents (agents/) | ~25 | 6 archetypes + templates + orchestration |
 | Skills (skills/) | ~13 | scan + setup + create-framework + references |
 | Process (daily/) | 5 | Briefing, reflection, check-in, framework-of-day |
 | Docs & Guides | ~15 | README, CLAUDE.md, guides, examples |
-| **Total** | **~253** | |
+| **Total** | **~257** | |

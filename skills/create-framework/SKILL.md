@@ -85,6 +85,8 @@ Takes a concept — from a name, a description, a paper, a book, a conversation,
 - `README.md` — framework count, category tree, mermaid diagram framework count
 - `CLAUDE.md` — framework count in "What This Repo Is"
 - `docs/ARCHITECTURE.md` — framework count, file statistics table
+- `FRAMEWORK-MAP.md` — header count, architecture mermaid count, the framework's category table, relationships graph (if it pairs with mapped frameworks), footer count
+- `framework-map.html` — hero count, architecture mermaid count, framework card in the category grid, relationships graph, footer count
 - `skills/scan/references/signal-patterns.md` — add signal patterns for the new framework in the appropriate signal category
 - If a new category was created: add it to the category tree in `README.md` and the category list in `skills/create-framework/SKILL.md`
 
@@ -100,7 +102,8 @@ Takes a concept — from a name, a description, a paper, a book, a conversation,
 - [ ] index.md mermaid diagram includes the new framework
 - [ ] `pairs-with` references exist as real frameworks
 - [ ] `updates` paths reference real status directories/files
-- [ ] Framework counts are consistent across README.md, CLAUDE.md, and ARCHITECTURE.md
+- [ ] Framework counts are consistent across README.md, CLAUDE.md, ARCHITECTURE.md, FRAMEWORK-MAP.md, and framework-map.html
+- [ ] Framework appears in FRAMEWORK-MAP.md's category table and framework-map.html's category grid
 - [ ] Signal patterns added for the new framework
 
 Report the result. If any check fails, fix it immediately.
