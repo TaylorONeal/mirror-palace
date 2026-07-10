@@ -16,8 +16,8 @@ avoid-when:
   - "Positive reinforcement alone is sufficient"
   - "User is already anxious and loss-averse framing would increase pressure"
 updates:
-  - "status/domains/health.md"
-  - "status/domains/productivity.md"
+  - "status/domains/health-fitness.md"
+  - "status/domains/"
 ---
 
 # Loss Aversion

@@ -16,8 +16,8 @@ avoid-when:
   - "Safety-critical feedback that must be reliable every time"
   - "User is in crisis and needs consistent support, not variable acknowledgment"
 updates:
-  - "status/domains/productivity.md"
-  - "status/domains/health.md"
+  - "status/domains/"
+  - "status/domains/health-fitness.md"
 ---
 
 # Variable Reward Schedules

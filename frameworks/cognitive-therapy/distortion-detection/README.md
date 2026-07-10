@@ -16,8 +16,7 @@ avoid-when:
   - "User has explicitly requested full unfiltered data"
   - "Clinical or therapeutic contexts requiring professional intervention"
 updates:
-  - "status/domains/productivity.md"
-  - "status/domains/mental-health.md"
+  - "status/domains/"
 ---
 
 # Distortion Detection

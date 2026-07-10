@@ -16,9 +16,9 @@ avoid-when:
   - "User has not expressed interest in self-examination"
   - "The behavior has a straightforward practical cause (e.g., overwork due to actual understaffing)"
 updates:
-  - "status/domains/personal-growth.md"
-  - "status/domains/relationships.md"
-  - "status/domains/mental-health.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/people/"
+  - "status/domains/"
 ---
 
 # Teleological Psychology

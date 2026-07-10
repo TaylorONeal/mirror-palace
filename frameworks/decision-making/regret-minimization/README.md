@@ -18,9 +18,9 @@ avoid-when:
   - "The decision is a two-way door (just do it, no framework needed)"
 updates:
   - "status/decisions/"
-  - "status/domains/career.md"
-  - "status/domains/relationships.md"
-  - "status/domains/creative.md"
+  - "status/domains/career-work.md"
+  - "status/people/"
+  - "status/domains/fun-recreation.md"
 ---
 
 # Regret Minimization

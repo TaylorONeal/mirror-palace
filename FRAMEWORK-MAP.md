@@ -69,8 +69,10 @@ Frameworks for reasoning, cognitive architecture, and information management.
 | Framework | What It Does | Use When |
 |-----------|-------------|----------|
 | **Concept Formation** | Grounds reasoning in clear definitions | Reasoning feels ungrounded, concepts are vague, noise is overwhelming signal |
-| **MIRROR Cognitive Architecture** | Structures persistent internal narratives for agents | Designing agent cognition, structuring persistent internal narratives |
+| **MIRROR Cognitive Architecture** | Structures persistent internal narratives for agents *(research blueprint — see note)* | Designing agent cognition, structuring persistent internal narratives |
 | **Information Compression** | Decides what to keep vs. discard | Context is getting long, need to decide what to keep vs discard |
+
+*MIRROR Cognitive Architecture is partially realized: today it runs as a within-turn reasoning discipline (its agent prompt) plus file-based memory (`MEMORY.md`/`WORKING.md` + the information-compression hierarchy). Its full form — parallel reasoning threads, between-turn reflection — is aspirational until agent runtimes support it. The framework's README documents the exact split.*
 
 ### Decision-Making — Choosing Under Uncertainty
 

@@ -17,9 +17,9 @@ avoid-when:
   - "User is in crisis and needs immediate action, not reflection"
   - "The question is about a specific decision, not overall direction"
 updates:
-  - "status/domains/career.md"
-  - "status/domains/purpose.md"
-  - "status/domains/financial.md"
+  - "status/domains/career-work.md"
+  - "status/domains/"
+  - "status/domains/money-finances.md"
 ---
 
 # Ikigai Diagnostic
