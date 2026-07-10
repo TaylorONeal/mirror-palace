@@ -2,6 +2,14 @@
 
 Skills are persistent operating procedures that extend what agents can do. Where agent archetypes define *who* does the work (personality, voice, frameworks), skills define *how* specific tasks get done (steps, modes, output formats).
 
+## Which Skill When
+
+| You want to... | Skill | Modes |
+|----------------|-------|-------|
+| Figure out which frameworks apply to you and populate the status system | [scan](scan/SKILL.md) | Documents, Conversation, Connected, Repo |
+| Wire Mirror Palace into an existing project (CLAUDE.md, AGENTS.md, agents) | [setup](setup/SKILL.md) | Interactive, consent at every step |
+| Turn a concept, paper, or book into a new framework | [create-framework](create-framework/SKILL.md) | Guided (interactive), Direct (one-shot) |
+
 ## How the Skill System Works
 
 Each skill lives in its own directory under `skills/` and contains:
@@ -62,3 +70,5 @@ Integrate mirror-palace into an existing project. Patches AGENTS.md and CLAUDE.m
 
 ### create-framework
 Scaffold a complete new framework from a concept, paper, book, or raw idea. Generates all four files (README.md, theory.md, template.md, agent-prompt.md), validates quality and distinctness against existing frameworks, and updates index.md. Two modes: Guided (interactive) and Direct (one-shot from source material).
+
+This skill is also the system's defense against documentation drift: its Step 6 lists every file that references framework counts or category lists (README.md, CLAUDE.md, index.md, FRAMEWORK-MAP.md, framework-map.html, docs/ARCHITECTURE.md, signal-patterns.md), and its verification step checks they stay consistent. If you add a framework by hand instead, work through that same list.

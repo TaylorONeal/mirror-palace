@@ -28,9 +28,9 @@ avoid-when:
   - "The person is using the framework to attack their parents rather than understand themselves"
   - "Emotional flooding is happening -- stabilize before analyzing"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/relationships.md"
-  - "status/domains/identity.md"
+  - "status/domains/"
+  - "status/people/"
+  - "status/domains/personal-growth-learning.md"
 ---
 
 # Childhood Emotional Neglect

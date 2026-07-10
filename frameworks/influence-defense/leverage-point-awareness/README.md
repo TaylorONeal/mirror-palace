@@ -28,10 +28,9 @@ avoid-when:
   - "The framework is being used to build leverage over others (defensive only)"
   - "The person wants to confront the leverager without having built alternatives first"
 updates:
-  - "status/domains/relationships.md"
-  - "status/domains/career.md"
-  - "status/domains/financial.md"
   - "status/people/"
+  - "status/domains/career-work.md"
+  - "status/domains/money-finances.md"
 ---
 
 # Leverage Point Awareness

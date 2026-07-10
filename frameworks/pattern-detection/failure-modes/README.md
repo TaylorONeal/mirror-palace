@@ -29,8 +29,7 @@ avoid-when:
   - "Naming failure modes is being used for self-punishment rather than self-awareness"
   - "The failure mode belongs to someone else and the user wants to diagnose them"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/productivity.md"
+  - "status/domains/"
 ---
 
 # Personal Failure Modes

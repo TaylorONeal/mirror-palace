@@ -15,8 +15,8 @@ avoid-when:
   - "Self-image issues are rooted in trauma requiring professional support"
   - "User is not ready for self-examination and finds it threatening"
 updates:
-  - "status/domains/personal-growth.md"
-  - "status/domains/mental-health.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/domains/"
 ---
 
 # Self-Image Cybernetics

@@ -16,9 +16,9 @@ avoid-when:
   - "The situation genuinely requires a specific measurable target (e.g., regulatory compliance)"
   - "User is in early exploration and does not yet know what system to build"
 updates:
-  - "status/domains/personal-growth.md"
-  - "status/domains/productivity.md"
-  - "status/domains/career.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/domains/"
+  - "status/domains/career-work.md"
 ---
 
 # Systems Over Goals

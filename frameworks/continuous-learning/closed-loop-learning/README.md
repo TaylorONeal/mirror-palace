@@ -15,8 +15,8 @@ avoid-when:
   - "User is in information-gathering phase and not ready to experiment"
   - "The pattern is already well-understood and the solution is known"
 updates:
-  - "status/domains/personal-growth.md"
-  - "status/domains/productivity.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/domains/"
 ---
 
 # Closed-Loop Learning

@@ -14,9 +14,10 @@ use-when:
 avoid-when:
   - "Simple, single-turn interactions that need no context tracking"
   - "The agent's only job is retrieval, not reasoning"
+implementation-status: partial
 updates:
-  - "status/domains/intellectual.md"
-  - "status/domains/career.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/domains/career-work.md"
 ---
 
 # Mirror Cognitive Architecture
@@ -28,6 +29,23 @@ A two-layer cognitive model for agents: an internal Thinker (three parallel thre
 - **Complexity**: High
 - **Time to apply**: Ongoing (architecture, not one-time exercise)
 - **Pairs with**: Concept Formation, Information Compression, Jobs to Be Done, Behavior Equation
+
+## Implementation Status: Blueprint, Partially Realized
+
+This framework describes a full cognitive architecture from the research literature. Be honest about which parts current agents can actually run:
+
+**Available today (use these now):**
+- The `agent-prompt.md` snippet works as a *reasoning discipline* — a single model approximating the three threads within each turn, not literally running them in parallel
+- Mirror Palace's agent file conventions approximate the Memory thread: `MEMORY.md` (persistent), `WORKING.md` (session narrative), daily logs (temporal) — see `docs/ARCHITECTURE.md` § Memory Hierarchy
+- The Cognitive Controller's compression step is implemented via the [information-compression](../information-compression/) priority hierarchy
+- The Talker principles (confidence calibration, appropriate length, no raw-reasoning dumps) apply directly to any agent's output style
+
+**Deeper work (aspirational — not yet supported by typical agent harnesses):**
+- True between-turn reflection: the paper's inner monologue that continues *between* conversational turns
+- Genuinely parallel Goals/Reasoning/Memory threads with a separate controller process
+- A persistent first-person internal narrative maintained independently of the conversation transcript
+
+Treat the aspirational parts as a design direction to grow into as agent runtimes evolve, not as something a prompt snippet delivers.
 
 ## Attribution
 
