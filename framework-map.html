@@ -472,7 +472,7 @@
 <section class="hero" id="top">
   <div class="container">
     <h1>Mirror Palace Framework Map</h1>
-    <p>A cognitive framework toolkit. 36 frameworks across 16 categories, 8 situation routes, and 6 agent archetypes. The system never prescribes a vision of the good life. It helps users discover and pursue their own.</p>
+    <p>A cognitive framework toolkit. 49 frameworks across 15 categories, 8 situation routes, and 6 agent archetypes. The system never prescribes a vision of the good life. It helps users discover and pursue their own.</p>
     <div class="progression">
       <span class="progression-step">Surface patterns</span>
       <span class="progression-arrow">&rarr;</span>
@@ -501,7 +501,7 @@ graph TB
 
     subgraph "KNOWLEDGE LAYER"
         F["frameworks/"]
-        F1["36 frameworks x 4 files"]
+        F1["49 frameworks x 4 files"]
         F2["theory + template + agent-prompt + README"]
     end
 
@@ -539,8 +539,8 @@ graph TB
 <!-- FRAMEWORKS -->
 <section id="frameworks">
   <div class="container">
-    <h2>The 16 Framework Categories</h2>
-    <p style="margin-bottom:24px;">36 frameworks organized by domain. Click any card to expand details.</p>
+    <h2>The 15 Framework Categories</h2>
+    <p style="margin-bottom:24px;">49 frameworks organized by domain. Click any card to expand details.</p>
 
     <div class="search-wrap">
       <span class="search-icon">&#9906;</span>
@@ -819,6 +819,16 @@ graph TB
             <div class="fw-card-title">Needs &amp; Feelings Clarity <span class="chevron">&#9656;</span></div>
             <div class="fw-card-what">Separates feelings from interpretations, needs from strategies</div>
             <div class="fw-card-detail"><strong>Use when:</strong> Emotional language is muddy, accusation-heavy, or confused with strategy</div>
+          </div>
+          <div class="fw-card" data-keywords="nvc translation nonviolent communication ofnr observation feeling need request empathy boundary conflict message">
+            <div class="fw-card-title">NVC Translation <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Mode-aware rewriting engine for conflict communication</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Drafting an outgoing message during conflict, generating an empathy guess, distinguishing a request from a demand</div>
+          </div>
+          <div class="fw-card" data-keywords="signal processing inbox email notifications triage routing synthesis noise admin">
+            <div class="fw-card-title">Signal Processing <span class="chevron">&#9656;</span></div>
+            <div class="fw-card-what">Turns inbound noise into meaningful routing, action, and synthesis</div>
+            <div class="fw-card-detail"><strong>Use when:</strong> Email, notifications, social signals, or admin friction need interpretation, not just triage</div>
           </div>
         </div>
       </div>
@@ -1133,7 +1143,7 @@ graph TD
 <section id="relationships">
   <div class="container">
     <h2>Framework Relationships</h2>
-    <p>How the 36 frameworks connect. Clusters form around shared concerns: core coaching tools, decision-making, trauma/attachment, behavior design, and identity.</p>
+    <p>How the 49 frameworks connect. Clusters form around shared concerns: core coaching tools, decision-making, trauma/attachment, behavior design, and identity.</p>
     <div class="mermaid-wrap">
       <pre class="mermaid">
 graph LR
@@ -1153,11 +1163,18 @@ graph LR
     NFC --- SVF
     NFC --- SSC["Self-Coaching"]
     NFC --- AAI
+    NFC --- NVCT["NVC Translation"]
+    NVCT --- DD
+    NVCT --- LR["Linguistic Reframing"]
     DD --- AAI
     DD --- FM
-    DD --- LR["Linguistic Reframing"]
+    DD --- LR
     FM --- CLL["Closed-Loop Learning"]
     SVF --- SSC
+    SP["Signal Processing"] --- NFC
+    SP --- SVF
+    SP --- FM
+    SP --- ACT
 
     subgraph "Decision Cluster"
         RC["Reversibility"]
@@ -1287,6 +1304,7 @@ graph LR
           <tr><td>Connect body and mind</td><td>Embodied Awareness</td></tr>
           <tr><td>Learn from experience</td><td>Closed-Loop Learning</td></tr>
           <tr><td>Build a sustainable practice</td><td>Systems Over Goals</td></tr>
+          <tr><td>Make sense of a flooded inbox or notification pile</td><td>Signal Processing</td></tr>
         </tbody>
       </table>
     </div>
@@ -1295,7 +1313,7 @@ graph LR
 
 <!-- FOOTER -->
 <div class="footer">
-  36 frameworks. 8 routes. 6 agents. 10 domains. One system.
+  49 frameworks. 8 routes. 6 agents. 10 domains. One system.
 </div>
 
 <script>

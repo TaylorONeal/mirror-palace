@@ -64,6 +64,11 @@ graph TD
     INFLUENCE --> LPA[leverage-point-awareness]
     INFLUENCE --> MW[manipulation-watchouts]
 
+    START --> NOISE[Flooded with inbound signals or noise]
+    NOISE --> Q15{Triage or interpretation?}
+    Q15 -->|What do I do with all this?| SPF[signal-processing]
+    Q15 -->|What is this bringing up in me?| NFC3[needs-feelings-clarity]
+
     START --> EXPRESS[Drafting an outgoing message during conflict or repair]
     EXPRESS --> Q13{Do I know what I feel and need?}
     Q13 -->|not yet| NFC2[needs-feelings-clarity]
@@ -128,6 +133,7 @@ graph TD
 | `ACT` | Coaching | [Acceptance & Commitment Therapy](frameworks/coaching/acceptance-and-commitment-therapy/) | Fusion, avoidance, shame spirals, comparison, or overprocessing are blocking values-guided action | `status/domains/`, `status/people/`, `status/decisions/` | needs-feelings-clarity, stories-vs-facts, awareness-as-intervention, embodied-awareness |
 | `NFC` | Coaching | [Needs & Feelings Clarity](frameworks/coaching/needs-feelings-clarity/) | Emotional language is muddy, accusation-heavy, or confused with strategy | `status/domains/`, `status/people/`, `status/decisions/` | nvc-translation, structured-self-coaching, stories-vs-facts, awareness-as-intervention |
 | `NVCT` | Coaching | [NVC Translation](frameworks/coaching/nvc-translation/) | Drafting an outgoing message during conflict, generating an empathy guess, or distinguishing a request from a demand | `status/people/`, `status/decisions/`, `status/domains/` | needs-feelings-clarity, distortion-detection, linguistic-reframing, manipulation-watchouts |
+| `SP` | Coaching | [Signal Processing](frameworks/coaching/signal-processing/) | Inbound signals — email, notifications, admin, social — are piling up and it's unclear what matters or what they reveal | `status/domains/`, `status/people/`, `status/decisions/` | needs-feelings-clarity, acceptance-and-commitment-therapy, stories-vs-facts, failure-modes |
 | `BSR` | Influence Defense | [Behavioral Signal Reading](frameworks/influence-defense/behavioral-signal-reading/) | Something feels off in a conversation, reading dynamics | `status/people/` | manipulation-watchouts, leverage-point-awareness |
 | `LPA` | Influence Defense | [Leverage Point Awareness](frameworks/influence-defense/leverage-point-awareness/) | Recognizing power dynamics, negotiation, someone applying pressure | `status/people/`, `status/decisions/` | behavioral-signal-reading, manipulation-watchouts |
 | `MW` | Influence Defense | [Manipulation Watchouts](frameworks/influence-defense/manipulation-watchouts/) | Feeling pressured, reciprocity trap, authority play, scarcity push | `status/people/`, `status/decisions/` | behavioral-signal-reading, leverage-point-awareness |
