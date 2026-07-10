@@ -17,8 +17,7 @@ avoid-when:
   - "Already reinforcing too frequently (check if it's becoming noise)"
   - "The behavior contradicts stated values (say nothing — reinforcement is additive only)"
 updates:
-  - "status/domains/purpose.md"
-  - "status/domains/relationships.md"
+  - "status/domains/"
   - "status/people/"
 ---
 

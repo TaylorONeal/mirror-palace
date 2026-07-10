@@ -28,8 +28,8 @@ avoid-when:
   - "Active trauma processing should be done with a professional, not a framework"
   - "The person is using somatic language to bypass emotional work"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/health-body.md"
+  - "status/domains/"
+  - "status/domains/health-fitness.md"
 ---
 
 # Subconscious Repatterning

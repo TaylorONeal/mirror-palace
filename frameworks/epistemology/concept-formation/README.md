@@ -16,8 +16,8 @@ avoid-when:
   - "Emotional processing where intellectualizing would be counterproductive"
   - "Time-critical situations where grounding from concretes would cause harmful delay"
 updates:
-  - "status/domains/career.md"
-  - "status/domains/intellectual.md"
+  - "status/domains/career-work.md"
+  - "status/domains/personal-growth-learning.md"
 ---
 
 # Concept Formation

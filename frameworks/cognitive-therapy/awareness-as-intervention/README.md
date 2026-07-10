@@ -17,8 +17,8 @@ avoid-when:
   - "User has explicitly asked for advice or strategies"
   - "Pattern involves clinical issues requiring professional intervention"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/personal-growth.md"
+  - "status/domains/"
+  - "status/domains/personal-growth-learning.md"
 ---
 
 # Awareness as Intervention

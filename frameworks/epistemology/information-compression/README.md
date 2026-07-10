@@ -16,7 +16,7 @@ avoid-when:
   - "Early stages where you don't yet know what's important"
   - "Compressing would mean losing the user's emotional context prematurely"
 updates:
-  - "status/domains/intellectual.md"
+  - "status/domains/personal-growth-learning.md"
 ---
 
 # Information Compression

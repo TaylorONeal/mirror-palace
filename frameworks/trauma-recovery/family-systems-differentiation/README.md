@@ -29,10 +29,9 @@ avoid-when:
   - "Active abuse is occurring -- safety takes precedence over differentiation"
   - "The person is using differentiation language to justify emotional abandonment"
 updates:
-  - "status/domains/relationships.md"
-  - "status/domains/mental-health.md"
-  - "status/domains/identity.md"
   - "status/people/"
+  - "status/domains/"
+  - "status/domains/personal-growth-learning.md"
 ---
 
 # Family Systems Differentiation
