@@ -29,8 +29,8 @@ avoid-when:
   - "The person is in crisis that requires immediate intervention, not stage assessment"
   - "Applying the model globally when it should be applied per-domain"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/career-professional.md"
+  - "status/domains/"
+  - "status/domains/career-work.md"
   - "status/people/"
 ---
 

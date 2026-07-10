@@ -29,7 +29,7 @@ avoid-when:
   - "The situation genuinely is unfair and the story is accurate"
   - "The person needs empathy first, accuracy second"
 updates:
-  - "status/domains/mental-health.md"
+  - "status/domains/"
   - "status/domains/partner-love.md"
 ---
 

@@ -36,7 +36,7 @@ graph TB
     classDef process fill:#553c9a,stroke:#6b46c1,color:#e9d8fd
 
     subgraph KNOW ["KNOWLEDGE LAYER — What the agent knows about humans"]
-        F[48 Frameworks] --> EP[Epistemology<br/><i>How to think</i>]
+        F[49 Frameworks] --> EP[Epistemology<br/><i>How to think</i>]
         F --> DM[Decision-Making<br/><i>How to decide</i>]
         F --> BP[Behavioral Psychology<br/><i>How people act</i>]
         F --> CT[Cognitive Therapy<br/><i>Reframing patterns</i>]
@@ -242,7 +242,7 @@ Every area of your life gets tracked, scored, and cross-linked.
 
 ## The Framework Library
 
-48 frameworks across 15 categories. Each one has:
+49 frameworks across 15 categories. Each one has:
 
 | File | Purpose |
 |------|---------|
@@ -254,42 +254,46 @@ Every area of your life gets tracked, scored, and cross-linked.
 ### Categories at a Glance
 
 ```
-EPISTEMOLOGY                    DECISION-MAKING
-├── Concept Formation           ├── Reversibility Classification
-├── MIRROR Architecture         ├── Regret Minimization
-└── Information Compression     ├── North Star Test
-                                └── Ikigai Diagnostic
+EPISTEMOLOGY                     DECISION-MAKING
+├── Concept Formation            ├── Reversibility Classification
+├── MIRROR Architecture          ├── Regret Minimization
+└── Information Compression      ├── North Star Test
+                                 └── Ikigai Diagnostic
+BEHAVIORAL PSYCHOLOGY
+├── Jobs to Be Done              COGNITIVE THERAPY
+├── Behavior Equation            ├── Distortion Detection
+├── Habit Loop Design            ├── Linguistic Reframing
+├── Variable Reward Schedules    └── Awareness as Intervention
+├── Loss Aversion
+└── Identity Reinforcement       EXECUTIVE FUNCTION
+                                 ├── Executive Function Model
+SELF-IMAGE                       ├── ADHD Design Rules
+├── Self-Image Cybernetics       └── Time Blindness
+├── Teleological Psychology
+├── Systems Over Goals           CONTINUOUS LEARNING
+└── Rational Self-Interest       └── Closed-Loop Learning
 
-BEHAVIORAL PSYCHOLOGY           COGNITIVE THERAPY
-├── Jobs to Be Done             ├── Distortion Detection
-├── Behavior Equation           ├── Linguistic Reframing
-├── Habit Loop Design           └── Awareness as Intervention
-├── Variable Reward Schedules
-├── Loss Aversion               EXECUTIVE FUNCTION
-└── Identity Reinforcement      ├── Executive Function Model
-                                ├── ADHD Design Rules
-SELF-IMAGE                      └── Time Blindness
-├── Self-Image Cybernetics
-├── Teleological Psychology     CONTINUOUS LEARNING
-└── Systems Over Goals          └── Closed-Loop Learning
+TRAUMA RECOVERY                  COACHING
+├── Four-F Survival Types        ├── Structured Self-Coaching
+├── Childhood Emotional Neglect  ├── Stories vs Facts
+├── Emotionally Immature Parents ├── Developmental Stages
+├── Family Systems               ├── Acceptance & Commitment (ACT)
+├── EFT Relationship Lens        ├── Needs & Feelings Clarity
+└── Five Wounds                  ├── NVC Translation
+                                 └── Signal Processing
+SOMATIC
+├── Subconscious Repatterning    INFLUENCE DEFENSE ⚠️
+└── Embodied Awareness           ├── Behavioral Signal Reading
+                                 ├── Leverage Point Awareness
+PATTERN DETECTION                └── Manipulation Watchouts
+├── Failure Modes (7 types)
+└── Psychological Contracts      PERSONALITY ASSESSMENTS
+                                 ├── Big Five (OCEAN)
+ANTI-PATTERNS                    ├── Enneagram (9 types)
+└── System Anti-Patterns (12)    └── MBTI (16 types)
 
-TRAUMA RECOVERY                 COACHING
-├── Four-F Survival Types       ├── Structured Self-Coaching
-├── Childhood Emotional Neglect ├── Stories vs Facts
-├── Emotionally Immature Parents└── Developmental Stages
-├── Family Systems
-└── Five Wounds                 INFLUENCE DEFENSE ⚠️
-                                ├── Behavioral Signal Reading
-SOMATIC                         ├── Leverage Point Awareness
-├── Subconscious Repatterning   └── Manipulation Watchouts
-└── Embodied Awareness
-                                PERSONALITY ASSESSMENTS
-PATTERN DETECTION               ├── Big Five (OCEAN)
-├── Failure Modes (7 types)     ├── Enneagram (9 types)
-└── Psychological Contracts     └── MBTI (16 types)
-
-ANTI-PATTERNS                   INTEGRATED PRACTICE
-└── System Anti-Patterns (12)   └── Rational Yoga
+INTEGRATED PRACTICE
+└── Rational Yoga
 ```
 
 > ⚠️ **Influence Defense** is explicitly *defensive* — recognizing techniques used on you, not techniques to use on others.

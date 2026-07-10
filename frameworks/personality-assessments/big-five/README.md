@@ -28,8 +28,8 @@ avoid-when:
   - "Scores are being used competitively or judgmentally"
   - "The person needs motivational or developmental insight (use Enneagram or developmental stages instead)"
 updates:
-  - "status/domains/identity.md"
-  - "status/domains/career.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/domains/career-work.md"
 ---
 
 # Big Five Personality Model (OCEAN)

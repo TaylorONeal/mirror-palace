@@ -17,8 +17,8 @@ avoid-when:
   - "Early exploration where the user experience hasn't been defined yet"
   - "Evaluating aggregate product strategy rather than individual interactions"
 updates:
-  - "status/domains/career.md"
-  - "status/domains/creative.md"
+  - "status/domains/career-work.md"
+  - "status/domains/fun-recreation.md"
 ---
 
 # North Star Test

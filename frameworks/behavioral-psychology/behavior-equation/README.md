@@ -17,8 +17,8 @@ avoid-when:
   - "The issue is genuinely motivational (values conflict, not friction)"
   - "The behavior requires a decision, not a habit (use decision frameworks)"
 updates:
-  - "status/domains/health.md"
-  - "status/domains/productivity.md"
+  - "status/domains/health-fitness.md"
+  - "status/domains/"
 ---
 
 # Behavior Equation

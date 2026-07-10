@@ -15,8 +15,7 @@ avoid-when:
   - "High-stakes professional context where complete information is legally required"
   - "User finds the simplified view condescending and prefers full control"
 updates:
-  - "status/domains/productivity.md"
-  - "status/domains/mental-health.md"
+  - "status/domains/"
 ---
 
 # ADHD Design Rules

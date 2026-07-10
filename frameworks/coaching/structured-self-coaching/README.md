@@ -26,8 +26,7 @@ avoid-when:
   - "The protocol is being used to avoid feeling by staying intellectual"
   - "Self-coaching is substituting for professional support that is needed"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/productivity.md"
+  - "status/domains/"
 ---
 
 # Structured Self-Coaching

@@ -27,8 +27,8 @@ avoid-when:
   - "Trauma is very recent and unprocessed -- safety first, framework later"
   - "The person is using the framework to label and avoid rather than to understand"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/relationships.md"
+  - "status/domains/"
+  - "status/people/"
 ---
 
 # Four-F Survival Types

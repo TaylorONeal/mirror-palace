@@ -15,8 +15,7 @@ avoid-when:
   - "Simple task list is sufficient and no cognitive support is needed"
   - "Over-engineering a system for users who do not need executive function support"
 updates:
-  - "status/domains/productivity.md"
-  - "status/domains/mental-health.md"
+  - "status/domains/"
 ---
 
 # Executive Function Model
