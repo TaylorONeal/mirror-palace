@@ -16,8 +16,8 @@ avoid-when:
   - "The issue is a decision, not a repeated behavior"
   - "The user needs to first clarify WHAT to do (use other frameworks), not HOW to make it automatic"
 updates:
-  - "status/domains/health.md"
-  - "status/domains/productivity.md"
+  - "status/domains/health-fitness.md"
+  - "status/domains/"
 ---
 
 # Habit Loop Design

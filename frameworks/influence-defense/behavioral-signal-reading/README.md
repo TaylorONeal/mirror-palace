@@ -28,9 +28,8 @@ avoid-when:
   - "The framework is being used to justify distrust of all people"
   - "The user wants to use signal reading offensively"
 updates:
-  - "status/domains/relationships.md"
-  - "status/domains/career.md"
   - "status/people/"
+  - "status/domains/career-work.md"
 ---
 
 # Behavioral Signal Reading

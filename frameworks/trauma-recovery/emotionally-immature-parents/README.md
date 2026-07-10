@@ -28,10 +28,9 @@ avoid-when:
   - "The framework is being used as a weapon against the parent"
   - "The person is not ready to examine family-of-origin patterns"
 updates:
-  - "status/domains/mental-health.md"
-  - "status/domains/relationships.md"
-  - "status/domains/identity.md"
+  - "status/domains/"
   - "status/people/"
+  - "status/domains/personal-growth-learning.md"
 ---
 
 # Emotionally Immature Parents

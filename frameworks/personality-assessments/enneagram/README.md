@@ -29,8 +29,8 @@ avoid-when:
   - "Typing others without consent"
   - "Treating the Enneagram as equivalent to empirically validated measures"
 updates:
-  - "status/domains/identity.md"
-  - "status/domains/relationships.md"
+  - "status/domains/personal-growth-learning.md"
+  - "status/people/"
 ---
 
 # Enneagram

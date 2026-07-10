@@ -45,6 +45,16 @@ Signal patterns for the scan skill. When you detect a signal in conversation, do
 | Events repeatedly rescheduled (3+ in a week) | Calendar | `time-blindness`, `behavior-equation` | High — measurable pattern | Relevant domain | [career-stuckness](../../../routes/career-stuckness.md) |
 | No fun/recreation events on calendar | Calendar | `north-star-test`, `behavior-equation` | Medium — fun may not be calendared | `status/domains/fun-recreation.md` | [career-stuckness](../../../routes/career-stuckness.md) |
 
+## Inbound Signal and Inbox Signals
+
+| Signal | Source Type | Framework(s) | Confidence Guide | Updates | Suggested Route |
+|--------|------------|-------------|-----------------|---------|----------------|
+| Inbox or notification backlog described as overwhelming | Email, conversation | `signal-processing`, `executive-function-model` | High if user names it directly | `status/domains/environment.md` | [overthinking-fusion](../../../routes/overthinking-fusion.md) or [emotional-signal-unclear](../../../routes/emotional-signal-unclear.md) |
+| Same admin task (bill, form, reply) surfacing repeatedly without action | Email, task manager, conversation | `signal-processing`, `failure-modes` | High if 3+ recurrences — avoidance signal, not just backlog | Relevant domain, `status/decisions/` | [overthinking-fusion](../../../routes/overthinking-fusion.md) |
+| Anxiety spike tied to checking messages or notifications | Conversation, messages | `signal-processing`, `needs-feelings-clarity` | Medium — check what the signal is bringing up | `status/people/`, relevant domain | [emotional-signal-unclear](../../../routes/emotional-signal-unclear.md) |
+| Signals from one sender or domain consistently deferred | Email, messages | `signal-processing`, `psychological-contracts` | Medium-high if pattern is sender-specific — relational avoidance | `status/people/` | [friendship-ambiguity](../../../routes/friendship-ambiguity.md) or [conflict-blame](../../../routes/conflict-blame.md) |
+| Reflexive triage (archive/delete everything) with no synthesis of what the volume means | Email, conversation | `signal-processing` | Medium — efficient triage can hide pattern-blindness | Relevant domain | [emotional-signal-unclear](../../../routes/emotional-signal-unclear.md) |
+
 ## Language and Self-Talk Signals
 
 | Signal | Source Type | Framework(s) | Confidence Guide | Updates | Suggested Route |

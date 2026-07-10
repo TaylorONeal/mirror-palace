@@ -28,8 +28,8 @@ avoid-when:
   - "Analysis paralysis about anti-patterns is preventing building anything"
   - "The issue is not design but motivation, resources, or context"
 updates:
-  - "status/domains/productivity.md"
-  - "status/domains/career-professional.md"
+  - "status/domains/"
+  - "status/domains/career-work.md"
 ---
 
 # System Anti-Patterns

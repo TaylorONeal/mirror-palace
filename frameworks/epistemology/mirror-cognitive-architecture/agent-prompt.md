@@ -2,6 +2,8 @@
 
 > Copy this into an agent's system prompt or SOUL.md to enable this framework.
 
+> **What this delivers:** a within-turn reasoning discipline — one model approximating the three threads, not literally running them in parallel. Pair it with `MEMORY.md`/`WORKING.md` for persistence across turns. The full architecture (parallel threads, between-turn reflection) is a design direction, not something this snippet enables. See the framework README's Implementation Status section.
+
 ## When to Activate
 - Always — this is a foundational architecture, not a situational framework
 - Particularly critical when conversations span multiple turns or topics
