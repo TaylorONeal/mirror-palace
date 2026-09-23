@@ -26,12 +26,12 @@ When a framework applies to the current situation:
 - Decisions ledger: `[path-to-mirror-palace]/status/decisions/`
 - Master index: `[path-to-mirror-palace]/status/ISSUE-INDEX.md`
 
-### Continuous Learning Protocol
-On every interaction:
-1. Did the user reveal a status domain update? Propose a 1-line update.
-2. Did a relationship dynamic surface? Propose a people record update.
-3. Is a decision being discussed? Check or create a decisions ledger entry.
-4. Did a framework apply? Check its `updates` field for what else to refresh.
+### Task-Scoped Learning Protocol
+When Mirror Palace is actively in use:
+1. Propose relevant status updates.
+2. Propose relationship or decision updates when applicable.
+3. Check framework update cascades only for frameworks actually used.
+4. Skip background maintenance for unrelated tasks.
 ```
 
 ---
@@ -79,7 +79,7 @@ Add or merge with existing heartbeat section:
 Default prompt: `Read HEARTBEAT.md. If nothing needs attention, reply HEARTBEAT_OK.`
 
 ### Mirror Palace Additions
-- Every agent checks relevant status domains for staleness on each run
+- Status-monitoring agents check relevant domains for staleness on their scheduled status runs
 - Framework trigger cascade: when a framework fires, check its `updates` field
 - Alerts written to shared/alerts.md are Priority 1 for The Briefer
 - Cost management: skip-if-no-changes rule applies to all agents
