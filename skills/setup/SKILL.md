@@ -24,6 +24,10 @@ outputs:
 
 # Setup
 
+## Execution Model
+
+Treat ordered setup steps as **stateful execution boundaries**, not as a required reasoning transcript. Frontier models should use native reasoning, avoid scratchpads and narrated step-by-step analysis, and perform only the checks needed for the requested setup. Preserve consent, privacy, file-write, and migration ordering. Smaller/legacy models may use the sequence as a checklist.
+
 ## Purpose
 Integrates mirror-palace frameworks, agents, and status tracking into an existing project repository. This is the bridge between mirror-palace as a standalone toolkit and mirror-palace as an active part of your development or work environment.
 
