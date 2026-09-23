@@ -1,5 +1,17 @@
 # Customizing Agent Archetypes
 
+
+## Model-Aware Execution Policy
+
+Use **native reasoning by default** on current frontier models and coding agents. Instructions should define goals, hard constraints, sources of truth, and acceptance criteria without forcing a ritualized reasoning process.
+
+- Do not add "think step by step", scratchpad, chain-of-thought, or fixed reasoning templates unless a specific legacy/lightweight model demonstrably needs them.
+- Emphasis words such as **CRITICAL**, **ALWAYS**, and **MANDATORY** are not requests for extra narration, repeated checks, or extra tool calls. Reserve them for real invariants such as privacy, consent, data integrity, irreversible writes, and security boundaries.
+- Keep ordered procedures when order itself protects state, consent, privacy, or correctness. A numbered workflow is an execution contract, not a request to expose internal reasoning.
+- Prefer direct execution followed by verification against acceptance criteria. Do not restate routine plans or expose internal reasoning unless asked.
+- If the runtime is explicitly a smaller/legacy model, a concise checklist scaffold may be used. Keep that compatibility path separate from the frontier-model default.
+- If instructions conflict, follow the more specific task/repo contract and the higher-risk invariant; surface a genuine unresolved conflict rather than trying to satisfy both literally.
+
 ## Starting from an Archetype
 
 1. Pick an archetype from `agents/archetypes/` that matches your need
