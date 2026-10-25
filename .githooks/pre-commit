@@ -21,7 +21,6 @@ PERSONAL_PATHS=(
     "status/scan-report"
     "agents/archetypes/*/MEMORY.md"
     "agents/archetypes/*/WORKING.md"
-    "SYNC.md"
 )
 
 STAGED_FILES=$(git diff --cached --name-only)

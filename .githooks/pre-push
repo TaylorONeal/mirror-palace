@@ -26,7 +26,12 @@ if echo "$REMOTE" | grep -qi "mirror-palace"; then
     ALL_FILES=$(git ls-files)
 
     # Check for personal data paths
-    PERSONAL=$(echo "$ALL_FILES" | grep -E "(status/people/[^_R]|status/decisions/DEC-|scan-report|MEMORY\.md|WORKING\.md|SYNC\.md)" || true)
+    # Match real personal data only. Templates, READMEs and index files are
+    # intentionally tracked in the public repo, so exclude them explicitly
+    # (this mirrors the exclusions in .githooks/pre-commit).
+    PERSONAL=$(echo "$ALL_FILES" \
+        | grep -E "(status/people/|status/decisions/DEC-|scan-report|agents/archetypes/[^/]+/(MEMORY|WORKING)\.md)" \
+        | grep -vE "(_template|README\.md|PEOPLE-INDEX|DECISIONS-INDEX|decision-frameworks-ref)" || true)
     if [ -n "$PERSONAL" ]; then
         echo -e "${RED}BLOCKED:${NC} Personal data files are tracked:"
         echo "$PERSONAL" | while read -r f; do echo "  - $f"; done

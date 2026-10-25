@@ -1,0 +1,27 @@
+name: Safety gate
+
+# The repository ships a pre-push hook that blocks personal data from
+# reaching this public repo, but a local hook only runs if the clone sets
+# core.hooksPath=.githooks. A fresh clone, a CI job, or an agent session
+# will not have it, so the gate is enforced here as well.
+#
+# This calls .githooks/pre-push directly rather than reimplementing the
+# checks, so the hook stays the single source of truth.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  scan:
+    name: No personal data in tracked files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run the Mirror Palace safety gate
+        run: |
+          chmod +x .githooks/pre-push
+          # The hook only runs its full scan when the remote names this repo.
+          bash .githooks/pre-push mirror-palace
