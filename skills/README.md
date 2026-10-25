@@ -16,8 +16,8 @@ Each skill lives in its own directory under `skills/` and contains:
 
 ```
 skills/
-  _template/              ← Template for creating new skills
-    SKILL.md
+  _template/              ← Template for authoring a skill (not installable)
+    SKILL.template.md
   scan/                   ← Analyze inputs to recommend frameworks
     SKILL.md
     references/
@@ -53,7 +53,7 @@ Skills are not agents — they don't have personality, voice, or memory. They're
 
 ## Creating New Skills
 
-Copy `skills/_template/SKILL.md` and fill in the sections. A good skill has:
+Copy `skills/_template/SKILL.template.md` to `skills/<your-skill>/SKILL.md` and fill in the sections. A good skill has:
 
 - A clear, bounded scope (one job, done well)
 - Defined inputs and outputs
