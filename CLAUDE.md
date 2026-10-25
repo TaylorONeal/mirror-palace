@@ -1,12 +1,25 @@
 # CLAUDE.md — Mirror Palace
 
+
+## Model-Aware Execution Policy
+
+Use **native reasoning by default** on current frontier models and coding agents. Instructions should define goals, hard constraints, sources of truth, and acceptance criteria without forcing a ritualized reasoning process.
+
+- Do not add "think step by step", scratchpad, chain-of-thought, or fixed reasoning templates unless a specific legacy/lightweight model demonstrably needs them.
+- Emphasis words such as **CRITICAL**, **ALWAYS**, and **MANDATORY** are not requests for extra narration, repeated checks, or extra tool calls. Reserve them for real invariants such as privacy, consent, data integrity, irreversible writes, and security boundaries.
+- Keep ordered procedures when order itself protects state, consent, privacy, or correctness. A numbered workflow is an execution contract, not a request to expose internal reasoning.
+- Prefer direct execution followed by verification against acceptance criteria. Do not restate routine plans or expose internal reasoning unless asked.
+- If the runtime is explicitly a smaller/legacy model, a concise checklist scaffold may be used. Keep that compatibility path separate from the frontier-model default.
+- If instructions conflict, follow the more specific task/repo contract and the higher-risk invariant; surface a genuine unresolved conflict rather than trying to satisfy both literally.
+
 ## What This Repo Is
 A cognitive framework toolkit. 49 psychology, decision-making, and behavioral science frameworks organized for both human reference and AI agent consumption. Includes a life domain status tracking system, people records, decisions ledger, personality assessments, 6 agent archetypes, and 3 core skills (scan + setup + create-framework).
 
-## Every Session
-1. Read this file
-2. Read `index.md` — the master framework routing table
-3. If working with a user's data: check `status/` for current state
+## Context Loading
+- This file is the stable repo contract.
+- Load `index.md` only when framework routing is relevant to the task.
+- Load `status/` only when the task uses a user's status, people, decisions, or other personal context.
+- Search `AGENT_LEARNINGS.md` for task-relevant lessons before non-trivial repo work; do not load the whole file by default.
 
 ## Framework Structure
 Every framework lives in `frameworks/{category}/{name}/` with exactly 4 files:
@@ -37,17 +50,16 @@ This means the system must detect **what's working** alongside what's broken. It
 **Pacing matters.** When the user's state is activated or distressed, lead with presence and grounding before analysis. Naming a pattern can agitate as easily as it can calm. Match the system's intensity to the user's capacity to receive.
 
 ## Continuous Learning Protocol
-This is critical. Mirror Palace is a living system, not a static reference.
+Mirror Palace is a living system, but maintenance should be task-scoped, not a tax on every interaction.
 
-**On every interaction, check:**
-1. Did the user reveal information that updates a status domain? → Propose a 1-line update
-2. Did a relationship dynamic surface? → Propose a people record update
-3. Is a decision being discussed? → Check/create a decisions ledger entry
-4. Did a personality pattern emerge? → Note it in the relevant assessment template
-5. Did a framework apply? → Check the framework's `updates` field in its README.md for what else to refresh
-6. Is something genuinely working well? → Note it. Thriving is data, not just the absence of problems.
+When the user is actively doing a scan, status-maintenance task, relationship/decision review, or explicitly asks Mirror Palace to learn from the interaction:
+- Propose concise updates to relevant status, people, decision, personality, or framework records.
+- Capture genuinely thriving signals as well as problems.
+- Ask for confirmation before writing personal records.
 
-**Low friction is mandatory.** Don't ask the user to fill out forms. Propose specific updates based on what they said, confirm with a yes/no, then write.
+For unrelated work, do not run status-maintenance checks in the background.
+
+Keep updates low-friction: propose the smallest concrete change instead of asking the user to fill out forms.
 
 ## Status System
 - `status/domains/` — 10 life domains with RYG status, scores, domain-specific columns

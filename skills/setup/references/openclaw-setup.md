@@ -41,8 +41,8 @@ Status: /path/to/mirror-palace/status/
 Add the Mirror Palace Integration section from `agents-md-patch.md` to your existing AGENTS.md. Key additions:
 
 1. **Framework check rule:** When a framework applies, check its `updates` field and propose status updates.
-2. **Status check rule:** Agents check relevant status domains for staleness on every run.
-3. **Continuous Learning Protocol:** Every interaction checks for domain/people/decision updates.
+2. **Status check rule:** Status-monitoring agents check relevant domains on their scheduled status runs.
+3. **Continuous Learning Protocol:** Run domain, people, and decision maintenance only during active Mirror Palace work.
 
 ### Step 3: Enhance Existing Agents
 
@@ -90,15 +90,15 @@ If your OpenClaw repo doesn't have a status tracking system:
 Add to CLAUDE.md (see `claude-md-patch.md` for full text):
 
 ```markdown
-## Continuous Learning Protocol
-On every interaction:
-1. Status domain update? Propose 1-line update.
-2. Relationship dynamic? Propose people record update.
-3. Decision discussed? Check/create decisions entry.
-4. Framework applied? Check its updates field.
+## Task-Scoped Learning Protocol
+When Mirror Palace is actively in use:
+1. Propose relevant status updates.
+2. Propose relationship or decision updates when applicable.
+3. Check framework update cascades only for frameworks actually used.
+4. Skip background maintenance for unrelated tasks.
 ```
 
-This is the critical addition. Without it, mirror-palace is a passive reference library. With it, the system stays current through natural conversation.
+This keeps Mirror Palace current without making every unrelated interaction pay a context and maintenance tax.
 
 ## Compatibility Notes
 
