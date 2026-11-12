@@ -70,17 +70,13 @@
 | `docs/routing-layer-task-status.md` | This file | Continuation tracking |
 | `routes/` | Complete | 8 route cards + template + README |
 | `docs/ROADMAP.md` | Updated | References PRD and current initiative |
-| `CLAUDE.md` | Updated | Routing layer + git/SSH + lessons learned |
+| `AGENTS.md` | Updated | Routing layer and git notes |
 | `FRAMEWORK-MAP.md` | Complete | Public-ready visual reference |
 | `framework-map.html` | Complete | Interactive HTML visualization |
 
-### Git & Deployment Setup (complete)
-- [x] SSH deploy key configured (mirror-palace-sandbox, ed25519, read-write)
-- [x] Sandbox can push directly to GitHub — no manual relay
-- [x] Lessons learned logged in CLAUDE.md
 
 ## Continuation Prompt
 
 If picking this up in a new session, start with:
 
-> Read `CLAUDE.md` and `docs/routing-layer-task-status.md` in the mirror-palace repo. Phases 1-3 of the framework routing layer are complete and pushed to GitHub. The remaining work is Phase 4 (refinement): collect usage feedback, consider v2 situation classes (trauma processing, system design), and potentially build a `/route` executable skill. For git: SSH deploy key is configured, sandbox can push directly.
+> Read `AGENTS.md` and `docs/routing-layer-task-status.md` in the mirror-palace repo. Phases 1-3 of the framework routing layer are complete and pushed to GitHub. The remaining work is Phase 4 (refinement): collect usage feedback, consider v2 situation classes (trauma processing, system design), and potentially build a `/route` executable skill. For git: SSH deploy key is configured, sandbox can push directly.
