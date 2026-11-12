@@ -977,7 +977,7 @@ async function main() {
   // ═══════════════════════════════════════════════════════════
   // SAVE
   // ═══════════════════════════════════════════════════════════
-  const outputPath = "/path/to/mnt/mirror-palace/mirror-palace-keynote.pptx";
+  const outputPath = process.env.KEYNOTE_OUT || require("path").join(__dirname, "mirror-palace-keynote.pptx");
   await pres.writeFile({ fileName: outputPath });
   console.log("Presentation saved to:", outputPath);
 }
