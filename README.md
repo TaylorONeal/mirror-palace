@@ -341,6 +341,26 @@ graph TD
 
 ---
 
+## Install the skills
+
+Paste this into Claude Code, ChatGPT, or whichever agent you use:
+
+```
+Install the skills from https://github.com/TaylorONeal/mirror-palace
+```
+
+Or install them directly:
+
+```bash
+npx skills add TaylorONeal/mirror-palace --list                        # see what is here first
+npx skills add TaylorONeal/mirror-palace --global --yes                # all three
+npx skills add TaylorONeal/mirror-palace --skill scan --global --yes   # just one
+```
+
+Three skills ship from this repo: [`scan`](skills/scan/SKILL.md), [`setup`](skills/setup/SKILL.md) and [`create-framework`](skills/create-framework/SKILL.md). Needs Node 22.20 or later. Nothing here reads your personal data; that stays in your own private system, as [Philosophy](#philosophy) explains.
+
+---
+
 ## Quick Start
 
 | Path | Time | Start Here |
