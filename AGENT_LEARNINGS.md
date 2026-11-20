@@ -18,14 +18,14 @@ Persistent, repo-specific lessons for agents. This is external memory, not a tra
 - Failure pattern: Running continuous-learning checks on every interaction adds context and cognitive overhead and can produce irrelevant update proposals.
 - Better approach: Run status maintenance only for active Mirror Palace work or when the user explicitly asks to capture or update personal context.
 - Verified by: 2026-09-23 instruction audit.
-- Promote to: CLAUDE.md and scan/setup templates.
+- Promote to: AGENTS.md and scan/setup templates.
 
 ### ML-002 — Retrieve framework context just in time
 - Trigger: A task may benefit from one or more Mirror Palace frameworks.
 - Failure pattern: Reading the full framework index and broad status context at every session start wastes context and increases irrelevant instruction collisions.
 - Better approach: Use the task to choose the narrowest routing/index lookup, then load only the framework/status files needed.
 - Verified by: 2026-09-23 instruction audit.
-- Promote to: CLAUDE.md and setup templates.
+- Promote to: AGENTS.md and setup templates.
 
 ### ML-003 — Consent and privacy ordering is an execution invariant
 - Trigger: Reading connected personal sources or writing personal status, people, or decision records.

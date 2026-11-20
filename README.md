@@ -341,6 +341,26 @@ graph TD
 
 ---
 
+## Install the skills
+
+Paste this into Claude Code, ChatGPT, or whichever agent you use:
+
+```
+Install the skills from https://github.com/TaylorONeal/mirror-palace
+```
+
+Or install them directly:
+
+```bash
+npx skills add TaylorONeal/mirror-palace --list                        # see what is here first
+npx skills add TaylorONeal/mirror-palace --global --yes                # all three
+npx skills add TaylorONeal/mirror-palace --skill scan --global --yes   # just one
+```
+
+Three skills ship from this repo: [`scan`](skills/scan/SKILL.md), [`setup`](skills/setup/SKILL.md) and [`create-framework`](skills/create-framework/SKILL.md). Needs Node 22.20 or later. Nothing here reads your personal data; that stays in your own private system, as [Philosophy](#philosophy) explains.
+
+---
+
 ## Quick Start
 
 | Path | Time | Start Here |
@@ -419,6 +439,17 @@ This project grew out of too many late nights, too many frameworks studied, and 
 If you recognize your work in here and feel it needs a credit, reach out. The frameworks are described by concept, not by name, because this is a toolkit for application, not an academic citation index. But the ideas belong to the people who developed them, and this project wouldn't exist without their work.
 
 ---
+
+## More from me
+
+I'm Taylor O'Neal. I work in product and analytics, teach at Miami University, and put the
+tools I actually use into the open.
+
+- [tayloroneal.com](https://www.tayloroneal.com) for what I'm working on and how to reach me
+- [@businesstaylor](https://x.com/businesstaylor) on X, where I post build notes
+- [@grizzpm](https://www.youtube.com/@grizzpm) on YouTube
+
+If this saved you time, a star helps other people find it. Issues and PRs are welcome.
 
 ## License
 
