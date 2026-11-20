@@ -27,6 +27,10 @@ outputs:
 
 # Scan
 
+## Execution Model
+
+The numbered sections below are **workflow/state boundaries**, not a chain-of-thought template. Frontier models should use native reasoning and execute the minimum necessary steps directly. Keep consent gates, privacy boundaries, and write ordering because they protect user state. Smaller/legacy models may use the numbered sequence as an explicit checklist when needed.
+
 ## Purpose
 The scan skill reads signals from various sources and maps them to mirror-palace frameworks, status domains, people records, and decisions. It is the primary way the system gets populated with data. Instead of asking users to fill out forms, the scan skill extracts information from what already exists and proposes structured updates.
 
@@ -294,7 +298,7 @@ The scan skill reads signals from various sources and maps them to mirror-palace
 
 The scan skill is not a one-time event. It implements the Continuous Learning Protocol defined in `CLAUDE.md`.
 
-### On Every Interaction
+### During Active Scan or Status-Maintenance Work
 1. **Domain update check:** Did the user reveal information that updates a status domain? If yes, propose a 1-line update.
 2. **People update check:** Did a relationship dynamic surface? If yes, propose a people record update — including Giving% and "What I Give" if the user describes what they contribute to the relationship.
 3. **Decision check:** Is a decision being discussed? If yes, check for an existing decisions ledger entry or propose a new one. Include "Who's Affected" if stakeholders are mentioned.
@@ -313,7 +317,7 @@ Before surfacing patterns or proposing updates, read the user's current state. I
 The continuous learning protocol should never add cognitive load to someone who's already overloaded.
 
 ### Staleness Detection
-Agents should check on every run:
+When a scan or status-maintenance run is requested, check:
 - Are any domain files older than 30 days? Flag for review.
 - Are any people records older than 60 days? Flag for review.
 - Are any decisions in "pending" for 30+ days? Flag for review.
@@ -321,7 +325,7 @@ Agents should check on every run:
 - Have any frameworks been triggered that specify status updates, but those updates haven't been made? Flag the gap.
 - Are any domains green for 60+ days with no issues? Note as thriving — stability is data worth acknowledging, not just problems.
 
-### Low Friction Is Mandatory
+### Low-Friction Requirement
 Do not ask the user to fill out forms. Propose specific updates based on what they said. Confirm with a yes/no. Then write. The goal is zero-friction data maintenance.
 
 ---

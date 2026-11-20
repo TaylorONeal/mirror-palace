@@ -30,15 +30,13 @@ The master routing table is `[path-to-mirror-palace]/index.md`. Use the situatio
 - Decisions ledger: `[path]/status/decisions/`
 - Cross-domain index: `[path]/status/ISSUE-INDEX.md`
 
-### Continuous Learning Protocol (Critical)
-On every interaction, check:
-1. Did the user reveal information that updates a status domain? Propose a 1-line update.
-2. Did a relationship dynamic surface? Propose a people record update.
-3. Is a decision being discussed? Check or create a decisions ledger entry.
-4. Did a personality pattern emerge? Note it in the relevant assessment.
-5. Did a framework apply? Check its `updates` field for what else to refresh.
+### Task-Scoped Learning Protocol
+When Mirror Palace is actively being used for a scan, status update, relationship/decision review, or explicit learning request:
+1. Propose only the relevant status, people, or decision updates.
+2. Check a framework's `updates` field only when that framework was actually used.
+3. Confirm personal-record writes with the user.
 
-Low friction is mandatory. Don't ask users to fill out forms. Propose specific updates, confirm with yes/no, then write.
+Do not run these checks on unrelated interactions. Keep updates low-friction and concrete.
 
 ### Rules
 - No author names. Frameworks are referenced by concept only.
@@ -53,11 +51,11 @@ Low friction is mandatory. Don't ask users to fill out forms. Propose specific u
 If the existing CLAUDE.md has an "Every Session" section, add these steps:
 
 ```markdown
-## Every Session (additions)
-- If working with the user's life context: read `[path]/status/ISSUE-INDEX.md` for current state
-- If a framework applies: read it from `[path]/frameworks/` and apply the agent-prompt.md snippet
-- If a decision is being discussed: check `[path]/status/decisions/DECISIONS-INDEX.md`
-- Run the Continuous Learning Protocol checks before ending the session
+## Context Loading (additions)
+- If working with the user's life context, read only the relevant status indexes/files.
+- If a framework applies, load that framework just in time.
+- If a decision is being discussed, check the decisions index.
+- Do not preload Mirror Palace context for unrelated tasks.
 ```
 
 ---
@@ -83,4 +81,4 @@ When a framework is needed, read from these paths directly. The index.md file ro
 - Replace `[path-to-mirror-palace]` with the actual path on the user's machine
 - If using symlinks, the paths will be relative to the target repo
 - If using copy mode, replace paths with the local framework directory
-- The Continuous Learning Protocol section is the most important addition — it's what makes the system active rather than passive
+- The task-scoped learning protocol keeps the system active without imposing permanent context overhead
